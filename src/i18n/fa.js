@@ -1,4 +1,7 @@
-export default {
-  "home.title": "خانه",
-  "contact.title": "تماس",
+const messages = {
+  welcome: "خوش آمدید",
+  Home: "خانه",
+  Contact: "تماس",
 };
+
+export default messages;
