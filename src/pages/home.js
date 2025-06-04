@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import  imageheader  from "../images/headrimage.jpg";
 
 export default function Home({ locale, setLocale }) {
-  const { formatMessage } = useIntl();
+  useIntl();
 
   return (
     <div className="home">

@@ -8,7 +8,9 @@ const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   return (
     <header className="header">
-      <img src={Logotext} alt="Logo" className="logo-image" />
+      <div className="header-right">
+        <img src={Logotext} alt="Logo" className="logo-image" />
+      </div>
       <nav className="nav-menu" aria-label="Main navigation">
         <Link
           to="/"
@@ -27,13 +29,14 @@ const Header = ({ locale, setLocale }) => {
           {formatMessage({ id: "aboutUs", defaultMessage: "aboutUs" })}
         </Link>
         <select
-          className="locale-select"
+          class="language-select"
           value={locale}
           onChange={(e) => setLocale(e.target.value)}
           aria-label="Select language"
         >
-          <option value="en">English</option>
-          <option value="fa">فارسی</option>
+          <option value="en">🇺🇸</option>
+          <option value="fa">🇮🇷</option>
+          <option value="nl">🇳🇱</option>
         </select>
       </nav>
       <div className="header-right">
