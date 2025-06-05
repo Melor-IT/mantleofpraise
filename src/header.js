@@ -8,7 +8,7 @@ const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   return (
     <header className="header">
-      <div className="header-right">
+      <div className="header-left">
         <img src={Logotext} alt="Logo" className="logo-image" />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
