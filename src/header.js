@@ -1,5 +1,3 @@
-import Logo from "./images/logo-big.png";
-import Logotext from "./images/rada- eng.png";
 import { NavLink } from "react-router-dom";
 import { useIntl } from "react-intl";
 
@@ -8,7 +6,7 @@ const Header = ({ locale, setLocale }) => {
   return (
     <header>
       <div className="header-left">
-        <img src={Logotext} alt="Logo" className="logo-image" />
+        <img src="/images/rada- eng.png" alt="Logo" className="logo-image" />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -36,7 +34,7 @@ const Header = ({ locale, setLocale }) => {
         </select>
       </nav>
       <div className="header-right">
-        <img src={Logo} alt="Logo" className="logo-image" />
+        <img src="/images/logo-big.png" alt="Logo" className="logo-image" />
       </div>
     </header>
   );
