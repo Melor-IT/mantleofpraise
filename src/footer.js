@@ -1,7 +1,4 @@
-import React from "react";
 import { useIntl } from "react-intl";
-
-
 
 const Footer = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
@@ -35,7 +32,7 @@ const Footer = ({ locale, setLocale }) => {
           <h4>
             {formatMessage({
               id: "kvk",
-              defaultMessage: "(KVK)",
+              defaultMessage: "KVK",
             })}
           </h4>
           <p>97889539</p>
