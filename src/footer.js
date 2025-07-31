@@ -1,51 +1,70 @@
 import React from "react";
+import { useIntl } from "react-intl";
 
 
-export default function footer() {
+
+const Footer = ({ locale, setLocale }) => {
+  const { formatMessage } = useIntl();
+
+  const footerStyle = {
+  backgroundImage: `url(/images/footerimage.jpg)`
+}
+
   return (
-    <footer className="footer">
+    <footer className="footer" style={footerStyle}>
       <div className="info">
         <div className="col">
-          <h4>Bezoekadres</h4>
-          <p>Parkwijklaan 5, 1326AX Almere Nederland</p>
+          <h4>
+            {formatMessage({
+              id: "visitingAddress",
+              defaultMessage: "VisitingAddress",
+            })}
+          </h4>
+          <p>Tante Pollewopstraat, 1336KB Almere, Netherlands</p>
         </div>
         <div className="col">
-          <h4>Correspondentieadres</h4>
+          <h4>
+            {formatMessage({
+              id: "mailingAddress",
+              defaultMessage: "MailingAddress",
+            })}
+          </h4>
           <p>Alseïdenstraat 20-2, 1363SR Almere</p>
         </div>
         <div className="col">
-          <h4>KVK</h4>
-          <p>92274404</p>
+          <h4>
+            {formatMessage({
+              id: "kvk",
+              defaultMessage: "(KVK)",
+            })}
+          </h4>
+          <p>97889539</p>
         </div>
       </div>
-      <div className="services">
-        <h4>Diensten</h4>
-        <p>
-          Ieder eerste en derde zondag van de maand vinden de kerk bijeenkomsten
-          op locatie plaats.
-          <br />
-          Op zondagen waarbij er geen fysieke bijeenkomst plaats vindt, zullen
-          deze via Zoom gehouden worden.
-        </p>
-        {/* <span>2024 Copyright:Made by Hamid Ghanbari</span> */}
-      </div>
-      <div className="contact">
-        <h4>Contact</h4>
+      <div className="socialmedia">
+        <h4>
+          {formatMessage({
+            id: "socialMedia",
+            defaultMessage: "SocialMedia",
+          })}
+        </h4>
         <div>
-          <a href="tel:068371262">
+          <a href="tel:+31636348934">
             <span className="icon-phone"></span>
           </a>
-          <a href="mailto:lichtwereldkerk2022@gmail.com">
+          <a href="gh.hamid89@gmail.com">
             <span className="icon-envelop"></span>
           </a>
-          <a href="https://www.youtube.com/@LichtWereldKerk">
+          {/* <a href="https://www.youtube.com/@LichtWereldKerk">
             <span className="icon-youtube"></span>
           </a>
           <a href="https://www.instagram.com/noorejahan_farsi_church?igsh=MTA1djZzdnByeHJldQ==">
             <span className="icon-instagram"></span>
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

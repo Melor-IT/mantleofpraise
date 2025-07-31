@@ -16,19 +16,28 @@ const messages = {
 };
 
 function App() {
-  const [locale, setLocale] = useState("en");
+  const [locale, setLocale] = useState(
+    localStorage.getItem("locale") || "en"
+  );
+
+  const changeLocale = (newLocale) => {
+    setLocale(newLocale);
+    localStorage.setItem("locale", newLocale);
+  };
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <BrowserRouter>
-        <main className="app">
-          <Header locale={locale} setLocale={setLocale} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+        <div className="app">
+          <Header locale={locale} setLocale={changeLocale} />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
           <Footer />
-        </main>
+        </div>
       </BrowserRouter>
     </IntlProvider>
   );

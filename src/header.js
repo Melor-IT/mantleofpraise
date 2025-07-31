@@ -1,35 +1,31 @@
-import React from "react";
 import Logo from "./images/logo-big.png";
 import Logotext from "./images/rada- eng.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   return (
-    <header className="header">
+    <header>
       <div className="header-left">
         <img src={Logotext} alt="Logo" className="logo-image" />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
-        <Link
-          to="/"
-          aria-current={locale === "home" ? "page" : undefined}
-          className="active"
-        >
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
           {formatMessage({ id: "home", defaultMessage: "Home" })}
-        </Link>
-        <Link to={`/gallery`} activeClassName="current">
-          {formatMessage({ id: "gallery", defaultMessage: "gallery" })}
-        </Link>
-        <Link to={`/joinUs`} activeClassName="current">
-          {formatMessage({ id: "joinUs", defaultMessage: "joinUs" })}
-        </Link>
-        <Link to={`/aboutUs`} activeClassName="current">
-          {formatMessage({ id: "aboutUs", defaultMessage: "aboutUs" })}
-        </Link>
+        </NavLink>
+        <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : "")}>
+          {formatMessage({ id: "gallery", defaultMessage: "Gallery" })}
+        </NavLink>
+        <NavLink to="/joinUs" className={({ isActive }) => (isActive ? "active" : "")}>
+          {formatMessage({ id: "joinUs", defaultMessage: "Join Us" })}
+        </NavLink>
+        <NavLink to="/aboutUs" className={({ isActive }) => (isActive ? "active" : "")}>
+          {formatMessage({ id: "aboutUs", defaultMessage: "About Us" })}
+        </NavLink>
         <select
-          class="language-select"
+          id="language-select"
+          className="language-select"
           value={locale}
           onChange={(e) => setLocale(e.target.value)}
           aria-label="Select language"
