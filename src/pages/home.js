@@ -1,13 +1,21 @@
 import { useIntl } from "react-intl";
+import BackgroundImage from "../components/BackgroundImage";
 
 export default function Home({ locale, setLocale }) {
   useIntl();
 
   return (
-    <div  className="home">
-      <div className="imageheadr">
-        <img src="../images/headrimage.jpg" alt="imageheader" className="imageheader" />
-      </div>
-    </div>
-  );
+    <main className="page home">
+      <section>
+        <BackgroundImage url="/images/home-banner.jpg" />
+
+        <div className="content">
+          <h2>Welcome to</h2>
+          <h1>Mantle of Praise</h1>
+        </div>
+      </section>
+    </main>
+)  ;
+
+
 }

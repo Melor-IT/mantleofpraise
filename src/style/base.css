@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 :root {
   --primary-color: #d4aa42;
   --secondary-color: #631969;
@@ -11,4 +13,22 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

@@ -1,4 +1,5 @@
 @import "base.css";
+
 /* ========== پایه ========== */
 html,
 body {
@@ -21,9 +22,10 @@ html,
 
 /* ========== هدر ========== */
 header {
+  position: sticky;
   width: 100%;
   max-width: 1140px;
-  margin: 2.5rem auto -10rem;
+  margin: 0 auto -10rem;
   padding: 1rem;
   display: flex;
   align-items: stretch;
@@ -31,9 +33,9 @@ header {
   gap: 1rem;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
   font-size: clamp(0.9rem, 1vw + 0.6rem, 1.1rem);
   z-index: 10;
+  top: 1rem;
 }
 
 .header-left,
@@ -71,6 +73,7 @@ header {
   text-decoration: none;
   transition: color 0.3s ease;
   height: 100%;
+  font-weight: bold;
 }
 
 .nav-menu a::after {
@@ -152,14 +155,6 @@ footer {
 }
 
 /* ========== صفحه اصلی ========== */
-.home {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-}
 
 .imageheader {
   width: 100vw;
@@ -175,6 +170,57 @@ footer {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.page {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page > section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page > section > .background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.page > section > .content {
+  width: 100%;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.page.home {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.page.home h1 {
+ font-size: 5.5rem;
+}
+
+.page.home h2 {
+  font-size: 3rem;
+
+}
+
+.page.home > section {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
 }
 
 /* ========== واکنش‌گرایی ========== */

@@ -4,6 +4,6 @@ export default function Contact() {
   const { formatMessage } = useIntl();
 
   return (
-    <div>{formatMessage({ id: "aboutUs", defaultMessage: "aboutUs" })}</div>
+    <main class="page">{formatMessage({ id: "aboutUs", defaultMessage: "aboutUs" })}</main>
   );
 }

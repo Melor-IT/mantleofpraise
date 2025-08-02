@@ -30,12 +30,10 @@ function App() {
       <BrowserRouter>
         <div className="app">
           <Header locale={locale} setLocale={changeLocale} />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
           <Footer />
         </div>
       </BrowserRouter>
