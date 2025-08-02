@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #d4aa42;
+  --secondary-color: #631969;
+  --black-color: #000;
+  --font-family: "Arial", sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
