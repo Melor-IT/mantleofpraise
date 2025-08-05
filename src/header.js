@@ -6,7 +6,6 @@ const Header = ({ locale, setLocale }) => {
   return (
     <header>
       <div className="header-left">
-        <img src="/images/rada- eng.png" alt="Logo" className="logo-image" />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -34,7 +33,7 @@ const Header = ({ locale, setLocale }) => {
         </select>
       </nav>
       <div className="header-right">
-        <img src="/images/logo-big.png" alt="Logo" className="logo-image" />
+        <img src="/images/MantleofPraise.jpeg" alt="Logo" className="logo-image" />
       </div>
     </header>
   );
