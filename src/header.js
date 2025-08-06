@@ -44,7 +44,7 @@ const Header = ({ locale, setLocale }) => {
         </div>
       </nav>
       <div className="header-right">
-        <img src="/images/logo-big.png" alt="Logo" className="logo-image" />
+        <img src="/images/MantleofPraise.jpeg" alt="Logo" className="logo-image" />
       </div>
     </header>
   );
