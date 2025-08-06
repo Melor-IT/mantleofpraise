@@ -3,12 +3,11 @@ import { IntlProvider } from "react-intl";
 import { useState } from "react";
 import enMessages from "./i18n/en";
 import faMessages from "./i18n/fa";
-import Header from "./header";
-import Footer from "./footer";
-import Home from "./pages/home";
-import Contact from "./pages/contact";
-import "./App.css";
-import "./style/main.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import "./style/main.scss";
 
 const messages = {
   en: enMessages,
@@ -31,8 +30,8 @@ function App() {
         <div className="app">
           <Header locale={locale} setLocale={changeLocale} />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />
         </div>

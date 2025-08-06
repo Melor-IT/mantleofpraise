@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import BackgroundImage from "../components/BackgroundImage";
 
-export default function Home({ locale, setLocale }) {
+export default function HomePage({ locale, setLocale }) {
   useIntl();
 
   return (
@@ -14,6 +14,10 @@ export default function Home({ locale, setLocale }) {
           <h1>Mantle of Praise</h1>
         </div>
       </section>
+
+      <section className="secondary"></section>
+
+      <section className="primary"></section>
     </main>
 )  ;
 

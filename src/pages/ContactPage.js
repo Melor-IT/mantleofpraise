@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 
-export default function Contact() {
+export default function ContactPage() {
   const { formatMessage } = useIntl();
 
   return (
