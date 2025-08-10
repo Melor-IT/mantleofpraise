@@ -22,12 +22,12 @@ body, html, .app {
 /* ========== هدر ========== */
 header {
   width: 100%;
-  max-width: 1140px;
+  max-width: 50em;
   margin: 2.5em auto -10em;
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 1em;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -36,15 +36,14 @@ header {
   z-index: 10;
 }
 
-.header-left,
-.header-right {
+.logo {
   display: flex;
   align-items: center;
-  max-width: 16em;
+  max-width: 12em;
   width: 100%;
 }
 
-.header-right {
+.logo {
   max-width: 6.5em;
 }
 
@@ -173,21 +172,9 @@ footer {
 
 /* تبلت */
 @media (max-width: 1024px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5em;
-    text-align: center;
-  }
-
   .nav-menu {
     flex-wrap: wrap;
     gap: 2em;
-  }
-
-  .header-left,
-  .header-right {
-    max-width: 12em;
   }
 
   .nav-menu a {
@@ -209,12 +196,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 1.5em auto;
-    padding: 1em 0.5em;
-  }
-
-  .header-left,
-  .header-right {
-    max-width: 10em;
+    padding:  0.5em;
   }
 
   .nav-menu {

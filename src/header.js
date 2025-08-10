@@ -5,7 +5,8 @@ const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   return (
     <header>
-      <div className="header-left">
+      <div className="logo">
+        <img src="/images/MantleofPraise.jpeg" alt="Logo" className="logo-image" />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
@@ -20,7 +21,8 @@ const Header = ({ locale, setLocale }) => {
         <NavLink to="/aboutUs" className={({ isActive }) => (isActive ? "active" : "")}>
           {formatMessage({ id: "aboutUs", defaultMessage: "About Us" })}
         </NavLink>
-        <select
+      </nav>
+       <select
           id="language-select"
           className="language-select"
           value={locale}
@@ -31,10 +33,6 @@ const Header = ({ locale, setLocale }) => {
           <option value="fa">🇮🇷</option>
           <option value="nl">🇳🇱</option>
         </select>
-      </nav>
-      <div className="header-right">
-        <img src="/images/MantleofPraise.jpeg" alt="Logo" className="logo-image" />
-      </div>
     </header>
   );
 };
