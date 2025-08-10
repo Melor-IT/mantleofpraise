@@ -6,9 +6,11 @@ import faMessages from "./i18n/fa";
 import Header from "./header";
 import Footer from "./footer";
 import Home from "./pages/home";
-import Contact from "./pages/contact";
 import "./App.css";
 import "./style/main.css";
+import AboutUs from "./pages/aboutUs";
+import JoinUs from "./pages/joinUs";
+import Gallery from "./pages/gallery";
 
 const messages = {
   en: enMessages,
@@ -33,7 +35,9 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/gallery" element={<Gallery/>} />
+              <Route path="/aboutUs" element={<AboutUs />} />
+              <Route path="/joinUs" element={<JoinUs />} />
             </Routes>
           </main>
           <Footer />
