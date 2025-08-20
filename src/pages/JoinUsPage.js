@@ -33,7 +33,7 @@ export default function JoinUs() {
     }
     console.log('Form submitted:', formData);
 
-    const response = await fetch('http://localhost:8888/.netlify/functions/send-email', {
+    const response = await fetch('/.netlify/functions/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
