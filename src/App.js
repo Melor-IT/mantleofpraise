@@ -8,6 +8,14 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import "./style/main.scss";
+import Header from "./header";
+import Footer from "./footer";
+import Home from "./pages/home";
+import "./App.css";
+import "./style/main.css";
+import AboutUs from "./pages/aboutUs";
+import JoinUs from "./pages/joinUs";
+import Gallery from "./pages/gallery";
 
 const messages = {
   en: enMessages,
@@ -29,10 +37,14 @@ function App() {
       <BrowserRouter>
         <div className="app">
           <Header locale={locale} setLocale={changeLocale} />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/gallery" element={<Gallery/>} />
+              <Route path="/aboutUs" element={<AboutUs />} />
+              <Route path="/joinUs" element={<JoinUs />} />
+            </Routes>
+          </main>
           <Footer />
         </div>
       </BrowserRouter>
