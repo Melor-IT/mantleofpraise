@@ -3,18 +3,23 @@ import { IntlProvider } from "react-intl";
 import { useState } from "react";
 import enMessages from "./i18n/en";
 import faMessages from "./i18n/fa";
-import Header from "./header";
-import Footer from "./footer";
-import Home from "./pages/home";
-import "./App.css";
-import "./style/main.css";
-import AboutUs from "./pages/aboutUs";
-import JoinUs from "./pages/joinUs";
-import Gallery from "./pages/gallery";
+import nlMessages from "./i18n/nl";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import AboutUsPage from "./pages/AbouUsPage";
+import JoinUsPage from "./pages/JoinUsPage";
+import GalleryPage from "./pages/GalleryPage";
+
+import "./style/main.scss";
+// import "./App.css";
+// import "./style/main.css";
 
 const messages = {
   en: enMessages,
   fa: faMessages,
+  nl: nlMessages
 };
 
 function App() {
@@ -34,10 +39,10 @@ function App() {
           <Header locale={locale} setLocale={changeLocale} />
           <main>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/gallery" element={<Gallery/>} />
-              <Route path="/aboutUs" element={<AboutUs />} />
-              <Route path="/joinUs" element={<JoinUs />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
+              <Route path="/join-us" element={<JoinUsPage />} />
             </Routes>
           </main>
           <Footer />
