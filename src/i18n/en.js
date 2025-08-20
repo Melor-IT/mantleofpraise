@@ -2,7 +2,7 @@ const messages = {
   welcome: "Welcome",
   Home: "Home",
   Contact: "Contact",
-  AboutUs:"AboutUs",
+  AboutUs: "About Us",
   VisitingAddressTitle: "Visiting Address",
   MailingAddressTitle: "Mailing Address",
   ChamberOfCommerceTitle: "Chamber of Commerce (KVK)",
@@ -10,6 +10,18 @@ const messages = {
   ServicesText:
     "Every first and third Sunday of the month, church services take place on location. On Sundays without a physical gathering, the services will be held via Zoom.",
   ContactTitle: "Contact",
+  firstName: "First Name",
+  lastName: "Last Name",
+  email: "Email",
+  phone: "Phone",
+  city: "City",
+  church: "Which church are you a member of?",
+  pastor: "Your pastor's name",
+  gifts: "Gifts / Talents",
+  agreeTerms: "I agree to the Terms & Conditions",
+  agreePrivacy: "I agree to the Privacy Policy",
+  submit: "Submit Membership Form",
+  mustAgree: "You must agree to both terms to continue.",
 };
 
 export default messages;

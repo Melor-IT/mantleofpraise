@@ -6,33 +6,49 @@ const Header = ({ locale, setLocale }) => {
   return (
     <header>
       <div className="logo">
-        <img src="/images/MantleofPraise.jpeg" alt="Logo" className="logo-image" />
+        <img
+          src="/images/MantleofPraise.jpeg"
+          alt="Logo"
+          className="logo-image"
+        />
       </div>
       <nav className="nav-menu" aria-label="Main navigation">
-        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {formatMessage({ id: "home", defaultMessage: "Home" })}
         </NavLink>
-        <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {formatMessage({ id: "gallery", defaultMessage: "Gallery" })}
         </NavLink>
-        <NavLink to="/joinUs" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/joinUs"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {formatMessage({ id: "joinUs", defaultMessage: "Join Us" })}
         </NavLink>
-        <NavLink to="/aboutUs" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/aboutUs"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           {formatMessage({ id: "aboutUs", defaultMessage: "About Us" })}
         </NavLink>
       </nav>
-       <select
-          id="language-select"
-          className="language-select"
-          value={locale}
-          onChange={(e) => setLocale(e.target.value)}
-          aria-label="Select language"
-        >
-          <option value="en">🇺🇸</option>
-          <option value="fa">🇮🇷</option>
-          <option value="nl">🇳🇱</option>
-        </select>
+      <select
+        id="language-select"
+        className="language-select"
+        value={locale}
+        onChange={(e) => setLocale(e.target.value)}
+        aria-label="Select language"
+      >
+        <option value="en">🇺🇸</option>
+        <option value="fa">🇮🇷</option>
+        <option value="nl">🇳🇱</option>
+      </select>
     </header>
   );
 };
