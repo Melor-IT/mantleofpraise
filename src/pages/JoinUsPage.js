@@ -25,13 +25,27 @@ export default function JoinUs() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.agreeTerms || !formData.agreePrivacy) {
       alert(formatMessage({ id: 'joinus.mustAgree' }));
       return;
     }
     console.log('Form submitted:', formData);
+
+    const response = await fetch('http://localhost:8888/.netlify/functions/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+    alert("Message sent!");
+  } else {
+    alert("Failed to send message.");
+  }
   };
 
   return (
@@ -46,13 +60,13 @@ export default function JoinUs() {
               defaultMessage: 'Join Us'
             })}
           </h1>
-        
-          <h3 style={{marginTop: "2rem"}}>
+
+          <h3 style={{ marginTop: '2rem' }}>
             And let us consider how we may spur one another on toward love and good deeds, not
             giving up meeting together, as some are in the habit of doing, but encouraging one
             another—and all the more as you see the Day approaching.
           </h3>
-          <h3 >- Hebrews 10:24-25</h3>
+          <h3>- Hebrews 10:24-25</h3>
         </div>
       </section>
 
