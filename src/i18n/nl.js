@@ -22,6 +22,7 @@ const messages = {
   agreePrivacy: "Ik ga akkoord met het privacybeleid",
   submit: "Lidmaatschapsformulier verzenden",
   mustAgree: "U moet met beide voorwaarden akkoord gaan om verder te gaan.",
+  footerText: "Mijn God, ik roep des daags, en Gij antwoordt niet, en des nachts, en ik kom niet tot stilte. Nochtans zijt Gij de Heilige, die troont op de lofzangen Israëls. Op U hebben onze vaderen vertrouwd, zij hebben vertrouwd, en Gij deedt hen ontkomen;"
 };
 
 export default messages;

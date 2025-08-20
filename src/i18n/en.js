@@ -22,6 +22,11 @@ const messages = {
   agreePrivacy: "I agree to the Privacy Policy",
   submit: "Submit Membership Form",
   mustAgree: "You must agree to both terms to continue.",
+  socialMedia: "Social Media",
+  visitingAddress: "Visiting Address",
+  mailingAddress: "Mailing Address",
+  kvk: "Chamber of Commerce (KVK)",
+  footerText: "You are the holy one, enthroned. You are Israel’s praise. Our ancestors trusted you they trusted you and you rescued them; they cried out to you and they were saved; they trusted you and they weren’t ashamed."
 };
 
 export default messages;
