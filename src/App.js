@@ -7,14 +7,9 @@ import nlMessages from "./i18n/nl";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
 import AboutUsPage from "./pages/AbouUsPage";
 import JoinUsPage from "./pages/JoinUsPage";
-import GalleryPage from "./pages/GalleryPage";
-
 import "./style/main.scss";
-// import "./App.css";
-// import "./style/main.css";
 
 const messages = {
   en: enMessages,
@@ -40,7 +35,6 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/join-us" element={<JoinUsPage />} />
             </Routes>
