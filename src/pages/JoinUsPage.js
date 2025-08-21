@@ -62,11 +62,16 @@ export default function JoinUs() {
           </h1>
 
           <h3 style={{ marginTop: '2rem' }}>
-            And let us consider how we may spur one another on toward love and good deeds, not
-            giving up meeting together, as some are in the habit of doing, but encouraging one
-            another—and all the more as you see the Day approaching.
+   {          formatMessage({
+              id: 'joinUsText', defaultMessage: 'And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.'
+            })}
           </h3>
-          <h3>- Hebrews 10:24-25</h3>
+          <h3>
+            {formatMessage({
+              id: 'joinUsTextOnder',
+              defaultMessage: '- Hebrews 10:24-25'
+            })}
+          </h3>
         </div>
       </section>
 

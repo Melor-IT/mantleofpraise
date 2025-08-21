@@ -16,7 +16,7 @@ const Footer = ({ locale, setLocale }) => {
                 defaultMessage: 'footerText'
               })}</h3>
         </div>
-
+    <div className='botoje-gold'></div>
         <div className="content-row">
           <div className="dark-glass">
             <h4>

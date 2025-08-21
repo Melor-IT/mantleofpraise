@@ -36,13 +36,14 @@ html,
   align-items: center;
   gap: 2rem;
   flex-wrap: nowrap;
+  width: 50%;
 
   > div {
     flex: 0 1 auto;
     width: 100%;
 
     &:only-child {
-      width: 50%;
+      // width: 50%;
     }
   }
 }
@@ -196,7 +197,7 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   font-size: 1.1rem;
   color: #fff;
   overflow: hidden;
@@ -207,13 +208,18 @@ footer {
   text-align: center;
 
   > .page-content {
-    padding: 2em 1em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 3rem;
+    width: 100%;
+    padding: 4em 1em 4em;
+    align-items: center;
   }
 
   .message {
     width: 80%;
-    margin: 0 auto 15rem;
+
     color: #000;
     padding: 1rem;
   }
@@ -222,7 +228,6 @@ footer {
 .dark-glass {
   display: inline-flex;
   flex-direction: column;
-  padding: 1rem;
   gap: 1rem;
   color: #444;
   background-color: rgba(255, 255, 255, 0.35);
@@ -370,6 +375,17 @@ footer {
   z-index: 10;
 }
 
+.botoje-gold {
+  width: 130px;
+  aspect-ratio: 0.66;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+  background-image: url('../../public/images/botoje-gold-1.png');
+  background-size: cover;
+  z-index: 10;
+}
+
 .form-block {
   display: flex;
   flex-direction: column;
@@ -431,15 +447,15 @@ footer {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   h2 {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 
   h4 {
@@ -487,6 +503,10 @@ footer {
     font-size: clamp(0.8rem, 0.6vw + 0.6rem, 1rem);
   }
 
+  .botoje-gold {
+    width: 100px;
+  }
+
   .page {
     > section {
       &:first-child {
@@ -520,6 +540,7 @@ footer {
   }
 
   .content-row {
+    width: 100%;
     > div {
       &:only-child {
         width: 100%;
