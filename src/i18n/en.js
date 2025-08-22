@@ -47,7 +47,12 @@ const messages = {
   more: 'More',
   visen: 'Our Vision',
   visenText:
-    'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
-};
+    'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.',
+   giftText:
+    "We invite you to participate with a grateful heart and steadfast faith, so that the name of the Lord may be glorified among the nations.",
+   gift: "Gift",
+  giftTextbibel: 'Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.',
+   giftTextbibelOnder: '2 Corinthians 9:7',
+  };
 
 export default messages;

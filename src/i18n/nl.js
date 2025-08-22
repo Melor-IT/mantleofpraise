@@ -46,6 +46,11 @@ const messages = {
   more: 'meer',
   visen: 'Onze Visie',
   visenText:
-    'Onze visie is het vormen van een inspirerende gemeenschap van aanbidders en profeten die, door middel van muziek en aanbidding vervuld met de leiding van de Heilige Geest, het licht en de aanwezigheid van God in kerken verspreiden, elk hart wekken en genezen, en een levendige, diepe en blijvende ervaring van verbinding met de Heer creëren voor elk individu en elke gemeente.'
-};
+    'Onze visie is het vormen van een inspirerende gemeenschap van aanbidders en profeten die, door middel van muziek en aanbidding vervuld met de leiding van de Heilige Geest, het licht en de aanwezigheid van God in kerken verspreiden, elk hart wekken en genezen, en een levendige, diepe en blijvende ervaring van verbinding met de Heer creëren voor elk individu en elke gemeente.',
+  giftText: 
+  "Wij nodigen u uit om met een dankbaar hart en standvastig geloof deel te nemen, zodat de naam van de Heer onder de volken verheerlijkt wordt.",
+    gift: "Gift",
+  giftTextbibel: 'Laat ieder zoveel geven als hij zelf besloten heeft, zonder tegenzin of dwang, want God houdt van mensen die blijmoedig geven.',
+    giftTextbibelOnder: '2 Korintiërs 9:7',
+  };
 export default messages;
