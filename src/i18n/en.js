@@ -33,6 +33,8 @@ const messages = {
   aboutUsText:
     'The Spirit of the Lord GOD is upon me; for the LORD has anointed me to bring good news to the meek, to heal the brokenhearted, to proclaim liberty to captives and release to the bound; to declare the year of the LORD’s favor and the day of His vengeance; to comfort all who mourn, giving them beauty for ashes, joy for mourning, and a garment of praise for heaviness, that they may be called trees of righteousness, the planting of the LORD, that He may be glorified.',
   aboutUsTextOnder: '- Isaiah 61:1-3',
+  ourMission: 'Our Mission',
+  ourMissionText:'',
   firstService: 'Equipping Worshipers',
   firstServiceText:
     'Preparing and training members for service in churches and leading worship sessions.',

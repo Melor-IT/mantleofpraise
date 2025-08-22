@@ -14,18 +14,41 @@ export default function AboutUs() {
 
           <h3 style={{ marginTop: '2rem' }}>
             {formatMessage({
-              id: "aboutUsText",
-              defaultMessage:"The Spirit of the Lord GOD is upon me ..."
-            })} 
-          </h3>
-          
-          <h3>
-            {formatMessage({
-              id: "aboutUsTextOnder",
-              aboutUsTextOnder:"- Isaiah 61:1-3"
-            })} 
+              id: 'aboutUsText',
+              defaultMessage: 'The Spirit of the Lord GOD is upon me ...'
+            })}
           </h3>
 
+          <h3>
+            {formatMessage({
+              id: 'aboutUsTextOnder',
+              aboutUsTextOnder: '- Isaiah 61:1-3'
+            })}
+          </h3>
+        </div>
+      </section>
+
+      <section className="secondary">
+        <div className="page-content">
+          <div>
+            <h2>
+              {formatMessage({
+                id: 'visen',
+                defaultMessage: 'Our Vision'
+              })}
+            </h2>
+
+            <p>
+              {formatMessage({
+                id: 'visenText',
+                defaultMessage:
+                  'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
+              })}
+            </p>
+          </div>
+          <div>
+            <div className="imageH&S"></div>
+          </div>
         </div>
       </section>
     </div>
