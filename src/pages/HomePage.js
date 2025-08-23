@@ -62,7 +62,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle">
-                <img src="https://picsum.photos/300" />
+                <img src="/images/firstService.jpg" />
               </div>
             </div>
             <div>
@@ -80,7 +80,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle ne">
-                <img src="https://picsum.photos/300" />
+                <img src="/images/secondService.jpeg" />
               </div>
             </div>
             <div>
@@ -98,7 +98,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle sw">
-                <img src="https://picsum.photos/300" />
+                <img src="/public/images/thirdService.jpg" />
               </div>
             </div>
           </div>
