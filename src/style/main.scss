@@ -29,7 +29,7 @@ html,
   > header {
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 3rem;
     margin-bottom: 5rem;
 
     > * {
@@ -520,21 +520,21 @@ section {
     display: inline-flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 1rem;
+
+
+    > *:not(.image-circle) {
+      padding: 0 1rem;
+    }
 
     &:nth-child(1) {
-      margin-top: 5rem;
+      margin-top: 9rem;
 
     }
 
     &:nth-child(2) {
       flex: 1 0 36%;
-      margin-top: 15rem;
-      margin-bottom: -5rem;
-    }
-
-    > .image-circle {
-      margin: 0 -1rem;
+      margin-top: 24rem;
+      margin-bottom: -10rem;
     }
   }
 }
@@ -579,10 +579,6 @@ section {
 
   h2 {
     font-size: 3rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
   }
 
   h4 {
@@ -646,22 +642,23 @@ section {
       }
 
       > .page-content {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
       }
     }
 
-    &.home {
+  }
+
+  section {
+
+    &.banner {
+
       .page-content {
+
         > .botoje-white {
           bottom: 1rem;
           right: 1rem;
-          width: 50px;
+          width: 60px;
         }
-      }
-
-      > section {
-        display: flex;
-        justify-content: center;
       }
     }
   }
@@ -679,5 +676,16 @@ section {
   .dark-glass {
     aspect-ratio: auto;
     padding: 3rem 0;
+  }
+
+  .services {
+    flex-wrap: wrap;
+    gap: 5rem;
+
+    > div {
+      flex: 1 0 100%;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
   }
 }
