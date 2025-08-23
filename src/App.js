@@ -7,7 +7,7 @@ import nlMessages from "./i18n/nl";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
-import AboutUsPage from "./pages/AbouUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
 import JoinUsPage from "./pages/JoinUsPage";
 import "./style/main.scss";
 

@@ -52,5 +52,11 @@ const messages = {
     gift: "Gift",
   giftTextbibel: 'Laat ieder zoveel geven als hij zelf besloten heeft, zonder tegenzin of dwang, want God houdt van mensen die blijmoedig geven.',
     giftTextbibelOnder: '2 Korintiërs 9:7',
-  };
+  team: 'Ons Team',
+  teamText:
+ 'Bij Mantel van lof zijn we meer dan een team – we zijn een familie. Samen aanbidden we, leren we, dienen we en groeien we. Het werk wordt geleid door het Leiderschapsteam en geestelijk begeleid door de Levieten, maar in werkelijkheid maakt ieder lid deel uit van Gods tuin. Ieder dient op zijn eigen plek: het Aanbidding & Muziekteam, het Onderwijsteam, het Media & Vertaalteam en de mensen die de samenkomsten en evenementen mogelijk maken. Ook de leiders van huiskringen en de jeugdleiders staan naast ons om de nieuwe generatie voor te bereiden op de toekomst. Wij geloven dit: wij tuinieren, maar alleen God geeft de groei en de vrucht.',
+  leder: 'Oprichters',
+  lederText:
+'Mantel van lof is ontstaan uit gebed, de leiding van de Heilige Geest en een diepe passie voor aanbidding. De oprichters, met jarenlange ervaring in aanbidding en kerkdienst, hebben samen met hun gezinnen deze bediening opgericht als een plek om God te ontmoeten, geestelijk te groeien en zowel Farsi-sprekende als internationale kerken te dienen. Wij weten uit eigen ervaring welke kracht ware aanbidding heeft – het vernieuwt harten, verandert levens en bouwt de Kerk op. De visie van Reda-ye Setayesh is om aanbidders toe te rusten en een nieuwe generatie leiders op te bouwen die geworteld zijn in Gods Woord en aanbidden in vrijheid en in de kracht van de Heilige Geest. Iedereen is welkom bij Reda-ye Setayesh – of je nu nieuw bent in aanbidding of al vele jaren ervaring hebt. Wij geloven dat aanbidding een roeping is voor al Gods kinderen, en dat Hij wil dat iedereen Zijn aanwezigheid in vrijheid ervaart. Wij zijn hier om elkaar te bemoedigen, samen te aanbidden en getuige te zijn van het nieuwe werk van God',
+};
 export default messages;

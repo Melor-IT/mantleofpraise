@@ -77,6 +77,30 @@ export default function JoinUs() {
         </div>
       </section>
 
+      <section className="secondary">
+        <div className="page-content">
+          <div>
+            <h2>
+              {formatMessage({
+                id: 'team',
+                defaultMessage: 'our team'
+              })}
+            </h2>
+
+            <p>
+              {formatMessage({
+                id: 'teamText',
+                defaultMessage: ''
+              })}
+            </p>
+          </div>
+          <div>
+            <div className=""></div>
+          </div>
+          <div className="botoje-gold"></div>
+        </div>
+      </section>
+
       <section className="botoje">
         <div className="page-content">
           <form style={{ marginBottom: '9rem' }} className="form-block" onSubmit={handleSubmit}>
@@ -176,9 +200,7 @@ export default function JoinUs() {
                 required
               />
               <span>
-                <a href="../../pdf/termsFa.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer">
+                <a href="../../pdf/termsFa.pdf" target="_blank" rel="noopener noreferrer">
                   {formatMessage({ id: 'agreeTerms' })}
                 </a>{' '}
               </span>

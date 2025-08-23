@@ -5,7 +5,7 @@ export default function AboutUs() {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="page join-us">
+    <div className="pag juin-us">
       <section>
         <BackgroundImage url="/images/join-us-banner.png" />
 
@@ -28,7 +28,8 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="secondary">
+
+      <section className="primary">
         <div className="page-content">
           <div>
             <h2>
@@ -41,6 +42,29 @@ export default function AboutUs() {
             <p>
               {formatMessage({
                 id: 'visenText',
+                defaultMessage:
+                  'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
+              })}
+            </p>
+          </div>
+          <div>
+            <div className="imageH&S"></div>
+          </div>
+        </div>
+      </section>
+      <section className="secondary">
+        <div className="page-content">
+          <div>
+            <h2>
+              {formatMessage({
+                id: 'leder',
+                defaultMessage: 'Our Vision'
+              })}
+            </h2>
+
+            <p>
+              {formatMessage({
+                id: 'lederText',
                 defaultMessage:
                   'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
               })}
