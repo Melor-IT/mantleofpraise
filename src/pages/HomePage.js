@@ -62,7 +62,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle">
-                <img src="/images/firstService.jpg" />
+                <img src="/images/firstService.jpg" alt="Equipping Worshipers"/>
               </div>
             </div>
             <div>
@@ -80,7 +80,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle ne">
-                <img src="/images/secondService.jpeg" />
+                <img src="/images/secondService.jpeg" alt="Nurturing Prophets" />
               </div>
             </div>
             <div>
@@ -98,7 +98,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle sw">
-                <img src="/images/thirdService.jpg" />
+                <img src="/images/thirdService.jpg" alt="Organizing Prayer and Worship Sessions" />
               </div>
             </div>
           </div>
