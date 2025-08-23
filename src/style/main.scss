@@ -290,7 +290,7 @@ footer {
   align-items: center;
   position: relative;
 
-  button {
+  .button {
     text-transform: uppercase;
     padding: .9rem 3rem;
     background: #000a;
@@ -301,6 +301,8 @@ footer {
     cursor: pointer;
     font-weight: bold;
     font-size: .9rem;
+    text-decoration: none;
+    text-align: center;
 
     &:hover {
       background: #000c;
@@ -345,7 +347,7 @@ footer {
     }
 
     &.botoje {
-      background-image: url('../../public/images/back1.jpg');
+      background-image: url('../../public/images/back2.jpg');
       background-size: 100% auto;
       background-repeat: repeat-y;
 
@@ -360,17 +362,8 @@ footer {
         z-index: 2;
       }
     }
-
-
   }
 
-  &.home {
-
-  }
-
-  &.join-us {
-
-  }
 }
 
 section {
@@ -399,9 +392,10 @@ section {
       right: unset;
       left: 1rem;
       bottom: 3rem;
+      width: 180px;
     }
 
-    button {
+    .button {
       margin-top: 5rem;
     }
 
@@ -417,12 +411,46 @@ section {
     }
   }
 
+  &.our-team {
+    background-color: #eee;
+
+    > .page-content {
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      padding: 2rem 3rem;
+    }
+
+    .circle {
+      flex: 1 0 58%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      background-color: #ccc;
+      padding: 4rem;
+      margin: -4rem 0;
+    }
+  }
+
   &.our-vision {
     > .page-content {
       gap: 3rem;
       align-items: center;
     }
   }
+
+  &.form {
+
+  }
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .botoje-white {
@@ -453,8 +481,10 @@ section {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 640px;
+  margin: 5rem auto;
+  border: .4rem solid #E4DAE5;
+  padding: 2rem;
 
   label {
     display: inline-flex;
@@ -567,6 +597,21 @@ section {
   }
 }
 
+.image-big {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: .3rem solid #fff;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+}
+
 @media (max-width: 1100px) {
   :root {
     font-size: 14px;
@@ -649,15 +694,46 @@ section {
   }
 
   section {
-
     &.banner {
-
       .page-content {
-
         > .botoje-white {
           bottom: 1rem;
           right: 1rem;
           width: 60px;
+        }
+      }
+    }
+
+    &.about-us {
+      .button {
+        margin-top: 5rem;
+      }
+
+      > .page-content {
+        flex-direction: column;
+        padding-bottom: calc(4rem + 150px);
+
+        .botoje-white {
+          width: 100px;
+          left: calc(50% - 50px);
+        }
+
+        > div {
+          flex: 1 0 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    &.our-team {
+      > .page-content {
+        flex-direction: column;
+        padding: 1rem;
+        overflow: hidden;
+
+        .circle {
+          margin: 0;
+          padding: 5rem;
         }
       }
     }

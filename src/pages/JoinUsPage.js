@@ -50,7 +50,7 @@ export default function JoinUs() {
 
   return (
     <div className="page join-us">
-      <section>
+      <section className="banner">
         <BackgroundImage url="/images/join-us-banner.png" />
 
         <div className="page-content">
@@ -77,9 +77,10 @@ export default function JoinUs() {
         </div>
       </section>
 
-      <section className="secondary">
+      <section className="our-team">
+
         <div className="page-content">
-          <div>
+          <div className="circle">
             <h2>
               {formatMessage({
                 id: 'team',
@@ -94,16 +95,19 @@ export default function JoinUs() {
               })}
             </p>
           </div>
-          <div>
-            <div className=""></div>
-          </div>
-          <div className="botoje-gold"></div>
+
+            <div className="image-big">
+              <img src="/images/family.jpg" alt="Hamid & Sima" />
+            </div>
+
+
         </div>
       </section>
 
-      <section className="botoje">
+      <section className="botoje form">
+
         <div className="page-content">
-          <form style={{ marginBottom: '9rem' }} className="form-block" onSubmit={handleSubmit}>
+          <form className="form-block" onSubmit={handleSubmit}>
             <label>
               <span className="title">{formatMessage({ id: 'firstName' })}</span>
               <input

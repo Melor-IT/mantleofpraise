@@ -1,5 +1,6 @@
 import { useIntl } from 'react-intl';
 import BackgroundImage from '../components/BackgroundImage';
+import { Link } from 'react-router-dom';
 
 export default function HomePage({ locale, setLocale }) {
   const { formatMessage } = useIntl();
@@ -107,7 +108,7 @@ export default function HomePage({ locale, setLocale }) {
       <section className="primary about-us">
         <div className="page-content">
           <div className="botoje-white"></div>
-          <div>
+          <div className="text-block">
             <h2>
               {formatMessage({
                 id: 'aboutUs',
@@ -122,19 +123,19 @@ export default function HomePage({ locale, setLocale }) {
             </p>
 
           </div>
-          <div>
+          <div className="text-block">
             <p>
               {formatMessage({
                 id: 'aboutUsSectionText',
                 defaultMessage: ''
               })}
             </p>
-            <button className="btn">
+            <Link className="button" to="/about-us">
               {formatMessage({
                 id: 'more',
                 defaultMessage: 'More'
               })}
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -157,12 +158,12 @@ export default function HomePage({ locale, setLocale }) {
                   'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
               })}
             </p>
-            <button className="btn">
+            <Link className="button" to="/about-us">
               {formatMessage({
                 id: 'more',
                 defaultMessage: 'More'
               })}
-            </button>
+            </Link>
           {/*</div>*/}
           {/*<div>*/}
           {/*  <div className="imagevision"></div>*/}

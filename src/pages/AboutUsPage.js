@@ -5,11 +5,11 @@ export default function AboutUs() {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="pag juin-us">
+    <div className="page juin-us">
       <section>
         <BackgroundImage url="/images/join-us-banner.png" />
 
-        <div className="page-content">
+        <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>
 
           <h3 style={{ marginTop: '2rem' }}>
@@ -28,11 +28,9 @@ export default function AboutUs() {
         </div>
       </section>
 
-
-      <section className="secondary our-vision">
-
+      <section className="secondary">
         <div className="page-content">
-          <div>
+          <div className="text-block">
             <h2>
               {formatMessage({
                 id: 'visen',
@@ -48,14 +46,13 @@ export default function AboutUs() {
               })}
             </p>
           </div>
-          <div>
-            <div className="imageH&S"></div>
-          </div>
+          <div></div>
         </div>
       </section>
+
       <section className="secondary">
         <div className="page-content">
-          <div>
+          <div className="text-block">
             <h2>
               {formatMessage({
                 id: 'leder',
@@ -71,9 +68,7 @@ export default function AboutUs() {
               })}
             </p>
           </div>
-          <div>
-            <div className="imageH&S"></div>
-          </div>
+          <div></div>
         </div>
       </section>
     </div>
