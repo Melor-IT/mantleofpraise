@@ -68,7 +68,27 @@ export default function AboutUs() {
               })}
             </p>
           </div>
-          <div></div>
+          <div className="team">
+              <div className="team-member">
+                  <img src="/images/hamid.jpg"/>
+                  <strong>Hamid Ghanbari</strong>
+              </div>
+
+              <div className="team-member">
+                  <img src="/images/sima.jpg"/>
+                  <strong>Sima Ghanbari</strong>
+              </div>
+
+            <div className="team-member">
+              <img src="/images/alireza.jpg"/>
+              <strong>Ali Reza Shayan</strong>
+            </div>
+
+            <div className="team-member">
+              <img src="/images/atena.jpg"/>
+              <strong>Atena Ghorbani</strong>
+            </div>
+          </div>
         </div>
       </section>
     </div>
