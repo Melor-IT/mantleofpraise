@@ -28,7 +28,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="secondary">
+      <section className="secondary our-vision">
         <div className="page-content">
           <div>
             <h2>
