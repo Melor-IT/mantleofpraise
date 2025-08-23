@@ -33,7 +33,7 @@ export default function JoinUs() {
     }
     console.log('Form submitted:', formData);
 
-    const response = await fetch('/.netlify/functions/send-email', {
+    const response = await fetch('https://www.ewcms.org/mantleofpraise/contact.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
