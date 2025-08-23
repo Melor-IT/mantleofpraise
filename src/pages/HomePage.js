@@ -98,7 +98,7 @@ export default function HomePage({ locale, setLocale }) {
                 })}
               </p>
               <div className="image-circle sw">
-                <img src="/public/images/thirdService.jpg" />
+                <img src="/images/thirdService.jpg" />
               </div>
             </div>
           </div>
