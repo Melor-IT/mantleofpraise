@@ -42,10 +42,10 @@ export default function JoinUs() {
     });
 
     if (response.ok) {
-    alert("Message sent!");
-  } else {
-    alert("Failed to send message.");
-  }
+      alert('Message sent!');
+    } else {
+      alert('Failed to send message.');
+    }
   };
 
   return (
@@ -62,8 +62,10 @@ export default function JoinUs() {
           </h1>
 
           <h3 style={{ marginTop: '2rem' }}>
-   {          formatMessage({
-              id: 'joinUsText', defaultMessage: 'And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.'
+            {formatMessage({
+              id: 'joinUsText',
+              defaultMessage:
+                'And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.'
             })}
           </h3>
           <h3>
@@ -113,12 +115,24 @@ export default function JoinUs() {
 
             <label>
               <span className="title">{formatMessage({ id: 'phone' })}</span>
-              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
             </label>
 
             <label>
               <span className="title">{formatMessage({ id: 'city' })}</span>
-              <input type="text" name="city" value={formData.city} onChange={handleChange} />
+              <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                required
+              />
             </label>
 
             <label>
@@ -129,12 +143,19 @@ export default function JoinUs() {
                 value={formData.church}
                 onChange={handleChange}
                 className="w-full border rounded p-2"
+                required
               />
             </label>
 
             <label>
               <span className="title">{formatMessage({ id: 'pastor' })}</span>
-              <input type="text" name="pastor" value={formData.pastor} onChange={handleChange} />
+              <input
+                type="text"
+                name="pastor"
+                value={formData.pastor}
+                onChange={handleChange}
+                required
+              />
             </label>
 
             <label>
@@ -143,7 +164,7 @@ export default function JoinUs() {
                 name="gifts"
                 value={formData.gifts}
                 onChange={handleChange}
-                rows="3"></textarea>
+                rows="3"></textarea>{' '}
             </label>
 
             <label className="checkbox">
@@ -152,8 +173,15 @@ export default function JoinUs() {
                 name="agreeTerms"
                 checked={formData.agreeTerms}
                 onChange={handleChange}
+                required
               />
-              <span>{formatMessage({ id: 'agreeTerms' })}</span>
+              <span>
+                <a href="../../pdf/termsFa.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                  {formatMessage({ id: 'agreeTerms' })}
+                </a>{' '}
+              </span>
             </label>
 
             <label className="checkbox">
@@ -162,6 +190,7 @@ export default function JoinUs() {
                 name="agreePrivacy"
                 checked={formData.agreePrivacy}
                 onChange={handleChange}
+                required
               />
               <span>{formatMessage({ id: 'agreePrivacy' })}</span>
             </label>

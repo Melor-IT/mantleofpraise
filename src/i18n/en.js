@@ -7,7 +7,7 @@ const messages = {
   aboutUs: 'About Us',
   visitingAddressTitle: 'Visiting Address',
   mailingAddressTitle: 'Mailing Address',
-  chamberOfCommerceTitle: 'Chamber of Commerce (KVK)',
+  chamberOfCommerceTitle: 'Chamber of Commerce',
   servicesTitle: 'Services',
   servicesText:
     'Every first and third Sunday of the month, church services take place on location. On Sundays without a physical gathering, the services will be held via Zoom.',

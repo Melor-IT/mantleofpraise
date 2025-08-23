@@ -8,7 +8,7 @@ const messages = {
   contact: 'Contact',
   visitingAddressTitle: 'Bezoekadres',
   mailingAddressTitle: 'Postadres',
-  chamberOfCommerceTitle: 'Kamer van Koophandel (KVK)',
+  chamberOfCommerceTitle: 'Kamer van Koophandel',
   servicesTitle: 'Diensten',
   servicesText:
     'Elke eerste en derde zondag van de maand vinden de kerkdiensten op locatie plaats. Op zondagen zonder fysieke bijeenkomst worden de diensten via Zoom gehouden.',
