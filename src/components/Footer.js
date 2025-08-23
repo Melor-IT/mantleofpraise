@@ -11,12 +11,15 @@ const Footer = ({ locale, setLocale }) => {
     <footer className="footer" style={footerStyle}>
       <div className="page-content">
         <div className="content-row message">
-          <h3>   {formatMessage({
-                id: 'footerText',
-                defaultMessage: 'footerText'
-              })}</h3>
+          <h3>
+            {' '}
+            {formatMessage({
+              id: 'footerText',
+              defaultMessage: 'footerText'
+            })}
+          </h3>
         </div>
-    <div className='botoje-gold'></div>
+        <div className="botoje-gold"></div>
         <div className="content-row">
           <div className="dark-glass">
             <h4>
@@ -33,7 +36,9 @@ const Footer = ({ locale, setLocale }) => {
                 defaultMessage: 'Email'
               })}
             </h4>
-            <p><a href="to:info@mantleofpraise.nl">info@mantleofpraise.nl</a></p>
+            <p>
+              <a href="to:info@mantleofpraise.nl">info@mantleofpraise.nl</a>
+            </p>
 
             <h4>
               {formatMessage({
@@ -43,8 +48,6 @@ const Footer = ({ locale, setLocale }) => {
             </h4>
             <p>97889539</p>
           </div>
-
-          
         </div>
       </div>
     </footer>
