@@ -51,7 +51,7 @@ export default function JoinUs() {
   return (
     <div className="page join-us">
       <section className="banner">
-        <BackgroundImage url="/images/join-us-banner.png" />
+        <BackgroundImage url="/images/juneUs.png" />
 
         <div className="page-content">
           <h1>

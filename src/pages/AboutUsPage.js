@@ -50,7 +50,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="secondary">
+      <section className="primary">
         <div className="page-content">
           <div className="text-block">
             <h2>
