@@ -11,13 +11,13 @@ const menuItems = [
 const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   return (
-    <header>
+    <header className="app-header">
       <div className="page-content">
         <div className="logo-full">
           <img src="/images/logo-mini.png" alt="Logo" />
           <img src="/images/rada-eng.png" alt="Logo" />
         </div>
-        
+
         <nav className="nav-menu" aria-label="Main navigation">
           {menuItems.map((item) => (
             <NavLink

@@ -29,7 +29,8 @@ export default function AboutUs() {
       </section>
 
 
-      <section className="primary">
+      <section className="secondary our-vision">
+
         <div className="page-content">
           <div>
             <h2>

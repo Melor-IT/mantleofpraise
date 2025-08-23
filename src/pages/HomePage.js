@@ -6,7 +6,7 @@ export default function HomePage({ locale, setLocale }) {
 
   return (
     <main className="page home">
-      <section>
+      <section className="banner">
         <BackgroundImage url="/images/home-banner.jpg" />
 
         <div className="page-content">
@@ -30,7 +30,7 @@ export default function HomePage({ locale, setLocale }) {
       <section className="secondary">
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
-          <div>
+          <header>
             <h2>
               {formatMessage({
                 id: 'ourMission',
@@ -43,15 +43,16 @@ export default function HomePage({ locale, setLocale }) {
                 defaultMessage: ''
               })}
             </p>
-          </div>
+          </header>
+
           <div className="services">
             <div>
-              <h2>
+              <h3>
                 {formatMessage({
                   id: 'firstService',
                   defaultMessage: 'Equipping Worshipers'
                 })}
-              </h2>
+              </h3>
               <p>
                 {formatMessage({
                   id: 'firstServiceText',
@@ -59,15 +60,17 @@ export default function HomePage({ locale, setLocale }) {
                     'Preparing and training members for service in churches and leading worship sessions.'
                 })}
               </p>
-              <div className="image"></div>
+              <div className="image-circle">
+                <img src="https://picsum.photos/300" />
+              </div>
             </div>
             <div>
-              <h2>
+              <h3>
                 {formatMessage({
                   id: 'secondService',
                   defaultMessage: 'Nurturing Prophets'
                 })}
-              </h2>
+              </h3>
               <p>
                 {formatMessage({
                   id: 'secondServiceText',
@@ -75,15 +78,17 @@ export default function HomePage({ locale, setLocale }) {
                     'Teaching, guiding, and supporting prophets for effective ministry in the body of Christ and prophetic flow. Worship combined with prophetic service and leading prayer sessions.'
                 })}
               </p>
-              <div className="image"></div>
+              <div className="image-circle ne">
+                <img src="https://picsum.photos/300" />
+              </div>
             </div>
             <div>
-              <h2>
+              <h3>
                 {formatMessage({
                   id: 'thirdService',
                   defaultMessage: 'Organizing Prayer and Worship Sessions'
                 })}
-              </h2>
+              </h3>
               <p>
                 {formatMessage({
                   id: 'thirdServiceText',
@@ -91,14 +96,17 @@ export default function HomePage({ locale, setLocale }) {
                     'Combining music and worship under the guidance of the Holy Spirit, inspired by the Bible (1 Samuel 10:5), and organizing worship and prayer meetings to strengthen the presence of the Lord.'
                 })}
               </p>
-              <div className="image"></div>
+              <div className="image-circle sw">
+                <img src="https://picsum.photos/300" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="primary">
+      <section className="primary about-us">
         <div className="page-content">
+          <div className="botoje-white"></div>
           <div>
             <h2>
               {formatMessage({
@@ -108,16 +116,16 @@ export default function HomePage({ locale, setLocale }) {
             </h2>
             <p>
               {formatMessage({
-                id: 'aboutUsSectionText',
+                id: 'aboutUsShortText',
                 defaultMessage: ''
               })}
             </p>
-            <div className="botoje-white"></div>
+
           </div>
           <div>
             <p>
               {formatMessage({
-                id: 'aboutUsShortText',
+                id: 'aboutUsSectionText',
                 defaultMessage: ''
               })}
             </p>
@@ -131,10 +139,10 @@ export default function HomePage({ locale, setLocale }) {
         </div>
       </section>
 
-      <section className="secondary">
+      <section className="secondary our-vision">
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
-          <div>
+          {/*<div>*/}
             <h2>
               {formatMessage({
                 id: 'visen',
@@ -155,10 +163,10 @@ export default function HomePage({ locale, setLocale }) {
                 defaultMessage: 'More'
               })}
             </button>
-          </div>
-          <div>
-            <div className="imagevision"></div>
-          </div>
+          {/*</div>*/}
+          {/*<div>*/}
+          {/*  <div className="imagevision"></div>*/}
+          {/*</div>*/}
         </div>
       </section>
     </main>
