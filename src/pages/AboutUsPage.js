@@ -76,7 +76,7 @@ export default function AboutUs() {
 
               <div className="team-member">
                   <img src="/images/sima.jpg"/>
-                  <strong>Sima Ghanbari</strong>
+                  <strong>Sima Sasanfar</strong>
               </div>
 
             <div className="team-member">
