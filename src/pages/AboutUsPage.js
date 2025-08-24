@@ -69,24 +69,29 @@ export default function AboutUs() {
             </p>
           </div>
           <div className="team">
-              <div className="team-member">
-                  <img src="/images/hamid.jpg" alt="Hamid Ghanbari"/>
-                  <strong>Hamid Ghanbari</strong>
-              </div>
-
-              <div className="team-member">
-                  <img src="/images/sima.jpg" alt="Sima Sasanfar" />
-                  <strong>Sima Sasanfar</strong>
-              </div>
+            <div className="team-member">
+              <img src="/images/hamid.jpg" alt="Hamid Ghanbari" />
+              <strong>Hamid Ghanbari</strong>
+            </div>
 
             <div className="team-member">
-              <img src="/images/alireza.jpg" alt="Ali Reza Shayan"/>
+              <img src="/images/sima.jpg" alt="Sima Sasanfar" />
+              <strong>Sima Sasanfar</strong>
+            </div>
+
+            <div className="team-member">
+              <img src="/images/alireza.jpg" alt="Ali Reza Shayan" />
               <strong>Ali Reza Shayan</strong>
             </div>
 
             <div className="team-member">
-              <img src="/images/atena.jpg" alt="Atena Ghorbani"/>
-              <strong>Atena Ghorbani</strong>
+              <img src="/images/atena.jpg" alt="Atena Gholami" />
+              <strong>Atena Gholami</strong>
+            </div>
+
+            <div className="team-member">
+              <img src="/images/homa.jpg" alt="Homa K Mohammadi" />
+              <strong>Homa k Mohammadi</strong>
             </div>
           </div>
         </div>

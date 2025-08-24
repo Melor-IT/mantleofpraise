@@ -35,16 +35,16 @@ const messages = {
   aboutUsTextOnder: '- Isaiah 61:1-3',
   ourMission: 'Our Mission',
   ourMissionText:
-    'We believe that worship is the language of heaven and a way to know the heart of God. Our goal is that through worship and prayer, believers may be united in faith and glorify the Lord with one voice. We desire God’s people not only to be refreshed in His presence but also to be equipped with clarity and strength to fulfill their mission in this world, so that the light of Christ may be reflected in their personal lives, in the church, and in society.',
+    'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our goal is that through worship and prayer, believers may be united in faith and with one voice praise the Lord. We desire that the people of God be renewed in His presence and equipped with fresh strength and courage to fulfill their divine mission in this world — a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
   firstService: 'Equipping Worshipers',
   firstServiceText:
     'Preparing and training members for service in churches and leading worship sessions.',
   secondService: 'Nurturing Prophets',
   secondServiceText:
-    'Teaching, guiding, and supporting prophets for effective ministry in the body of Christ and prophetic flow. Worship combined with prophetic service and leading prayer sessions.',
+    'Equipping the prophets was established with the purpose of training, guiding, and supporting prophetic ministers, so that they may serve effectively in the Body of Christ and move in the prophetic flow with freedom and accuracy.',
   thirdService: 'Organizing Prayer and Worship Sessions',
   thirdServiceText:
-    'Combining music and worship under the guidance of the Holy Spirit, inspired by the Bible (1 Samuel 10:5), and organizing worship and prayer meetings to strengthen the presence of the Lord.',
+    'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
   more: 'More',
   visen: 'Our Vision',
   visenText:
@@ -60,7 +60,7 @@ const messages = {
     'Bij Mantle of Praise zijn we niet zomaar een team; we zijn een familie. Samen aanbidden, leren, dienen en groeien we. De leiding van deze dienst wordt verzorgd door het leiderschapsteam en de geestelijke supervisie van de Levieten, maar de waarheid is dat wij allemaal een belangrijk onderdeel zijn van de Mantle of Praise-familie. Ieder van ons dient op zijn of haar plek: het aanbids- en muziekteam, het trainingsteam, en degenen die bijeenkomsten en evenementen organiseren. Ook jeugdleiders zijn bij ons om de volgende generatie voor te bereiden op de toekomst. Wij geloven: wij zijn instrumenten van dienst, maar groei en zegen komen alleen van God.',
   leder: 'Leadership Team',
   lederText:
-    'Mantle of Praise was born out of prayer, the leading of the Holy Spirit, and a deep passion for worship. The founders, together with their families and drawing on years of experience in worship and church ministry, established this ministry as a place to encounter God, grow spiritually, and serve both Farsi-speaking and international churches. We have experienced firsthand the power of true worship – it renews hearts, transforms lives, and builds the Church. The leadership team of Mantle of Praise is responsible for guiding all spiritual and operational activities of the ministry. This team consists of members with deep commitment and experience in worship and church service and makes key decisions for the growth and development of the ministry under the spiritual guidance of the Levites. Responsibilities of the leadership team include advancing policies and programs, coordinating worship and training teams, leading meetings and events, managing resources and budget, and supporting ministry members. Each leadership team member contributes with a devoted heart to creating a healthy, spiritual, and creative environment for worship and faith growth. The vision of Mantle of Praise is to equip worshippers and raise up a new generation of leaders who are rooted in God’s Word and who worship in the freedom and power of the Holy Spirit. At Mantle of Praise, everyone is welcome – whether you are new to worship or have years of experience. We believe worship is a calling for all of God’s children, and He desires that everyone experience His presence in freedom. Here, we encourage one another, worship together, and witness the fresh works of God.',
+    'The Leadership Team of Mantle of Praise, consisting of servants with experience and a deep commitment to worship and church ministry, is responsible for guiding all spiritual and practical activities of this ministry. In consultation with and under the spiritual oversight of the Levites, it develops and advances policies and programs, coordinates worship and training teams, leads gatherings and events, manages resources and budgets, and supports and cares for the members of the ministry, in order to create a healthy, spiritual, and creative environment for worship and the growth of faith.',
   aboutUsShortText:
     'We is more than a team; we are a family worshiping, learning, and serving together.',
   aboutUsSectionText:
