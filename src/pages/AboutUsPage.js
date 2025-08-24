@@ -70,22 +70,22 @@ export default function AboutUs() {
           </div>
           <div className="team">
               <div className="team-member">
-                  <img src="/images/hamid.jpg"/>
+                  <img src="/images/hamid.jpg" alt="Hamid Ghanbari"/>
                   <strong>Hamid Ghanbari</strong>
               </div>
 
               <div className="team-member">
-                  <img src="/images/sima.jpg"/>
+                  <img src="/images/sima.jpg" alt="Sima Sasanfar" />
                   <strong>Sima Sasanfar</strong>
               </div>
 
             <div className="team-member">
-              <img src="/images/alireza.jpg"/>
+              <img src="/images/alireza.jpg" alt="Ali Reza Shayan"/>
               <strong>Ali Reza Shayan</strong>
             </div>
 
             <div className="team-member">
-              <img src="/images/atena.jpg"/>
+              <img src="/images/atena.jpg" alt="Atena Ghorbani"/>
               <strong>Atena Ghorbani</strong>
             </div>
           </div>
