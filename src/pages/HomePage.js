@@ -115,14 +115,8 @@ export default function HomePage({ locale, setLocale }) {
                 defaultMessage: 'About Us'
               })}
             </h2>
-            <p>
-              {formatMessage({
-                id: 'aboutUsShortText',
-                defaultMessage: ''
-              })}
-            </p>
-
           </div>
+          
           <div className="text-block">
             <p>
               {formatMessage({
@@ -144,26 +138,26 @@ export default function HomePage({ locale, setLocale }) {
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
           {/*<div>*/}
-            <h2>
-              {formatMessage({
-                id: 'visen',
-                defaultMessage: 'Our Vision'
-              })}
-            </h2>
+          <h2>
+            {formatMessage({
+              id: 'visen',
+              defaultMessage: 'Our Vision'
+            })}
+          </h2>
 
-            <p>
-              {formatMessage({
-                id: 'visenText',
-                defaultMessage:
-                  'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
-              })}
-            </p>
-            <Link className="button" to="/about-us">
-              {formatMessage({
-                id: 'more',
-                defaultMessage: 'More'
-              })}
-            </Link>
+          <p>
+            {formatMessage({
+              id: 'visenText',
+              defaultMessage:
+                'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
+            })}
+          </p>
+          <Link className="button" to="/about-us">
+            {formatMessage({
+              id: 'more',
+              defaultMessage: 'More'
+            })}
+          </Link>
           {/*</div>*/}
           {/*<div>*/}
           {/*  <div className="imagevision"></div>*/}
