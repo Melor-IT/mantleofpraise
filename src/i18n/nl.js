@@ -55,8 +55,8 @@ const messages = {
   giftTextbibelOnder: '2 Korintiërs 9:7',
   team: 'Ons Team',
   teamText:
-    'At Mantel van lof, we are not just a team; we are a family. Together we worship, learn, serve, and grow. The leadership of this ministry is guided by the leadership team and the spiritual oversight of the Levites, but the truth is that we are all an essential part of the Mantel van lof family. Each of us serves in our place: the worship and music team, the training team, and those who organize meetings and events. Youth leaders also join us to prepare the next generation for the future. We believe: we are instruments of service, but growth and blessing come only from God.',
-  leder: 'Leiderschapsteam',
+"In Mantel van lof zijn wij niet slechts een team; wij zijn een geestelijke familie. Een familie die samen God aanbidt, van elkaar leert, hand in hand dient en dagelijks dieper groeit in het geloof.Hoewel de leiding van de bediening in handen is van het Leiderschapsteam en onder geestelijk toezicht van de Levieten plaatsvindt, is de waarheid dat ieder van ons een levend deel van dit Lichaam is. Iedereen dient op zijn of haar plaats, en samen bouwen wij de kerk op.", 
+ leder: 'Leiderschapsteam',
   lederText:
     'Het Leiderschapsteam van Reda-ye Setayesh, bestaande uit dienaren met ervaring en een diepe toewijding aan aanbidding en kerkelijke bediening, is verantwoordelijk voor de leiding van alle geestelijke en praktische activiteiten van deze bediening. In overleg en onder geestelijk toezicht van de Levieten ontwikkelt en bevordert het beleid en programma’s, coördineert het de aanbiddings- en onderwijsteams, leidt het bijeenkomsten en evenementen, beheert het middelen en budgetten en ondersteunt en begeleidt het de leden van de bediening, om zo een gezonde, geestelijke en creatieve omgeving voor aanbidding en geloofsgroei te scheppen.',
   ourMission: 'Onze missie',
