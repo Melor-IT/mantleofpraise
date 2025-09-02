@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <div className="page juin-us">
       <section>
-        <BackgroundImage url="/images/join-us-banner.png" />
+        <BackgroundImage url="/images/join-us-banner.png" className='aboutus'/>
 
         <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>

@@ -1,6 +1,6 @@
-const BackgroundImage = ({ url }) => (
+const BackgroundImage = ({ url, className = "" }) => (
   <div
-    className="background"
+    className={`background ${className}`}
     style={{
       backgroundImage: `url(${url})`,
     }}

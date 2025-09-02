@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
@@ -13,10 +14,14 @@ const Header = ({ locale, setLocale }) => {
   return (
     <header className="app-header">
       <div className="page-content">
+             <Link to="/">
         <div className="logo-full">
-          <img src="/images/logo-mini.png" alt="Logo" />
-          <img src="/images/rada-eng.png" alt="Logo" />
-        </div>
+     
+         
+            <img src="/images/logo-mini.png" alt="Logo" />
+            <img src="/images/rada-eng.png" alt="Logo" />
+         
+        </div> </Link>
 
         <nav className="nav-menu" aria-label="Main navigation">
           {menuItems.map((item) => (
@@ -32,7 +37,7 @@ const Header = ({ locale, setLocale }) => {
           ))}
         </nav>
 
-        <div className='lang-selector'>
+        <div className="lang-selector">
           <select
             id="language-select"
             className="language-select"
