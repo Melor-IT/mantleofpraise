@@ -29,7 +29,7 @@ export default function HomePage({ locale, setLocale }) {
       </section>
 
       <section className="secondary">
-        <BackgroundImage url="/images/back2.jpg" />
+        <BackgroundImage url="/images/back2.jpg" className='mission'/>
         <div className="page-content">
           <header>
             <h2>

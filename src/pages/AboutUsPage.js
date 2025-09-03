@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <div className="page juin-us">
       <section>
-        <BackgroundImage url="/images/join-us-banner.png" className='aboutus'/>
+        <BackgroundImage url="/images/join-us-banner.png" className="aboutus" />
 
         <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>
@@ -70,13 +70,13 @@ export default function AboutUs() {
           </div>
           <div className="team">
             <div className="team-member">
-              <img src="/images/hamid.jpg" alt="Hamid Ghanbari" />
-              <strong>Hamid Ghanbari</strong>
+              <img src="/images/sima.jpg" alt="Sima Sasanfar" />
+              <strong>Sima Sasanfar</strong>
             </div>
 
             <div className="team-member">
-              <img src="/images/sima.jpg" alt="Sima Sasanfar" />
-              <strong>Sima Sasanfar</strong>
+              <img src="/images/hamid.jpg" alt="Hamid Ghanbari" />
+              <strong>Hamid Ghanbari</strong>
             </div>
 
             <div className="team-member">

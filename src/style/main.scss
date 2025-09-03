@@ -333,7 +333,15 @@ footer {
       position: absolute;
       z-index: 1;
     }
-    
+
+    .background.aboutus {
+      filter: brightness(60%);
+    }
+
+    .background.mission {
+      background-size: unset;
+    }
+
     > .page-content {
       padding: 6rem 3rem;
     }
@@ -760,7 +768,8 @@ section {
 
         .circle {
           margin: 0;
-          padding: 5rem;
+          padding: 6rem;
+          aspect-ratio: 0/1;
         }
       }
     }
