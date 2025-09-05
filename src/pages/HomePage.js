@@ -47,6 +47,26 @@ export default function HomePage({ locale, setLocale }) {
           </header>
 
           <div className="services">
+
+              <div>
+              <h3>
+                {formatMessage({
+                  id: 'thirdService',
+                  defaultMessage: 'Organizing Prayer and Worship Sessions'
+                })}
+              </h3>
+              <p>
+                {formatMessage({
+                  id: 'thirdServiceText',
+                  defaultMessage:
+                    'Combining music and worship under the guidance of the Holy Spirit, inspired by the Bible (1 Samuel 10:5), and organizing worship and prayer meetings to strengthen the presence of the Lord.'
+                })}
+              </p>
+              <div className="image-circle sw">
+                <img src="/images/thirdService.jpg" alt="Organizing Prayer and Worship Sessions" />
+              </div>
+            </div>
+            
             <div>
               <h3>
                 {formatMessage({
@@ -83,24 +103,7 @@ export default function HomePage({ locale, setLocale }) {
                 <img src="/images/secondService.jpeg" alt="Nurturing Prophets" />
               </div>
             </div>
-            <div>
-              <h3>
-                {formatMessage({
-                  id: 'thirdService',
-                  defaultMessage: 'Organizing Prayer and Worship Sessions'
-                })}
-              </h3>
-              <p>
-                {formatMessage({
-                  id: 'thirdServiceText',
-                  defaultMessage:
-                    'Combining music and worship under the guidance of the Holy Spirit, inspired by the Bible (1 Samuel 10:5), and organizing worship and prayer meetings to strengthen the presence of the Lord.'
-                })}
-              </p>
-              <div className="image-circle sw">
-                <img src="/images/thirdService.jpg" alt="Organizing Prayer and Worship Sessions" />
-              </div>
-            </div>
+          
           </div>
         </div>
       </section>

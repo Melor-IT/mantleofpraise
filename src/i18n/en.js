@@ -35,13 +35,12 @@ const messages = {
   aboutUsTextOnder: '- Isaiah 61:1-3',
   ourMission: 'Our Mission',
   ourMissionText:
-    'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our goal is that through worship and prayer, believers may be united in faith and with one voice praise the Lord. We desire that the people of God be renewed in His presence and equipped with fresh strength and courage to fulfill their divine mission in this world — a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
-  firstService: 'Equipping Worshipers',
-  firstServiceText:
-    'Preparing and training members for service in churches and leading worship sessions.',
-  secondService: 'Nurturing Prophets',
+    'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our aim is that through worship and prayer, believers may be united in faith and with one voice exalt the Lord. Our vision and mission is the unity of believers in the spirit of worship. We desire that God’s people be renewed in His presence and equipped with His power and strength to fulfill their divine mission in this world—a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
+  firstService: 'Worship and Worshipers',
+  firstServiceText: 'We provide a platform for you to serve as a worshipper in worship gatherings.',
+  secondService: 'Prophecy and Prophets',
   secondServiceText:
-    'Equipping the prophets was established with the purpose of training, guiding, and supporting prophetic ministers, so that they may serve effectively in the Body of Christ and move in the prophetic flow with freedom and accuracy.',
+    'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
   thirdService: 'Organizing Prayer and Worship Sessions',
   thirdServiceText:
     'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
@@ -67,7 +66,7 @@ const messages = {
     'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service. We believe that every individual, with their unique gifts and heart, can play a distinct role in advancing faith and divine love. Our activities include worship and music, training, and organizing meetings and events, all coordinated under the leadership team and the spiritual guidance of the Levites. Alongside youth leaders, we prepare the next generation for a fruitful future and a life reflecting the light of Christ. Mantle of Praise is a place where people grow together, share experiences, and learn how to manifest God’s light in their personal lives and communities. We are instruments of service, but every blessing and growth we witness comes solely from God.',
   sima: 'Sima Sasanfar',
   hamid: 'Hamid Ghanbari',
-  alireza: 'Ali Reza Shayan',
+  alireza: 'Alireza Shayan',
   atena: 'Atena Gholami',
   homa: 'Homa Mohammadi'
 };

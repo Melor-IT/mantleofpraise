@@ -34,12 +34,12 @@ const messages = {
   aboutUsText:
     'De Geest van de Heere is op mij, want de HEERE heeft mij gezalfd om goede tijding te brengen aan de ootmoedigen, om de gebrokenen van hart te genezen, vrijheid uit te roepen voor gevangenen en opening van de gevangenis voor wie gebonden zijn; om het jaar van het welbehagen van de HEERE en de dag van de wraak van onze God te verkondigen; om allen die treuren te troosten, hun schoonheid voor as te geven, vreugde-olie voor rouw, en een kleed van lof voor een verslagen geest; opdat zij genoemd worden eiken van gerechtigheid, een planting van de HEERE, tot Zijn verheerlijking.',
   aboutUsTextOnder: '- Jesaja 61:1-3',
-  firstService: 'Uitrusten van aanbidders',
+  firstService: 'aanbidding en aanbidders',
   firstServiceText:
-    'Voorbereiden en trainen van leden voor dienst in kerken en het leiden van aanbiddingssessies.',
-  secondService: 'Opvoeden van profeten',
+    'Wij bieden een platform voor uw dienst als aanbidder in aanbiddingsbijeenkomsten',
+  secondService: 'Profetie en profeten',
   secondServiceText:
-    'De toerusting van profeten is ontstaan met het doel om profetische bedienaren te onderwijzen, te leiden en te ondersteunen, zodat zij effectief kunnen dienen in het Lichaam van Christus en zich in de profetische stroom met vrijheid en nauwkeurigheid kunnen bewegen.',
+    'Aanbidding en profetie vullen elkaar aan, en deze bediening biedt de basis voor de openbaring van profetie en de bediening van de profeten naast aanbidding.',
   thirdService: 'Organiseren van gebeds- en aanbiddingssessies',
   thirdServiceText:
     'In Mantel van lof zijn de gebeds- en aanbiddingsbijeenkomsten een plaats waar harten in Gods aanwezigheid verenigd worden. Door muziek en aanbidding te combineren onder leiding van de Heilige Geest, en geïnspireerd door het Woord van God in 1 Samuël 10:5, bieden deze samenkomsten een gelegenheid voor het volk van God om Hem met één stem te verheerlijken.',
@@ -61,14 +61,14 @@ const messages = {
     'Het Leiderschapsteam van Reda-ye Setayesh, bestaande uit dienaren met ervaring en een diepe toewijding aan aanbidding en kerkelijke bediening, is verantwoordelijk voor de leiding van alle geestelijke en praktische activiteiten van deze bediening. In overleg en onder geestelijk toezicht van de Levieten ontwikkelt en bevordert het beleid en programma’s, coördineert het de aanbiddings- en onderwijsteams, leidt het bijeenkomsten en evenementen, beheert het middelen en budgetten en ondersteunt en begeleidt het de leden van de bediening, om zo een gezonde, geestelijke en creatieve omgeving voor aanbidding en geloofsgroei te scheppen.',
   ourMission: 'Onze missie',
   ourMissionText:
-    'Wij geloven dat aanbidding en gebed de taal van de hemel zijn en een weg om het hart van God te leren kennen. Ons doel is dat gelovigen door aanbidding en gebed in geloof verenigd worden en met één stem de Heer loven. Wij willen dat het volk van God in Zijn aanwezigheid vernieuwd wordt en met nieuwe kracht en moed toegerust wordt om hun goddelijke roeping in deze wereld te vervullen — een roeping waarin het licht van Christus weerspiegeld wordt in het persoonlijke leven, in de kerk en in de samenleving.',
+    'Wij geloven dat aanbidding en gebed de taal van de hemel zijn en een weg om het hart van God te kennen. Ons doel is dat gelovigen door aanbidding en gebed in geloof verenigd worden en met één stem de Heer verheerlijken. Onze visie en missie is de eenheid van gelovigen in de geest van aanbidding. Wij verlangen dat het volk van God vernieuwd wordt in Zijn aanwezigheid en toegerust met Zijn kracht en sterkte om hun goddelijke opdracht in deze wereld te volbrengen—een opdracht waarin het licht van Christus weerspiegeld wordt in het persoonlijke leven, in de kerk en in de samenleving.',
   aboutUsShortText:
     'Wij zijn meer dan een team; wij zijn een familie die samen aanbidt, leert en dient.',
   aboutUsSectionText:
     'Mantel van lof was born out of prayer, the guidance of the Holy Spirit, and a deep passion for worship. The founders, together with their families and with years of experience in worship and church ministry, established this ministry to be a place where the presence of God can be encountered, where spiritual growth takes place, and where churches—both Persian-speaking and international—are served. Time and again, we have experienced the power of true worship; a worship that renews hearts, transforms lives, and builds up the church.',
   sima: 'Sima Sasanfar',
   hamid: 'Hamid Ghanbari',
-  alireza: 'Ali Reza Shayan',
+  alireza: 'Alireza Shayan',
   atena: 'Atena Gholami',
   homa: 'Homa Mohammadi'
 };
