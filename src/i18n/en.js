@@ -36,13 +36,13 @@ const messages = {
   ourMission: 'Our Mission',
   ourMissionText:
     'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our aim is that through worship and prayer, believers may be united in faith and with one voice exalt the Lord. Our vision and mission is the unity of believers in the spirit of worship. We desire that God’s people be renewed in His presence and equipped with His power and strength to fulfill their divine mission in this world—a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
-  firstService: 'Worship and Worshipers',
-  firstServiceText: 'We provide a platform for you to serve as a worshipper in worship gatherings.',
-  secondService: 'Prophecy and Prophets',
-  secondServiceText:
-    'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
-  thirdService: 'Organizing Prayer and Worship Sessions',
+  secondService: 'Worship and Worshipers',
+  secondServiceText: 'We provide a platform for you to serve as a worshipper in worship gatherings.',
+  thirdService: 'Prophecy and Prophets',
   thirdServiceText:
+    'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
+  firstService: 'Organizing Prayer and Worship Sessions',
+  firstServiceText:
     'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
   more: 'More',
   visen: 'Our Vision',
