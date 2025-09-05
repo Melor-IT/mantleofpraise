@@ -12,7 +12,7 @@ export default function AboutUs() {
         <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>
 
-          <h3 style={{ marginTop: '2rem' }}>
+          <h3 className='page-intro'>
             {formatMessage({
               id: 'aboutUsText',
               defaultMessage: 'The Spirit of the Lord GOD is upon me ...'
@@ -71,27 +71,54 @@ export default function AboutUs() {
           <div className="team">
             <div className="team-member">
               <img src="/images/sima.jpg" alt="Sima Sasanfar" />
-              <strong>Sima Sasanfar</strong>
+              <strong>
+                {formatMessage({
+                  id: 'sima',
+                  defaultMessage: 'Sima Sasanfar'
+                })}
+              </strong>
             </div>
 
             <div className="team-member">
               <img src="/images/hamid.jpg" alt="Hamid Ghanbari" />
-              <strong>Hamid Ghanbari</strong>
+              <strong>
+                {formatMessage({
+                  id: 'hamid',
+                  defaultMessage: 'Hamid Ghanbari'
+                })}
+              </strong>
             </div>
 
             <div className="team-member">
               <img src="/images/alireza.jpg" alt="Ali Reza Shayan" />
-              <strong>Ali Reza Shayan</strong>
+              <strong>
+                {formatMessage({
+                  id: 'alireza',
+                  defaultMessage: 'Ali Reza Shayan'
+                })}
+              </strong>
             </div>
 
             <div className="team-member">
               <img src="/images/atena.jpg" alt="Atena Gholami" />
-              <strong>Atena Gholami</strong>
+              <strong>
+                {' '}
+                {formatMessage({
+                  id: 'atena',
+                  defaultMessage: 'Atena Gholami'
+                })}
+              </strong>
             </div>
 
             <div className="team-member">
               <img src="/images/homa.jpg" alt="Homa K Mohammadi" />
-              <strong>Homa k Mohammadi</strong>
+              <strong>
+                {' '}
+                {formatMessage({
+                  id: 'homa',
+                  defaultMessage: 'Homa Mohammadi'
+                })}
+              </strong>
             </div>
           </div>
         </div>

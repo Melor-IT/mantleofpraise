@@ -64,6 +64,11 @@ const messages = {
   aboutUsShortText:
     'We is more than a team; we are a family worshiping, learning, and serving together.',
   aboutUsSectionText:
-    'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service. We believe that every individual, with their unique gifts and heart, can play a distinct role in advancing faith and divine love. Our activities include worship and music, training, and organizing meetings and events, all coordinated under the leadership team and the spiritual guidance of the Levites. Alongside youth leaders, we prepare the next generation for a fruitful future and a life reflecting the light of Christ. Mantle of Praise is a place where people grow together, share experiences, and learn how to manifest God’s light in their personal lives and communities. We are instruments of service, but every blessing and growth we witness comes solely from God.'
+    'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service. We believe that every individual, with their unique gifts and heart, can play a distinct role in advancing faith and divine love. Our activities include worship and music, training, and organizing meetings and events, all coordinated under the leadership team and the spiritual guidance of the Levites. Alongside youth leaders, we prepare the next generation for a fruitful future and a life reflecting the light of Christ. Mantle of Praise is a place where people grow together, share experiences, and learn how to manifest God’s light in their personal lives and communities. We are instruments of service, but every blessing and growth we witness comes solely from God.',
+  sima: 'Sima Sasanfar',
+  hamid: 'Hamid Ghanbari',
+  alireza: 'Ali Reza Shayan',
+  atena: 'Atena Gholami',
+  homa: 'Homa Mohammadi'
 };
 export default messages;

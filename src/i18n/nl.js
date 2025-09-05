@@ -65,6 +65,11 @@ const messages = {
   aboutUsShortText:
     'Wij zijn meer dan een team; wij zijn een familie die samen aanbidt, leert en dient.',
   aboutUsSectionText:
-    'Mantel van lof was born out of prayer, the guidance of the Holy Spirit, and a deep passion for worship. The founders, together with their families and with years of experience in worship and church ministry, established this ministry to be a place where the presence of God can be encountered, where spiritual growth takes place, and where churches—both Persian-speaking and international—are served. Time and again, we have experienced the power of true worship; a worship that renews hearts, transforms lives, and builds up the church.'
+    'Mantel van lof was born out of prayer, the guidance of the Holy Spirit, and a deep passion for worship. The founders, together with their families and with years of experience in worship and church ministry, established this ministry to be a place where the presence of God can be encountered, where spiritual growth takes place, and where churches—both Persian-speaking and international—are served. Time and again, we have experienced the power of true worship; a worship that renews hearts, transforms lives, and builds up the church.',
+  sima: 'Sima Sasanfar',
+  hamid: 'Hamid Ghanbari',
+  alireza: 'Ali Reza Shayan',
+  atena: 'Atena Gholami',
+  homa: 'Homa Mohammadi'
 };
 export default messages;

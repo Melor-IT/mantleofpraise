@@ -61,7 +61,7 @@ export default function JoinUs() {
             })}
           </h1>
 
-          <h3 style={{ marginTop: '2rem' }}>
+          <h3 className='page-intro'>
             {formatMessage({
               id: 'joinUsText',
               defaultMessage:

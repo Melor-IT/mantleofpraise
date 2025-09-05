@@ -31,7 +31,7 @@ export default function HomePage({ locale, setLocale }) {
       <section className="secondary">
         <BackgroundImage url="/images/back2.jpg" className='mission'/>
         <div className="page-content">
-          <header>
+          <header className="missionus">
             <h2>
               {formatMessage({
                 id: 'ourMission',

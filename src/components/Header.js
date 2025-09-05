@@ -14,14 +14,15 @@ const Header = ({ locale, setLocale }) => {
   return (
     <header className="app-header">
       <div className="page-content">
-             <Link to="/">
-        <div className="logo-full">
-     
-         
+        <Link to="/">
+          <div className="logo-full">
             <img src="/images/logo-mini.png" alt="Logo" />
-            <img src="/images/rada-eng.png" alt="Logo" />
-         
-        </div> </Link>
+            <img
+              src={locale === 'fa' ? '/images/rada-farsi.png' : '/images/rada-eng.png'}
+              alt="Logo"
+            />
+          </div>{' '}
+        </Link>
 
         <nav className="nav-menu" aria-label="Main navigation">
           {menuItems.map((item) => (
