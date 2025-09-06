@@ -135,11 +135,11 @@ export default function HomePage({ locale, setLocale }) {
           </div>
         </div>
       </section>
-
+{/* 
       <section className="secondary our-vision">
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
-          {/*<div>*/}
+     
           <h2>
             {formatMessage({
               id: 'visen',
@@ -160,12 +160,13 @@ export default function HomePage({ locale, setLocale }) {
               defaultMessage: 'More'
             })}
           </Link>
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*  <div className="imagevision"></div>*/}
-          {/*</div>*/}
+     
         </div>
-      </section>
+
+      </section> */}
+
+
+      
     </main>
   );
 }

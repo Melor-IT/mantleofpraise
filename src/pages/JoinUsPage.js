@@ -76,7 +76,7 @@ export default function JoinUs() {
           </h3>
         </div>
       </section>
-
+{/* 
       <section className="our-team">
 
         <div className="page-content">
@@ -102,7 +102,7 @@ export default function JoinUs() {
 
 
         </div>
-      </section>
+      </section> */}
 
       <section className="botoje form">
 
