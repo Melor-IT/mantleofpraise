@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
+  { to: '/our-vision', id: 'ourVision', defaultMessage: 'Our Vision' },
+  { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' },
   // { to: '/gallery', id: 'gallery', defaultMessage: 'Gallery' },
-  { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' },
-  { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' }
+  { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' }
 ];
 
 const Header = ({ locale, setLocale }) => {

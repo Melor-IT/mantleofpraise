@@ -8,8 +8,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
+import OurVisionPage from "./pages/OurVisionPage";
 import JoinUsPage from "./pages/JoinUsPage";
-import "./style/main.scss";
+import "./style/main.css";
 
 const messages = {
   en: enMessages,
@@ -40,6 +41,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/join-us" element={<JoinUsPage />} />
+              <Route path="/our-vision" element={<OurVisionPage />} />
+              {/* <Route path="/gallery" element={<GalleryPage />} /> */}
             </Routes>
           </main>
           <Footer />

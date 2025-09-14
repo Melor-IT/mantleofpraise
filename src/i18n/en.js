@@ -41,11 +41,11 @@ const messages = {
   thirdService: 'Prophecy and Prophets',
   thirdServiceText:
     'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
-  firstService: 'Organizing Prayer and Worship Sessions',
+  firstService: 'Worship gatherings',
   firstServiceText:
-    'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
+    'In Mantle of Praise, the prayer and worship gatherings are a place where hearts unite in the presence of God.',
   more: 'More',
-  visen: 'Our Vision',
+  ourVision: 'Our Vision',
   visenText:
     'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.',
   giftText:

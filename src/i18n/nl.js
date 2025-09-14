@@ -39,13 +39,13 @@ const messages = {
     'Wij bieden een platform voor uw dienst als aanbidder in aanbiddingsbijeenkomsten',
   secondService: 'Profetie en profeten',
   secondServiceText:
-    'Aanbidding en profetie vullen elkaar aan, en deze bediening biedt de basis voor de openbaring van profetie en de bediening van de profeten naast aanbidding.',
-  thirdService: 'Organiseren van gebeds- en aanbiddingssessies',
+    'Wij bieden een platform waar u als aanbidder kunt dienen in de aanbiddingsbijeenkomsten',
+  thirdService: 'Aanbiddingsbijeenkomsten',
   thirdServiceText:
-    'In Mantel van lof zijn de gebeds- en aanbiddingsbijeenkomsten een plaats waar harten in Gods aanwezigheid verenigd worden. Door muziek en aanbidding te combineren onder leiding van de Heilige Geest, en geïnspireerd door het Woord van God in 1 Samuël 10:5, bieden deze samenkomsten een gelegenheid voor het volk van God om Hem met één stem te verheerlijken.',
+    'In Mantel van lof zijn de gebeds- en aanbiddingsbijeenkomsten een plaats waar harten zich verenigen in Gods aanwezigheid.',
   more: 'meer',
-  visen: 'Onze Visie',
-  visenText:
+  ourVision: 'Onze Visie',
+  ourVisionText:
     'Onze visie is het vormen van een inspirerende gemeenschap van aanbidders en profeten die, door middel van muziek en aanbidding vervuld met de leiding van de Heilige Geest, het licht en de aanwezigheid van God in kerken verspreiden, elk hart wekken en genezen, en een levendige, diepe en blijvende ervaring van verbinding met de Heer creëren voor elk individu en elke gemeente.',
   giftText:
     'Wij nodigen u uit om met een dankbaar hart en standvastig geloof deel te nemen, zodat de naam van de Heer onder de volken verheerlijkt wordt.',
