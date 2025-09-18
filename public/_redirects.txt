@@ -1,0 +1,10 @@
+# مسیرهای حساس → 404
+/.env      /404  404
+/.git/*    /404  404
+/backup/*  /404  404
+/config/*  /404  404
+/debug/*   /404  404
+/private/* /404  404
+
+# برای React SPA → همیشه index.html رو بده
+/*    /index.html   200
