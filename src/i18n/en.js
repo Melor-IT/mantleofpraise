@@ -37,7 +37,8 @@ const messages = {
   ourMissionText:
     'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our aim is that through worship and prayer, believers may be united in faith and with one voice exalt the Lord. Our vision and mission is the unity of believers in the spirit of worship. We desire that God’s people be renewed in His presence and equipped with His power and strength to fulfill their divine mission in this world—a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
   secondService: 'Worship and Worshipers',
-  secondServiceText: 'We provide a platform for you to serve as a worshipper in worship gatherings.',
+  secondServiceText:
+    'We provide a platform for you to serve as a worshipper in worship gatherings.',
   thirdService: 'Prophecy and Prophets',
   thirdServiceText:
     'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
@@ -64,10 +65,20 @@ const messages = {
     'We is more than a team; we are a family worshiping, learning, and serving together.',
   aboutUsSectionText:
     'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service. We believe that every individual, with their unique gifts and heart, can play a distinct role in advancing faith and divine love. Our activities include worship and music, training, and organizing meetings and events, all coordinated under the leadership team and the spiritual guidance of the Levites. Alongside youth leaders, we prepare the next generation for a fruitful future and a life reflecting the light of Christ. Mantle of Praise is a place where people grow together, share experiences, and learn how to manifest God’s light in their personal lives and communities. We are instruments of service, but every blessing and growth we witness comes solely from God.',
-  sima: 'Sima Sasanfar',
+  sima: 'Dr. Sima Sasanfar',
+  chairperson: 'Chairperson',
   hamid: 'Hamid Ghanbari',
+  secretary: 'Secretary',
   alireza: 'Alireza Shayan',
   atena: 'Atena Gholami',
-  homa: 'Homa Mohammadi'
+  homa: 'Homa Mohammadi',
+  Kazem: 'Shepherd Kazem Dehghani',
+  treasurer: 'Treasurer',
+  babak: 'Shepherd Babak Zeynali',
+  kamil: 'Senior Pastor Kamil Navai',
+  advisoryBoardMember: 'Advisory Board Member',
+  supervisoryCommission: 'Supervisory Commission',
+  supervisoryCommissionText:
+    'The Supervisory Commission of the Reda-ye Setayesh Service Organization is composed of Levites from the member churches. Its responsibility is to oversee the spiritual integrity of the organization, provide pastoral and spiritual support to its members and activities, and ensure that the organization operates within biblical principles.'
 };
 export default messages;

@@ -47,6 +47,9 @@ const Footer = ({ locale, setLocale }) => {
               })}
             </h4>
             <p>97889539</p>
+
+            <h4> RSIN </h4>
+            <p>868276972</p>
           </div>
         </div>
       </div>

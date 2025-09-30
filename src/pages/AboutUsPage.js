@@ -12,7 +12,7 @@ export default function AboutUs() {
         <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>
 
-          <h3 className='page-intro'>
+          <h3 className="page-intro">
             {formatMessage({
               id: 'aboutUsText',
               defaultMessage: 'The Spirit of the Lord GOD is upon me ...'
@@ -54,6 +54,13 @@ export default function AboutUs() {
                   defaultMessage: 'Sima Sasanfar'
                 })}
               </strong>
+
+              <p>
+                {formatMessage({
+                  id: 'chairperson',
+                  defaultMessage: 'Chairperson'
+                })}
+              </p>
             </div>
 
             <div className="team-member">
@@ -64,6 +71,12 @@ export default function AboutUs() {
                   defaultMessage: 'Hamid Ghanbari'
                 })}
               </strong>
+              <p>
+                {formatMessage({
+                  id: 'secretary',
+                  defaultMessage: 'Secretary'
+                })}
+              </p>
             </div>
 
             <div className="team-member">
@@ -96,6 +109,70 @@ export default function AboutUs() {
                   defaultMessage: 'Homa Mohammadi'
                 })}
               </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="secondary">
+        <div className="page-content">
+          <div className="text-block">
+            <h2>
+              {formatMessage({
+                id: 'supervisoryCommission',
+                defaultMessage: 'OSupervisory Commission'
+              })}
+            </h2>
+
+            <p>
+              {formatMessage({
+                id: 'supervisoryCommissionText',
+                defaultMessage: `The Supervisory Commission of the Reda-ye Setayesh Service Organization is composed of Levites from the member churches. Its responsibility is to oversee the spiritual integrity of the organization, provide pastoral and spiritual support to its members and activities, and ensure that the organization operates within biblical principles.`
+              })}
+            </p>
+          </div>
+          <div className="team">
+            <div className="team-member">
+              <img src="/images/kamil.jpg" alt="Kamil Navai" />
+              <strong>
+                {formatMessage({
+                  id: 'kamil',
+                  defaultMessage: 'Pastor Kamil Navai'
+                })}
+              </strong>
+
+              <p>
+                {formatMessage({
+                  id: 'advisoryBoardMember',
+                  defaultMessage: 'Advisory Board Member'
+                })}
+              </p>
+            </div>
+
+            <div className="team-member">
+              <img src="/images/babak.jpg" alt="Babak Zeynalie" />
+              <strong>
+                {formatMessage({
+                  id: 'babak',
+                  defaultMessage: ''
+                })}
+              </strong>
+            </div>
+
+            <div className="team-member">
+              <img src="/images/kazem.jpg" alt="Kazem Dehghanie" />
+              <strong>
+                {' '}
+                {formatMessage({
+                  id: 'Kazem',
+                  defaultMessage: 'Kazem Dehghanie'
+                })}
+              </strong>
+              <p>
+                {formatMessage({
+                  id: 'treasurer',
+                  defaultMessage: 'Treasurer'
+                })}
+              </p>
             </div>
           </div>
         </div>
