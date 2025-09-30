@@ -22,18 +22,15 @@ html,
 }
 
 .app {
-  &.ltr {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-  }
-
   &.rtl {
     font-family: 'Vazirmatn', Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+    }
   }
 }
 
@@ -411,6 +408,7 @@ section {
       > .botoje-white {
         bottom: 3rem;
         width: 150px;
+
         .app.ltr & {
           right: 3rem;
           left: auto;
@@ -798,6 +796,7 @@ section {
           right: 1rem;
           width: 60px;
         }
+
         h2,
         h1 {
           padding: 0 2rem;
@@ -818,6 +817,7 @@ section {
         }
       }
     }
+
     &.about-us {
       .button {
         margin-top: 5rem;
