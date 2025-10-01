@@ -80,6 +80,67 @@ const messages = {
   advisoryBoardMember: 'Adviseurend',
   supervisoryCommission: 'Toezichtscommissie',
   supervisoryCommissionText:
-    'De Toezichtscommissie van de organisatie Reda-ye Setayesh bestaat uit Levieten van aangesloten kerken. Haar taak is het toezien op de geestelijke integriteit van de organisatie, het bieden van pastorale en geestelijke ondersteuning aan de leden en activiteiten, en het waarborgen dat de organisatie handelt binnen bijbelse principes.'
+    'De Toezichtscommissie van de organisatie Reda-ye Setayesh bestaat uit Levieten van aangesloten kerken. Haar taak is het toezien op de geestelijke integriteit van de organisatie, het bieden van pastorale en geestelijke ondersteuning aan de leden en activiteiten, en het waarborgen dat de organisatie handelt binnen bijbelse principes.',
+  ANBIInformation: 'ANBI Informatie',
+  ourVision: 'Onze Visie',
+  ourVisionText:
+    'Onze visie is het ervaren van ware eenheid in de aanbidding van de Heer; een plaats waar harten, stemmen en levens in Zijn aanwezigheid één worden. Wij geloven dat de taal van de hemel niets anders is dan eenheid in aanbidding, en wanneer het volk van God met één hart Hem aanbidt, wordt Zijn aanwezigheid geopenbaard en wordt de hemel op aarde weerspiegeld. Onze visie is het zien van een generatie die in de liefde en aanbidding van Christus verenigd is en samen Zijn naam verheerlijkt.',
+  beleidsplanTitle: 'Beleidsplan Stichting Mantle of Praise',
+
+  // Section 1 – Goals
+  policyGoalsTitle: '1. Doelstelling van de instelling',
+  policyGoalsIntro: 'De organisatie Stichting Mantle of Praise heeft als doel:',
+  policyGoals1: 'Het bevorderen van christelijke aanbidding en geestelijke vorming.',
+  policyGoals2: 'Het opleiden en begeleiden van aanbidders, muzikanten en geestelijke leiders.',
+  policyGoals3:
+    'Het ondersteunen van kerken en christelijke gemeenschappen door middel van aanbidding, onderwijs en samenwerking.',
+
+  // Section 2 – Activities
+  policyActivitiesTitle: '2. Activiteiten om dit doel te bereiken',
+  policyActivities1: 'Het organiseren van aanbidding bijeenkomsten, conferenties en trainingen.',
+  policyActivities2:
+    'Het ontwikkelen en beschikbaar stellen van liederen, materialen en hulpmiddelen voor aanbidding.',
+  policyActivities3: 'Het geven van onderwijs en begeleiding aan leden en deelnemers.',
+  policyActivities4: 'Het bevorderen van samenwerking tussen kerken en christelijke organisaties.',
+
+  // Section 3 – Income
+  policyIncomeTitle: '3. Inkomstenbronnen',
+  policyIncomeIntro: 'De inkomsten van de organisatie bestaan uit:',
+  policyIncome1: 'Vrijwillige bijdragen en donaties van particulieren en kerken.',
+  policyIncome2: 'Collecten en giften tijdens bijeenkomsten en evenementen.',
+  policyIncome3: 'Eventuele bijdragen van samenwerkende organisaties of fondsen.',
+
+  // Section 4 – Expenses
+  policyExpensesTitle: '4. Besteding van de middelen',
+  policyExpensesIntro: 'De bestedingen van de organisatie zijn gericht op:',
+  policyExpenses1: 'Het organiseren van activiteiten en evenementen.',
+  policyExpenses2: 'Onderwijs, training en begeleiding van leden en deelnemers.',
+  policyExpenses3: 'Aanschaf van muziekinstrumenten, apparatuur en materialen.',
+  policyExpenses4: 'Ondersteuning van kerken en bedieningen.',
+  policyExpenses5: 'Algemene beheers- en organisatiekosten.',
+
+  // Section 5 – Asset Management
+  policyAssetsTitle: '5. Beheer van het vermogen',
+  policyAssetsText:
+    'Het vermogen van de organisatie wordt zorgvuldig en transparant beheerd door het bestuur, conform de statuten en onder toezicht van de penningmeester en de commissie met toezicht. De middelen worden uitsluitend besteed aan de verwezenlijking van de doelstellingen.',
+  ourVisionTitle: 'Onze Visie',
+  unityPrayerWorshipTitle: 'Eenheid in gebed en ware aanbidding',
+  unityPrayerWorshipIntro:
+    'Het christelijk geloof is niet slechts een individueel geloof. Vanaf het begin van de Bijbel verzamelt God Zijn volk om Hem samen te aanbidden. Ware aanbidding wordt krachtiger wanneer gelovigen hun hart en geest verenigen.',
+  godThroneTitle: 'God gezeten op de troon door lof van Zijn volk',
+  godThroneText:
+    "Psalm 22:3: 'Maar U bent heilig, gezeten op de lof van Israël.' Wanneer Gods volk samen hun stemmen verheft, zet Hij Zich op hun aanbidding en wordt Zijn aanwezigheid op aarde zichtbaar.",
+  godsThroneAmongPeopleTitle: 'De troon van God onder Zijn volk',
+  godsThroneAmongPeopleText:
+    "Jeremia 49:38: 'Ik zal Mijn troon daar vestigen.' Wanneer we verenigd zijn in gebed en aanbidding, wordt Gods troon gevestigd en wordt Zijn autoriteit zichtbaar in onze kerk.",
+  godsTempleTitle: 'Wij zijn Gods tempel',
+  godsTempleText:
+    "1 Korintiërs 3:16: 'Weet u niet dat u Gods tempel bent en dat Gods Geest in u woont?' Elke gelovige is een levende tempel, en samen vormen we een grotere tempel waar Gods aanwezigheid zichtbaar wordt.",
+  worshipSpiritTruthTitle: 'Aanbidden in Geest en Waarheid',
+  worshipSpiritTruthText:
+    'Johannes 4:20-23: Ware aanbidders zullen de Vader aanbidden in geest en waarheid. Ware aanbidding vindt plaats wanneer ons hele wezen in lijn is met Gods waarheid.',
+  applicationTodayTitle: 'Toepassing voor Vandaag',
+  applicationTodayText:
+    'Handelingen 2:46-47: Wanneer ons gebed en aanbidding verenigd zijn, komt Gods aanwezigheid op een frisse manier, wordt de vijand verslagen, groeit ons geloof sterker en zien anderen Gods glorie en worden tot Christus getrokken.'
 };
 export default messages;

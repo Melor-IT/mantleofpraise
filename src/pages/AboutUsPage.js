@@ -8,17 +8,14 @@ export default function AboutUs() {
     <div className="page juin-us">
       <section>
         <BackgroundImage url="/images/join-us-banner.png" className="aboutus" />
-
         <div className="page-content ">
           <h1>{formatMessage({ id: 'aboutUs', defaultMessage: 'About Us' })}</h1>
-
           <h3 className="page-intro">
             {formatMessage({
               id: 'aboutUsText',
               defaultMessage: 'The Spirit of the Lord GOD is upon me ...'
             })}
           </h3>
-
           <h3>
             {formatMessage({
               id: 'aboutUsTextOnder',
@@ -36,7 +33,6 @@ export default function AboutUs() {
                 defaultMessage: 'Our Vision'
               })}
             </h2>
-
             <p>
               {formatMessage({
                 id: 'lederText',
@@ -54,7 +50,6 @@ export default function AboutUs() {
                   defaultMessage: 'Sima Sasanfar'
                 })}
               </strong>
-
               <p>
                 {formatMessage({
                   id: 'chairperson',
@@ -62,7 +57,6 @@ export default function AboutUs() {
                 })}
               </p>
             </div>
-
             <div className="team-member">
               <img src="/images/hamid.jpg" alt="Hamid Ghanbari" />
               <strong>
@@ -78,7 +72,6 @@ export default function AboutUs() {
                 })}
               </p>
             </div>
-
             <div className="team-member">
               <img src="/images/alireza.jpg" alt="Ali Reza Shayan" />
               <strong>
@@ -88,7 +81,6 @@ export default function AboutUs() {
                 })}
               </strong>
             </div>
-
             <div className="team-member">
               <img src="/images/atena.jpg" alt="Atena Gholami" />
               <strong>
@@ -99,7 +91,6 @@ export default function AboutUs() {
                 })}
               </strong>
             </div>
-
             <div className="team-member">
               <img src="/images/homa.jpg" alt="Homa K Mohammadi" />
               <strong>
@@ -122,7 +113,6 @@ export default function AboutUs() {
                 defaultMessage: 'OSupervisory Commission'
               })}
             </h2>
-
             <p>
               {formatMessage({
                 id: 'supervisoryCommissionText',
@@ -139,7 +129,6 @@ export default function AboutUs() {
                   defaultMessage: 'Pastor Kamil Navai'
                 })}
               </strong>
-
               <p>
                 {formatMessage({
                   id: 'advisoryBoardMember',
@@ -147,7 +136,6 @@ export default function AboutUs() {
                 })}
               </p>
             </div>
-
             <div className="team-member">
               <img src="/images/babak.jpg" alt="Babak Zeynalie" />
               <strong>
@@ -157,7 +145,6 @@ export default function AboutUs() {
                 })}
               </strong>
             </div>
-
             <div className="team-member">
               <img src="/images/kazem.jpg" alt="Kazem Dehghanie" />
               <strong>

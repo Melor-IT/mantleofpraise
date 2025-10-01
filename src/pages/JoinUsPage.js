@@ -2,7 +2,7 @@ import { useIntl } from 'react-intl';
 import { useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage';
 
-export default function JoinUs() {
+export default function JoinUsPage() {
   const { formatMessage } = useIntl();
   const [formData, setFormData] = useState({
     firstName: '',

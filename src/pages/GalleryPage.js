@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 
-export default function Gallery() {
+export default function GalleryPage() {
   const { formatMessage } = useIntl();
 
   return (

@@ -79,6 +79,66 @@ const messages = {
   advisoryBoardMember: 'Advisory Board Member',
   supervisoryCommission: 'Supervisory Commission',
   supervisoryCommissionText:
-    'The Supervisory Commission of the Reda-ye Setayesh Service Organization is composed of Levites from the member churches. Its responsibility is to oversee the spiritual integrity of the organization, provide pastoral and spiritual support to its members and activities, and ensure that the organization operates within biblical principles.'
+    'The Supervisory Commission of the Reda-ye Setayesh Service Organization is composed of Levites from the member churches. Its responsibility is to oversee the spiritual integrity of the organization, provide pastoral and spiritual support to its members and activities, and ensure that the organization operates within biblical principles.',
+  ANBIInformation: 'ANBI Information',
+  ourVision: 'Onze Visie',
+  ourVisionText:
+    'Onze visie is het ervaren van ware eenheid in de aanbidding van de Heer; een plaats waar harten, stemmen en levens in Zijn aanwezigheid één worden. Wij geloven dat de taal van de hemel niets anders is dan eenheid in aanbidding, en wanneer het volk van God met één hart Hem aanbidt, wordt Zijn aanwezigheid geopenbaard en wordt de hemel op aarde weerspiegeld. Onze visie is het zien van een generatie die in de liefde en aanbidding van Christus verenigd is en samen Zijn naam verheerlijkt.',
+  beleidsplanTitle: 'Beleidsplan Stichting Mantle of Praise',
+
+  // Section 1 – Goals
+  policyGoalsTitle: '1. Goals of the Foundation',
+  policyGoalsIntro: 'The organization Stichting Mantle of Praise aims to:',
+  policyGoals1: 'Promote Christian worship and spiritual formation.',
+  policyGoals2: 'Train and guide worshipers, musicians, and spiritual leaders.',
+  policyGoals3:
+    'Support churches and Christian communities through worship, education, and cooperation.',
+
+  // Section 2 – Activities
+  policyActivitiesTitle: '2. Activities to achieve this goal',
+  policyActivities1: 'Organizing worship gatherings, conferences, and training sessions.',
+  policyActivities2: 'Developing and providing songs, materials, and tools for worship.',
+  policyActivities3: 'Providing teaching and guidance to members and participants.',
+  policyActivities4: 'Promoting cooperation among churches and Christian organizations.',
+
+  // Section 3 – Income
+  policyIncomeTitle: '3. Sources of Income',
+  policyIncomeIntro: "The organization's income consists of:",
+  policyIncome1: 'Voluntary contributions and donations from individuals and churches.',
+  policyIncome2: 'Collections and gifts during gatherings and events.',
+  policyIncome3: 'Possible contributions from partner organizations or funds.',
+
+  // Section 4 – Expenses
+  policyExpensesTitle: '4. Use of Resources',
+  policyExpensesIntro: "The organization's expenditures are focused on:",
+  policyExpenses1: 'Organizing activities and events.',
+  policyExpenses2: 'Teaching, training, and guidance for members and participants.',
+  policyExpenses3: 'Purchase of musical instruments, equipment, and resources.',
+  policyExpenses4: 'Support for churches and ministries.',
+  policyExpenses5: 'General management and organizational costs.',
+
+  // Section 5 – Asset Management
+  policyAssetsTitle: '5. Asset Management',
+  policyAssetsText:
+    "The assets of the organization are carefully and transparently managed by the board, according to the statutes and under supervision of the treasurer and the supervisory commission. Resources are used solely to achieve the organization's objectives.",
+  ourVisionTitle: 'Our Vision',
+  unityPrayerWorshipTitle: 'Unity in Prayer and True Worship',
+  unityPrayerWorshipIntro:
+    'Christian faith is not merely an individual faith. From the beginning of the Bible, God gathers His people to worship Him together. True worship becomes more powerful when believers unite their hearts and spirits.',
+  godThroneTitle: 'God enthroned through the praise of His people',
+  godThroneText:
+    "Psalm 22:3: 'Yet you are holy, enthroned on the praises of Israel.' When God’s people lift their voices together, He sits enthroned on their worship, establishing His presence on earth.",
+  godsThroneAmongPeopleTitle: 'God’s throne among His people',
+  godsThroneAmongPeopleText:
+    "Jeremiah 49:38: 'I will set up my throne there.' When we unite in prayer and worship, God’s throne is established, and His authority is revealed in our church.",
+  godsTempleTitle: 'We are God’s temple',
+  godsTempleText:
+    "1 Corinthians 3:16: 'Do you not know that you are God’s temple and that God’s Spirit dwells in you?' Each believer is a living temple, and together we form a greater temple where God’s presence is revealed.",
+  worshipSpiritTruthTitle: 'Worship in Spirit and Truth',
+  worshipSpiritTruthText:
+    'John 4:20-23: True worshipers will worship the Father in spirit and truth. True worship occurs when our whole being aligns with God’s truth.',
+  applicationTodayTitle: 'Application for Today',
+  applicationTodayText:
+    'Acts 2:46-47: When our prayer and worship are united, God’s presence comes in a fresh way, the enemy is defeated, our faith grows stronger, and others see God’s glory and are drawn to Christ.'
 };
 export default messages;
