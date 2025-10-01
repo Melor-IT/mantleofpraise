@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   background-color: #fafafa;
   color: #333;
+}  
 
 body,
 html,
@@ -19,6 +20,7 @@ html,
   display: flex;
   flex-direction: column;
 }
+
 
 .app {
   &.rtl {
