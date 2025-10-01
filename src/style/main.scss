@@ -31,6 +31,10 @@ html,
   }
 }
 
+html:has(.app.rtl) {
+  font-size: 14px;
+}
+
 .page-content {
   width: 100%;
   max-width: 1140px;
