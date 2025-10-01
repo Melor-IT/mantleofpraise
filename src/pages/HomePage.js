@@ -13,7 +13,7 @@ export default function HomePage({ locale, setLocale }) {
         <div className="page-content">
           <h2>
             {formatMessage({
-              id: 'welcomTo',
+              id: 'welcomeTo',
               defaultMessage: 'Welcome to'
             })}
           </h2>
@@ -103,7 +103,7 @@ export default function HomePage({ locale, setLocale }) {
               </div>
             </div>
           </div>
-          
+
         </div>
       </section>
 
@@ -135,21 +135,21 @@ export default function HomePage({ locale, setLocale }) {
           </div>
         </div>
       </section>
-{/* 
+{/*
       <section className="secondary our-vision">
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
-     
+
           <h2>
             {formatMessage({
-              id: 'visen',
+              id: 'vision',
               defaultMessage: 'Our Vision'
             })}
           </h2>
 
           <p>
             {formatMessage({
-              id: 'visenText',
+              id: 'visionText',
               defaultMessage:
                 'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
             })}
@@ -160,13 +160,13 @@ export default function HomePage({ locale, setLocale }) {
               defaultMessage: 'More'
             })}
           </Link>
-     
+
         </div>
 
       </section> */}
 
 
-      
+
     </main>
   );
 }

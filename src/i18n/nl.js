@@ -1,6 +1,6 @@
 const messages = {
   welcome: 'Welkom',
-  welcomTo: 'Welkom bij',
+  welcomeTo: 'Welkom bij',
   mantleOfPraise: 'Mantel van lof',
   home: 'Home',
   joinUs: 'Word lid',
@@ -34,18 +34,18 @@ const messages = {
   aboutUsText:
     'De Geest van de Heere is op mij, want de HEERE heeft mij gezalfd om goede tijding te brengen aan de ootmoedigen, om de gebrokenen van hart te genezen, vrijheid uit te roepen voor gevangenen en opening van de gevangenis voor wie gebonden zijn; om het jaar van het welbehagen van de HEERE en de dag van de wraak van onze God te verkondigen; om allen die treuren te troosten, hun schoonheid voor as te geven, vreugde-olie voor rouw, en een kleed van lof voor een verslagen geest; opdat zij genoemd worden eiken van gerechtigheid, een planting van de HEERE, tot Zijn verheerlijking.',
   aboutUsTextOnder: '- Jesaja 61:1-3',
-  firstService: 'aanbidding en aanbidders',
+  firstService: 'Aanbidding en Aanbidders',
   firstServiceText:
     'Wij bieden een platform voor uw dienst als aanbidder in aanbiddingsbijeenkomsten',
-  secondService: 'Profetie en profeten',
+  secondService: 'Profetie en Profeten',
   secondServiceText:
     'Aanbidding en profetie vullen elkaar aan, en deze bediening biedt de basis voor de openbaring van profetie en de bediening van de profeten naast aanbidding.',
   thirdService: 'Organiseren van gebeds- en aanbiddingssessies',
   thirdServiceText:
     'In Mantel van lof zijn de gebeds- en aanbiddingsbijeenkomsten een plaats waar harten in Gods aanwezigheid verenigd worden. Door muziek en aanbidding te combineren onder leiding van de Heilige Geest, en geïnspireerd door het Woord van God in 1 Samuël 10:5, bieden deze samenkomsten een gelegenheid voor het volk van God om Hem met één stem te verheerlijken.',
   more: 'meer',
-  visen: 'Onze Visie',
-  visenText:
+  vision: 'Onze Visie',
+  visionText:
     'Onze visie is het vormen van een inspirerende gemeenschap van aanbidders en profeten die, door middel van muziek en aanbidding vervuld met de leiding van de Heilige Geest, het licht en de aanwezigheid van God in kerken verspreiden, elk hart wekken en genezen, en een levendige, diepe en blijvende ervaring van verbinding met de Heer creëren voor elk individu en elke gemeente.',
   giftText:
     'Wij nodigen u uit om met een dankbaar hart en standvastig geloof deel te nemen, zodat de naam van de Heer onder de volken verheerlijkt wordt.',
@@ -56,10 +56,10 @@ const messages = {
   team: 'Ons Team',
   teamText:
     'At Mantel van lof, we are not just a team; we are a family. Together we worship, learn, serve, and grow. The leadership of this ministry is guided by the leadership team and the spiritual oversight of the Levites, but the truth is that we are all an essential part of the Mantel van lof family. Each of us serves in our place: the worship and music team, the training team, and those who organize meetings and events. Youth leaders also join us to prepare the next generation for the future. We believe: we are instruments of service, but growth and blessing come only from God.',
-  leder: 'Leiderschapsteam',
-  lederText:
+  leader: 'Leiderschapsteam',
+  leaderText:
     'Het Leiderschapsteam van Reda-ye Setayesh, bestaande uit dienaren met ervaring en een diepe toewijding aan aanbidding en kerkelijke bediening, is verantwoordelijk voor de leiding van alle geestelijke en praktische activiteiten van deze bediening. In overleg en onder geestelijk toezicht van de Levieten ontwikkelt en bevordert het beleid en programma’s, coördineert het de aanbiddings- en onderwijsteams, leidt het bijeenkomsten en evenementen, beheert het middelen en budgetten en ondersteunt en begeleidt het de leden van de bediening, om zo een gezonde, geestelijke en creatieve omgeving voor aanbidding en geloofsgroei te scheppen.',
-  ourMission: 'Onze missie',
+  ourMission: 'Onze Missie',
   ourMissionText:
     'Wij geloven dat aanbidding en gebed de taal van de hemel zijn en een weg om het hart van God te kennen. Ons doel is dat gelovigen door aanbidding en gebed in geloof verenigd worden en met één stem de Heer verheerlijken. Onze visie en missie is de eenheid van gelovigen in de geest van aanbidding. Wij verlangen dat het volk van God vernieuwd wordt in Zijn aanwezigheid en toegerust met Zijn kracht en sterkte om hun goddelijke opdracht in deze wereld te volbrengen—een opdracht waarin het licht van Christus weerspiegeld wordt in het persoonlijke leven, in de kerk en in de samenleving.',
   aboutUsShortText:
@@ -74,7 +74,7 @@ const messages = {
   atena: 'Atena Gholami',
   homa: 'Homa Mohammadi',
   Kazem: 'Herder Kazem Dehghani',
-  treasurer: 'penningmeester',
+  treasurer: 'Penningmeester',
   babak: 'Herder Babak Zeynali',
   kamil: 'Dominee Kamil Navai',
   advisoryBoardMember: 'Adviseurend',

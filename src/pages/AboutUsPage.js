@@ -29,13 +29,13 @@ export default function AboutUs() {
           <div className="text-block">
             <h2>
               {formatMessage({
-                id: 'leder',
+                id: 'leader',
                 defaultMessage: 'Our Vision'
               })}
             </h2>
             <p>
               {formatMessage({
-                id: 'lederText',
+                id: 'leaderText',
                 defaultMessage:
                   'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.'
               })}

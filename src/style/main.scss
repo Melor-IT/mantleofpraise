@@ -11,7 +11,6 @@ body {
   scroll-behavior: smooth;
   background-color: #fafafa;
   color: #333;
-}
 
 body,
 html,
@@ -29,6 +28,10 @@ html,
       font-family: 'Vazirmatn', Tahoma, sans-serif;
     }
   }
+}
+
+html:has(.app.rtl) {
+  font-size: 14px;
 }
 
 .page-content {

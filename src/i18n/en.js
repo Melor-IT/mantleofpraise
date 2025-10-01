@@ -1,6 +1,6 @@
 const messages = {
   welcome: 'Welcome',
-  welcomTo: 'Welcome to',
+  welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
   home: 'Home',
   contact: 'Contact',
@@ -18,7 +18,7 @@ const messages = {
   phone: 'Phone',
   city: 'City',
   church: 'Which church are you a member of?',
-  pastor: "Your pastor's name",
+  pastor: 'Your pastor\'s name',
   gifts: 'Gifts / Talents',
   agreeTerms: 'I agree to the Terms & Conditions',
   agreePrivacy: 'I agree to the Privacy Policy',
@@ -36,18 +36,16 @@ const messages = {
   ourMission: 'Our Mission',
   ourMissionText:
     'We believe that worship and prayer are the language of heaven and a way to know the heart of God. Our aim is that through worship and prayer, believers may be united in faith and with one voice exalt the Lord. Our vision and mission is the unity of believers in the spirit of worship. We desire that God’s people be renewed in His presence and equipped with His power and strength to fulfill their divine mission in this world—a mission in which the light of Christ is reflected in personal life, in the church, and in society.',
-  secondService: 'Worship and Worshipers',
+  secondService: 'Prophecy and Prophets',
   secondServiceText:
-    'We provide a platform for you to serve as a worshipper in worship gatherings.',
-  thirdService: 'Prophecy and Prophets',
-  thirdServiceText:
     'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
-  firstService: 'Organizing Prayer and Worship Sessions',
-  firstServiceText:
-    'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
+  thirdService:  'Organizing Prayer and Worship Sessions',
+  thirdServiceText: 'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
+  firstService:'Worship and Worshipers',
+  firstServiceText:'We provide a platform for you to serve as a worshipper in worship gatherings.'    ,
   more: 'More',
-  visen: 'Our Vision',
-  visenText:
+  vision: 'Our Vision',
+  visionText:
     'Our vision is to form an inspiring community of worshipers and prophets who, through music and worship filled with the guidance of the Holy Spirit, spread the light and presence of God in churches, awaken and heal every heart, and create a living, deep, and lasting experience of connection with the Lord for each individual and congregation.',
   giftText:
     'We invite you to participate with a grateful heart and steadfast faith, so that the name of the Lord may be glorified among the nations.',
@@ -58,8 +56,8 @@ const messages = {
   team: 'Our Team',
   teamText:
     'Bij Mantle of Praise zijn we niet zomaar een team; we zijn een familie. Samen aanbidden, leren, dienen en groeien we. De leiding van deze dienst wordt verzorgd door het leiderschapsteam en de geestelijke supervisie van de Levieten, maar de waarheid is dat wij allemaal een belangrijk onderdeel zijn van de Mantle of Praise-familie. Ieder van ons dient op zijn of haar plek: het aanbids- en muziekteam, het trainingsteam, en degenen die bijeenkomsten en evenementen organiseren. Ook jeugdleiders zijn bij ons om de volgende generatie voor te bereiden op de toekomst. Wij geloven: wij zijn instrumenten van dienst, maar groei en zegen komen alleen van God.',
-  leder: 'Leadership Team',
-  lederText:
+  leader: 'Leadership Team',
+  leaderText:
     'The Leadership Team of Mantle of Praise, consisting of servants with experience and a deep commitment to worship and church ministry, is responsible for guiding all spiritual and practical activities of this ministry. In consultation with and under the spiritual oversight of the Levites, it develops and advances policies and programs, coordinates worship and training teams, leads gatherings and events, manages resources and budgets, and supports and cares for the members of the ministry, in order to create a healthy, spiritual, and creative environment for worship and the growth of faith.',
   aboutUsShortText:
     'We is more than a team; we are a family worshiping, learning, and serving together.',
