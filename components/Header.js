@@ -1,21 +1,34 @@
 'use client';
 
 import Link from 'next/link';
-import { useIntl } from 'react-intl';
-import { usePathname } from 'next/navigation';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
-  { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' },
-  { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' },
-  { to: '/our-vision', id: 'ourVision', defaultMessage: 'Our Vision' },
-  { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' }
+  // { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' },
+  // { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' },
+  // { to: '/our-vision', id: 'ourVision', defaultMessage: 'Our Vision' },
+  // { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' }
 ];
 
-const Header = ({ locale, setLocale }) => {
-  const { formatMessage } = useIntl();
+
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { locales, defaultLocale } from '@/i18n/request';
+
+export default function Header({ locale }) {
+  const t = useTranslations();
+  const router = useRouter();
   const pathname = usePathname();
 
+  const changeLocale = (newLocale) => {
+    // Validate the new locale
+    const validLocale = locales.includes(newLocale) ? newLocale : defaultLocale;
+    // Set locale in a cookie
+    document.cookie = `locale=${validLocale}; path=/; SameSite=Strict`;
+    // Redirect to the same page with the new locale
+    const currentPath = window.location.pathname.replace(/^\/(en|fa|nl)/, '') || '/';
+    router.push(`/${validLocale}${currentPath}`);
+  };
   return (
     <header className="app-header">
       <div className="page-content">
@@ -35,7 +48,7 @@ const Header = ({ locale, setLocale }) => {
               key={item.id}
               href={item.to}
               className={pathname === item.to ? 'active' : ''}>
-              {formatMessage({ id: item.id, defaultMessage: item.defaultMessage })}
+              {t(item.id)}
             </Link>
           ))}
         </nav>
@@ -45,7 +58,7 @@ const Header = ({ locale, setLocale }) => {
             id="language-select"
             className="language-select"
             value={locale}
-            onChange={(e) => setLocale(e.target.value)}
+            onChange={(e) => changeLocale(e.target.value)}
             aria-label="Select language">
             <option value="en">🇺🇸</option>
             <option value="fa">🇮🇷</option>
@@ -56,5 +69,3 @@ const Header = ({ locale, setLocale }) => {
     </header>
   );
 };
-
-export default Header;

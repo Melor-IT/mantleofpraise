@@ -1,12 +1,12 @@
+// const createNextIntlPlugin = require('next-intl/plugin');
+
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    unoptimized: true, // چون از public/images استفاده می‌کنی
-  },
-  experimental: {
-    appDir: true, // برای فعال‌کردن پوشه app
-  },
+
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

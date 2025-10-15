@@ -1,7 +1,7 @@
 'use client';
 
 import { useIntl } from 'react-intl';
-import BackgroundImage from '../../components/BackgroundImage';
+import BackgroundImage from '../../../components/BackgroundImage';
 
 export default function AboutUsPage() {
   const { formatMessage } = useIntl();

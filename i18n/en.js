@@ -1,4 +1,9 @@
 const messages = {
+  meta: {
+    title: 'Mantle of Praise',
+    description:
+      'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service.',
+  },
   welcome: 'Welcome',
   welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
