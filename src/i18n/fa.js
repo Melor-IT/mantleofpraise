@@ -74,7 +74,7 @@ const messages = {
   homa: 'هما محمدی',
   treasurer: 'خزانه دار',
   Kazem: 'شبان کاظم دهقانی',
-  babak: 'شبان بابک زینلی',
+  babak: 'شبان بابک زینالی',
   kamil: 'کشیش کامیل نوایی',
   advisoryBoardMember: 'عضو هیئت مشاوران',
   supervisoryCommission: 'کمیسیون نظارت',

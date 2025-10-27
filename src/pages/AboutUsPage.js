@@ -137,7 +137,7 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="team-member">
-              <img src="/images/babak.jpg" alt="Babak Zeynalie" />
+              <img src="/images/babak1.jpg" alt="Babak Zeynalie" />
               <strong>
                 {formatMessage({
                   id: 'babak',
