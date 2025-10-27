@@ -50,6 +50,9 @@ const Footer = ({ locale, setLocale }) => {
 
             <h4> RSIN </h4>
             <p>868276972</p>
+            
+            <h4>IBAN</h4>
+            <p>NL56TRIO0321129849</p>
           </div>
         </div>
       </div>
