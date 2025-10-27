@@ -16,6 +16,7 @@ const messages = {
   firstName: 'Voornaam',
   lastName: 'Achternaam',
   email: 'E-mailadres',
+  instogram: 'Instagram',
   phone: 'Telefoonnummer',
   city: 'Woonplaats',
   church: 'Van welke kerk bent u lid?',

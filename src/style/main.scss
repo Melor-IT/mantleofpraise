@@ -63,14 +63,14 @@ html:has(.app.rtl) {
   align-items: center;
   gap: 2rem;
   flex-wrap: nowrap;
-  width: 50%;
+  width: 100%;
 
   > div {
     flex: 0 1 auto;
     width: 100%;
 
     &:only-child {
-      // width: 50%;
+     width: 100%;
     }
   }
 }
