@@ -11,6 +11,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import OurVisionPage from './pages/OurVisionPage';
 import ANBIInformationPage from './pages/ANBIInformationPage';
 import JoinUsPage from './pages/JoinUsPage';
+import ScrollToTop from './components/ScrollToTop';
 import './style/main.scss';
 
 const messages = {
@@ -30,6 +31,7 @@ function App() {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <BrowserRouter>
+       <ScrollToTop />
         <div
           className={`app ${locale === 'fa' ? 'rtl' : 'ltr'}`}
           dir={locale === 'fa' ? 'rtl' : 'ltr'}>

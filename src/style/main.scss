@@ -11,7 +11,7 @@ body {
   scroll-behavior: smooth;
   background-color: #fafafa;
   color: #333;
-}  
+}
 
 body,
 html,
@@ -21,12 +21,16 @@ html,
   flex-direction: column;
 }
 
-
 .app {
   &.rtl {
     font-family: 'Vazirmatn', Tahoma, sans-serif;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Vazirmatn', Tahoma, sans-serif;
     }
   }
@@ -68,10 +72,6 @@ html:has(.app.rtl) {
   > div {
     flex: 0 1 auto;
     width: 100%;
-
-    &:only-child {
-     width: 100%;
-    }
   }
 }
 
@@ -88,7 +88,7 @@ html:has(.app.rtl) {
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    background-color: #fff;
+    background-color: var(--white-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: clamp(0.9rem, 1vw + 0.6rem, 1.1rem);
     z-index: 10;
@@ -186,11 +186,75 @@ html:has(.app.rtl) {
       }
     }
   }
+}
 
-  // > div:last-child {
-  //   margin-left: auto;
+/* ===================== HAMBURGER BUTTON ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
 
-  // }
+  span {
+    width: 28px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s ease;
+    border-radius: 2px;
+  }
+
+  &.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+/* ===================== MOBILE MENU ===================== */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  width: 240px;
+  background: #fff;
+  border-radius: 0 0 1em 1em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 50;
+
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+
+    &.active {
+      color: var(--primary-color);
+    }
+  }
+
+  &.show {
+    display: flex;
+  }
+}
+
+.app.rtl .mobile-menu {
+  right: auto;
+  left: 1rem;
 }
 
 .language-select {
@@ -199,7 +263,7 @@ html:has(.app.rtl) {
   padding: 0.4em 2em 0.4em 0.8em;
   border-radius: 0.5em;
   border: 1px solid #d4aa42;
-  background-color: #fff;
+  background-color: var(--white-color);
   color: #631969;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 5 5-5z' fill='%23333'/%3E%3C/svg%3E");
@@ -245,7 +309,6 @@ footer {
 
   .message {
     width: 80%;
-
     color: #000;
     padding: 1rem;
   }
@@ -487,9 +550,6 @@ section {
       align-items: center;
     }
   }
-
-  &.form {
-  }
 }
 
 .text-block {
@@ -686,6 +746,8 @@ section {
   }
 }
 
+/* ===================== ریسپانسیو ===================== */
+
 @media (max-width: 1300px) {
   .team > .team-member {
     flex: 0 0 30%;
@@ -706,6 +768,10 @@ section {
 
   .team > .team-member {
     flex: 0 0 100%;
+  }
+  .content-row {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
@@ -735,10 +801,9 @@ section {
       margin: 0;
 
       .lang-selector {
-        position: absolute;
         right: 1rem;
         top: 2rem;
-        padding: 0;
+        padding: 2rem;
       }
     }
   }
@@ -746,6 +811,7 @@ section {
   .logo-full {
     height: 80px;
     padding: 0.5rem;
+    flex-direction: column;
   }
 
   .nav-menu {
@@ -857,7 +923,6 @@ section {
 
   .content-row {
     width: 100%;
-
     > div {
       &:only-child {
         width: 100%;
@@ -878,6 +943,46 @@ section {
       flex: 1 0 100%;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .team > .team-member {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team > .team-member {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-menu {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    top: 6em;
+    width: 100%;
+  }
+
+  .app-header {
+    > .page-content {
+      flex-direction: row;
+      .lang-selector {
+        position: sticky;
+      }
     }
   }
 }
