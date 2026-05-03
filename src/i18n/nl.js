@@ -78,6 +78,7 @@ const messages = {
   treasurer: 'Penningmeester',
   babak: 'Herder Babak Zeynali',
   kamil: 'Dominee Kamil Navai',
+   sahar:'Dominee Sahar Apistola',
   advisoryBoardMember: 'Adviseurend',
   supervisoryCommission: 'Toezichtscommissie',
   supervisoryCommissionText:

@@ -75,6 +75,7 @@ const messages = {
   treasurer: 'Treasurer',
   babak: 'Shepherd Babak Zeynali',
   kamil: 'Senior Pastor Kamil Navai',
+  sahar:'Shepherd Sahar Apistola',
   advisoryBoardMember: 'Advisory Board Member',
   supervisoryCommission: 'Supervisory Commission',
   supervisoryCommissionText:

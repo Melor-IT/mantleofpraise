@@ -76,6 +76,7 @@ const messages = {
   Kazem: 'شبان کاظم دهقانی',
   babak: 'شبان بابک زینالی',
   kamil: 'کشیش کامیل نوایی',
+    sahar:'شبان سحر آپیستولا',
   advisoryBoardMember: 'عضو هیئت مشاوران',
   supervisoryCommission: 'کمیسیون نظارت',
   supervisoryCommissionText:
