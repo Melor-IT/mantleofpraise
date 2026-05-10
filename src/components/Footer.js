@@ -46,7 +46,10 @@ const Footer = ({ locale, setLocale }) => {
               })}
             </h4>
             <p>
-              <a href="https://www.instagram.com/mantle.of.praise/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/mantle.of.praise/"
+                target="_blank"
+                rel="noreferrer">
                 @mantle.of.praise
               </a>
             </p>
@@ -63,8 +66,8 @@ const Footer = ({ locale, setLocale }) => {
             <h4> RSIN </h4>
             <p>868276972</p>
 
-            {/* <h4>IBAN</h4>
-            <p>NL56TRIO0321129849</p> */}
+            <h4>IBAN</h4>
+            <p>NL54INGB0120063999</p>
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@ export default function JoinUsPage() {
             })}
           </h1>
 
-          <h3 className='page-intro'>
+          <h3 className="page-intro">
             {formatMessage({
               id: 'joinUsText',
               defaultMessage:
@@ -76,9 +76,8 @@ export default function JoinUsPage() {
           </h3>
         </div>
       </section>
-{/* 
-      <section className="our-team">
 
+      <section className="our-team">
         <div className="page-content">
           <div className="circle">
             <h2>
@@ -96,16 +95,13 @@ export default function JoinUsPage() {
             </p>
           </div>
 
-            <div className="image-big">
-              <img src="/images/family.jpg" alt="Hamid & Sima" />
-            </div>
-
-
+          <div className="image-big">
+            <img src="/images/HS.jpg" alt="Hamid & Sima" />
+          </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="botoje form">
-
         <div className="page-content">
           <form className="form-block" onSubmit={handleSubmit}>
             <label>
