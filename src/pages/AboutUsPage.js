@@ -20,13 +20,13 @@ export default function AboutUs() {
       defaultName: 'Hamid Ghanbari',
       roleId: 'secretary',
       defaultRole: 'Secretary'
-    },
-     {
-      img: '/images/homa.jpg',
-      alt: 'Homa K Mohammadi',
-      nameId: 'homa',
-      defaultName: 'Homa Mohammadi'
     }
+    //  {
+    //   img: '/images/homa.jpg',
+    //   alt: 'Homa K Mohammadi',
+    //   nameId: 'homa',
+    //   defaultName: 'Homa Mohammadi'
+    // }
     // {
     //   img: '/images/alireza.jpg',
     //   alt: 'Ali Reza Shayan',
@@ -102,8 +102,7 @@ export default function AboutUs() {
             <p>
               {formatMessage({
                 id: 'leaderText',
-                defaultMessage:
-                  'Our vision is to form an inspiring community...'
+                defaultMessage: 'Our vision is to form an inspiring community...'
               })}
             </p>
           </div>
