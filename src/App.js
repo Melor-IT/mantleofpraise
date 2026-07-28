@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { useState } from 'react';
 import enMessages from './i18n/en';
@@ -20,10 +20,18 @@ const messages = {
   nl: nlMessages
 };
 
+const supportedLocales = Object.keys(messages);
+
+const getInitialLocale = () => {
+  const storedLocale = localStorage.getItem('locale');
+  return supportedLocales.includes(storedLocale) ? storedLocale : 'en';
+};
+
 function App() {
-  const [locale, setLocale] = useState(localStorage.getItem('locale') || 'en');
+  const [locale, setLocale] = useState(getInitialLocale);
 
   const changeLocale = (newLocale) => {
+    if (!supportedLocales.includes(newLocale)) return;
     setLocale(newLocale);
     localStorage.setItem('locale', newLocale);
   };
@@ -43,6 +51,7 @@ function App() {
               <Route path="/join-us" element={<JoinUsPage />} />
               <Route path="/our-vision" element={<OurVisionPage />} />
               <Route path="/ANBI-information" element={<ANBIInformationPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
           <Footer />

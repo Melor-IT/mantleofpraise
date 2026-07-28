@@ -37,7 +37,7 @@ const Footer = ({ locale, setLocale }) => {
               })}
             </h4>
             <p>
-              <a href="to:info@mantleofpraise.nl">info@mantleofpraise.nl</a>
+              <a href="mailto:info@mantleofpraise.nl">info@mantleofpraise.nl</a>
             </p>
             <h4>
               {formatMessage({

@@ -6,7 +6,7 @@ export default function HomePage({ locale, setLocale }) {
   const { formatMessage } = useIntl();
 
   return (
-    <main className="page home">
+    <div className="page home">
       <section className="banner">
         <BackgroundImage url="/images/home-banner.jpg" />
 
@@ -167,6 +167,6 @@ export default function HomePage({ locale, setLocale }) {
 
 
 
-    </main>
+    </div>
   );
 }

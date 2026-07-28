@@ -28,7 +28,7 @@ const Gift = ({ locale, setLocale }) => {
                   'Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.'
               })}
             </h3>
-> <p>
+            <p>
               {formatMessage({
                 id: 'giftTextbibelOnder',
                 defaultMessage:

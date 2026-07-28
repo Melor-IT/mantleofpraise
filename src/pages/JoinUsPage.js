@@ -4,6 +4,7 @@ import BackgroundImage from '../components/BackgroundImage';
 
 export default function JoinUsPage() {
   const { formatMessage } = useIntl();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,23 +29,31 @@ export default function JoinUsPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.agreeTerms || !formData.agreePrivacy) {
-      alert(formatMessage({ id: 'joinus.mustAgree' }));
+      alert(formatMessage({ id: 'mustAgree' }));
       return;
     }
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
 
-    const response = await fetch('https://www.ewcms.org/mantleofpraise/contact.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
+    try {
+      const response = await fetch('https://www.ewcms.org/mantleofpraise/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    if (response.ok) {
-      alert('Message sent!');
-    } else {
-      alert('Failed to send message.');
+      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+
+      alert(formatMessage({ id: 'formSent', defaultMessage: 'Message sent!' }));
+      setFormData({
+        firstName: '', lastName: '', email: '', phone: '', city: '', church: '',
+        pastor: '', gifts: '', agreeTerms: false, agreePrivacy: false
+      });
+    } catch {
+      alert(formatMessage({ id: 'formFailed', defaultMessage: 'Failed to send message. Please try again later.' }));
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -200,7 +209,7 @@ export default function JoinUsPage() {
                 required
               />
               <span>
-                <a href="../../pdf/termsFa.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/pdf/termsFa.pdf" target="_blank" rel="noopener noreferrer">
                   {formatMessage({ id: 'agreeTerms' })}
                 </a>{' '}
               </span>
@@ -217,7 +226,11 @@ export default function JoinUsPage() {
               <span>{formatMessage({ id: 'agreePrivacy' })}</span>
             </label>
 
-            <button type="submit">{formatMessage({ id: 'submit' })}</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting
+                ? formatMessage({ id: 'submitting', defaultMessage: 'Sending...' })
+                : formatMessage({ id: 'submit' })}
+            </button>
           </form>
         </div>
       </section>
