@@ -48,11 +48,24 @@ export default function JoinUsPage() {
 
       alert(formatMessage({ id: 'formSent', defaultMessage: 'Message sent!' }));
       setFormData({
-        firstName: '', lastName: '', email: '', phone: '', city: '', church: '',
-        pastor: '', gifts: '', agreeTerms: false, agreePrivacy: false
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        city: '',
+        church: '',
+        pastor: '',
+        gifts: '',
+        agreeTerms: false,
+        agreePrivacy: false
       });
     } catch {
-      alert(formatMessage({ id: 'formFailed', defaultMessage: 'Failed to send message. Please try again later.' }));
+      alert(
+        formatMessage({
+          id: 'formFailed',
+          defaultMessage: 'Failed to send message. Please try again later.'
+        })
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -62,7 +75,7 @@ export default function JoinUsPage() {
     <div className="page join-us">
       <SEO
         title="Join Us | Mantle of Praise"
-        description="Join Mantle of Praise to participate in Persian Christian worship, prayer meetings, and meaningful fellowship across church communities." 
+        description="Join Mantle of Praise to participate in Persian Christian worship, prayer meetings, and meaningful fellowship across church communities."
         image="/images/juneUs.png"
         keywords="Join Mantle of Praise, Persian Christian worship, church fellowship, prayer meetings"
       />

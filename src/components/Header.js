@@ -14,19 +14,18 @@ const Header = ({ locale, setLocale }) => {
   const { formatMessage } = useIntl();
   const [open, setOpen] = useState(false);
   useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth > 500) {
-      setOpen(false);
-    }
-  };
+    const handleResize = () => {
+      if (window.innerWidth > 500) {
+        setOpen(false);
+      }
+    };
 
-  window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-  return () => {
-    window.removeEventListener('resize', handleResize);
-  };
-}, []);
-
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <header className="app-header">

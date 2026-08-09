@@ -48,13 +48,13 @@ function App() {
             <Header locale={locale} setLocale={changeLocale} />
             <main>
               <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about-us" element={<AboutUsPage />} />
-              <Route path="/join-us" element={<JoinUsPage />} />
-              <Route path="/our-vision" element={<OurVisionPage />} />
-              <Route path="/ANBI-information" element={<ANBIInformationPage />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-                </Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about-us" element={<AboutUsPage />} />
+                <Route path="/join-us" element={<JoinUsPage />} />
+                <Route path="/our-vision" element={<OurVisionPage />} />
+                <Route path="/ANBI-information" element={<ANBIInformationPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
             </main>
             <Footer />
           </div>

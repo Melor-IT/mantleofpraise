@@ -10,7 +10,7 @@ export default function HomePage({ locale, setLocale }) {
     <div className="page home">
       <SEO
         title="Mantle of Praise | Persian Christian Worship Community"
-        description="Mantle of Praise brings Persian Christians together for worship, prayer, and spiritual growth through community gatherings and service." 
+        description="Mantle of Praise brings Persian Christians together for worship, prayer, and spiritual growth through community gatherings and service."
         image="/images/home-banner.jpg"
         keywords="Persian Christian worship, prayer gatherings, church community, worship events, Mantle of Praise"
       />
@@ -82,8 +82,7 @@ export default function HomePage({ locale, setLocale }) {
               <p>
                 {formatMessage({
                   id: 'secondServiceText',
-                  defaultMessage:
-                    ''
+                  defaultMessage: ''
                 })}
               </p>
               <div className="image-circle">
@@ -101,8 +100,7 @@ export default function HomePage({ locale, setLocale }) {
               <p>
                 {formatMessage({
                   id: 'thirdServiceText',
-                  defaultMessage:
-                    ''
+                  defaultMessage: ''
                 })}
               </p>
               <div className="image-circle ne">
@@ -110,7 +108,6 @@ export default function HomePage({ locale, setLocale }) {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -142,7 +139,7 @@ export default function HomePage({ locale, setLocale }) {
           </div>
         </div>
       </section>
-{/*
+      {/*
       <section className="secondary our-vision">
         <BackgroundImage url="/images/back2.jpg" />
         <div className="page-content">
@@ -171,9 +168,6 @@ export default function HomePage({ locale, setLocale }) {
         </div>
 
       </section> */}
-
-
-
     </div>
   );
 }
