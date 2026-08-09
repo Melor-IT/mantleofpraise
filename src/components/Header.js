@@ -33,10 +33,10 @@ const Header = ({ locale, setLocale }) => {
       <div className="page-content">
         {/* Logo */}
         <div className="logo-full">
-          <img src="/images/logo-mini.png" alt="Logo" />
+          <img src="/images/logo-mini.png" alt="Mantle of Praise logo" />
           <img
             src={locale === 'fa' ? '/images/rada-farsi.png' : '/images/rada-eng.png'}
-            alt="Logo"
+            alt="Reda-ye Setayesh logo"
           />
         </div>
 

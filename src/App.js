@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { IntlProvider } from 'react-intl';
 import { useState } from 'react';
 import enMessages from './i18n/en';
@@ -38,25 +39,27 @@ function App() {
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
-      <BrowserRouter>
-       <ScrollToTop />
-        <div
-          className={`app ${locale === 'fa' ? 'rtl' : 'ltr'}`}
-          dir={locale === 'fa' ? 'rtl' : 'ltr'}>
-          <Header locale={locale} setLocale={changeLocale} />
-          <main>
-            <Routes>
+      <HelmetProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <div
+            className={`app ${locale === 'fa' ? 'rtl' : 'ltr'}`}
+            dir={locale === 'fa' ? 'rtl' : 'ltr'}>
+            <Header locale={locale} setLocale={changeLocale} />
+            <main>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/join-us" element={<JoinUsPage />} />
               <Route path="/our-vision" element={<OurVisionPage />} />
               <Route path="/ANBI-information" element={<ANBIInformationPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
+                </Routes>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
     </IntlProvider>
   );
 }

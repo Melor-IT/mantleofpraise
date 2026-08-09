@@ -1,6 +1,7 @@
 import { useIntl } from 'react-intl';
 import { useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage';
+import SEO from '../components/SEO';
 
 export default function JoinUsPage() {
   const { formatMessage } = useIntl();
@@ -59,6 +60,12 @@ export default function JoinUsPage() {
 
   return (
     <div className="page join-us">
+      <SEO
+        title="Join Us | Mantle of Praise"
+        description="Join Mantle of Praise to participate in Persian Christian worship, prayer meetings, and meaningful fellowship across church communities." 
+        image="/images/juneUs.png"
+        keywords="Join Mantle of Praise, Persian Christian worship, church fellowship, prayer meetings"
+      />
       <section className="banner">
         <BackgroundImage url="/images/juneUs.png" />
 
@@ -105,7 +112,7 @@ export default function JoinUsPage() {
           </div>
 
           <div className="image-big">
-            <img src="/images/HS.jpg" alt="Hamid & Sima" />
+            <img src="/images/HS.jpg" alt="Hamid and Sima, Mantle of Praise leaders" />
           </div>
         </div>
       </section>

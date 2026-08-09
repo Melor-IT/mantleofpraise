@@ -1,11 +1,18 @@
 import { useIntl } from 'react-intl';
 import BackgroundImage from '../components/BackgroundImage';
+import SEO from '../components/SEO';
 
 export default function OurVisionPage({ locale, setLocale }) {
   const { formatMessage } = useIntl();
 
   return (
     <div className="page OurVision">
+      <SEO
+        title="Our Vision | Mantle of Praise"
+        description="Read the vision of Mantle of Praise, a community focused on unity in prayer, true worship, and spiritual growth for Persian Christians."
+        image="/images/ourvision-banner.jpg"
+        keywords="Mantle of Praise vision, Christian worship vision, Persian Christian prayer, church unity"
+      />
       {/* Header */}
       <section>
         <BackgroundImage

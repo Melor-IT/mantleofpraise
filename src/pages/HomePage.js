@@ -1,5 +1,6 @@
 import { useIntl } from 'react-intl';
 import BackgroundImage from '../components/BackgroundImage';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function HomePage({ locale, setLocale }) {
@@ -7,6 +8,12 @@ export default function HomePage({ locale, setLocale }) {
 
   return (
     <div className="page home">
+      <SEO
+        title="Mantle of Praise | Persian Christian Worship Community"
+        description="Mantle of Praise brings Persian Christians together for worship, prayer, and spiritual growth through community gatherings and service." 
+        image="/images/home-banner.jpg"
+        keywords="Persian Christian worship, prayer gatherings, church community, worship events, Mantle of Praise"
+      />
       <section className="banner">
         <BackgroundImage url="/images/home-banner.jpg" />
 
