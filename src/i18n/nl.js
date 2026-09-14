@@ -64,7 +64,7 @@ const messages = {
   giftTextbibelOnder: '2 Korintiërs 9:7',
   team: 'Ons Team',
   teamText:
-    'At Mantel van lof, we are not just a team; we are a family. Together we worship, learn, serve, and grow. The leadership of this ministry is guided by the leadership team and the spiritual oversight of the Levites, but the truth is that we are all an essential part of the Mantel van lof family. Each of us serves in our place: the worship and music team, the training team, and those who organize meetings and events. Youth leaders also join us to prepare the next generation for the future. We believe: we are instruments of service, but growth and blessing come only from God.',
+    'Bij Mantel van lof zijn wij niet alleen een team, maar een familie. Samen aanbidden, leren, dienen en groeien wij. Het leiderschapsteam draagt deze bediening onder geestelijk toezicht. Ieder van ons heeft een plaats in aanbidding, muziek, onderwijs, de organisatie van bijeenkomsten of de begeleiding van jongeren. Wij geloven dat wij mogen dienen, terwijl groei en zegen van God komen.',
   leader: 'Leiderschapsteam',
   leaderText:
     'Het Leiderschapsteam van Reda-ye Setayesh, bestaande uit dienaren met ervaring en een diepe toewijding aan aanbidding en kerkelijke bediening, is verantwoordelijk voor de leiding van alle geestelijke en praktische activiteiten van deze bediening. In overleg en onder geestelijk toezicht van de Levieten ontwikkelt en bevordert het beleid en programma’s, coördineert het de aanbiddings- en onderwijsteams, leidt het bijeenkomsten en evenementen, beheert het middelen en budgetten en ondersteunt en begeleidt het de leden van de bediening, om zo een gezonde, geestelijke en creatieve omgeving voor aanbidding en geloofsgroei te scheppen.',
@@ -74,7 +74,7 @@ const messages = {
   aboutUsShortText:
     'Wij zijn meer dan een team; wij zijn een familie die samen aanbidt, leert en dient.',
   aboutUsSectionText:
-    'Mantel van lof was born out of prayer, the guidance of the Holy Spirit, and a deep passion for worship. The founders, together with their families and with years of experience in worship and church ministry, established this ministry to be a place where the presence of God can be encountered, where spiritual growth takes place, and where churches—both Persian-speaking and international—are served. Time and again, we have experienced the power of true worship; a worship that renews hearts, transforms lives, and builds up the church.',
+    'Mantel van lof is ontstaan uit gebed, de leiding van de Heilige Geest en een diepe passie voor aanbidding. De oprichters en hun gezinnen brachten jarenlange ervaring in kerkelijke bediening samen om een plek te vormen waar mensen Gods aanwezigheid kunnen ervaren, geestelijk kunnen groeien en zowel Perzischtalige als internationale kerken kunnen dienen. Ware aanbidding vernieuwt harten, verandert levens en bouwt de kerk op.',
   sima: 'Dr. Sima Sasanfar',
   chairperson: 'Voorzitter',
   hamid: 'Hamid Ghanbari',

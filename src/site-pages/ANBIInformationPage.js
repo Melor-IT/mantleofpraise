@@ -1,18 +1,12 @@
+'use client';
 import { useIntl } from 'react-intl';
 import BackgroundImage from '../components/BackgroundImage';
-import SEO from '../components/SEO';
 
 export default function ANBIInformationPage({ locale, setLocale }) {
   const { formatMessage } = useIntl();
 
   return (
     <div className="page ANBI-Information">
-      <SEO
-        title="ANBI Information | Mantle of Praise"
-        description="See the ANBI policy and mission statements for Stichting Mantle of Praise, including goals, activities, income, and transparency."
-        image="/images/ANBI-banner.jpg"
-        keywords="ANBI information, Mantle of Praise policy, Dutch Christian foundation, worship ministry transparency"
-      />
       {/* Header */}
       <section>
         <BackgroundImage url="/images/ANBI-banner.jpg" className="ANBIinformation" />

@@ -1,7 +1,0 @@
-/.env      /404  404
-/.git/*    /404  404
-/backup/*  /404  404
-/config/*  /404  404
-/debug/*   /404  404
-/private/* /404  404
-/*         /index.html  200

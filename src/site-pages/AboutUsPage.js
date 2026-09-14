@@ -1,6 +1,6 @@
+'use client';
 import { useIntl } from 'react-intl';
 import BackgroundImage from '../components/BackgroundImage';
-import SEO from '../components/SEO';
 
 export default function AboutUs() {
   const { formatMessage } = useIntl();
@@ -69,12 +69,6 @@ export default function AboutUs() {
 
   return (
     <div className="page juin-us">
-      <SEO
-        title="About Us | Mantle of Praise"
-        description="Learn about Mantle of Praise, a Persian Christian worship community dedicated to prayer, praise, spiritual growth, and church support."
-        image="/images/join-us-banner.png"
-        keywords="Mantle of Praise, About Us, Persian Christian community, worship ministry"
-      />
       <section>
         <BackgroundImage url="/images/join-us-banner.png" className="aboutus" />
         <div className="page-content ">

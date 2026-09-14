@@ -1,4 +1,6 @@
-import { NavLink } from 'react-router-dom';
+'use client';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { useIntl } from 'react-intl';
 import { useEffect, useState } from 'react';
 
@@ -10,8 +12,12 @@ const menuItems = [
   { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' }
 ];
 
-const Header = ({ locale, setLocale }) => {
+const Header = ({ locale }) => {
   const { formatMessage } = useIntl();
+  const pathname = usePathname();
+  const router = useRouter();
+  const suffix = pathname.split('/').slice(2).join('/');
+  const languagePath = (lang) => `/${lang}${suffix ? `/${suffix}` : ''}`;
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleResize = () => {
@@ -31,13 +37,16 @@ const Header = ({ locale, setLocale }) => {
     <header className="app-header">
       <div className="page-content">
         {/* Logo */}
-        <div className="logo-full">
+        <Link
+          className="logo-full"
+          href={`/${locale}`}
+          aria-label={formatMessage({ id: 'home', defaultMessage: 'Home' })}>
           <img src="/images/logo-mini.png" alt="Mantle of Praise logo" />
           <img
             src={locale === 'fa' ? '/images/rada-farsi.png' : '/images/rada-eng.png'}
             alt="Reda-ye Setayesh logo"
           />
-        </div>
+        </Link>
 
         {/* Hamburger Menu Button */}
         <button
@@ -55,7 +64,7 @@ const Header = ({ locale, setLocale }) => {
             id="language-select"
             className="language-select"
             value={locale}
-            onChange={(e) => setLocale(e.target.value)}
+            onChange={(e) => router.push(languagePath(e.target.value))}
             aria-label="Select language">
             <option value="en">🇺🇸</option>
             <option value="fa">🇮🇷</option>
@@ -66,31 +75,31 @@ const Header = ({ locale, setLocale }) => {
         {/* Desktop Menu */}
         <nav className="nav-menu" aria-label="Main navigation">
           {menuItems.map((item) => (
-            <NavLink
+            <Link
               key={item.id}
-              to={item.to}
-              className={({ isActive }) => (isActive ? 'active' : '')}>
+              href={`/${locale}${item.to === '/' ? '' : item.to}`}
+              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}>
               {formatMessage({
                 id: item.id,
                 defaultMessage: item.defaultMessage
               })}
-            </NavLink>
+            </Link>
           ))}
         </nav>
 
         {/* Mobile Menu */}
         <div className={`mobile-menu ${open ? 'show' : ''}`}>
           {menuItems.map((item) => (
-            <NavLink
+            <Link
               key={item.id}
-              to={item.to}
+              href={`/${locale}${item.to === '/' ? '' : item.to}`}
               onClick={() => setOpen(false)}
-              className={({ isActive }) => (isActive ? 'active' : '')}>
+              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}>
               {formatMessage({
                 id: item.id,
                 defaultMessage: item.defaultMessage
               })}
-            </NavLink>
+            </Link>
           ))}
         </div>
       </div>

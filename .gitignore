@@ -10,6 +10,9 @@
 
 # production
 /build
+/.next
+/.npm-cache
+/out
 
 # misc
 .DS_Store
