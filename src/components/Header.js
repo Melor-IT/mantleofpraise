@@ -6,10 +6,10 @@ import { useEffect, useState } from 'react';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
-  { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' },
   { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' },
   { to: '/our-vision', id: 'ourVision', defaultMessage: 'Our Vision' },
-  { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' }
+  { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' },
+  { to: '/join-us', id: 'joinUs', defaultMessage: 'Join Us' }
 ];
 
 const Header = ({ locale }) => {
@@ -78,7 +78,9 @@ const Header = ({ locale }) => {
             <Link
               key={item.id}
               href={`/${locale}${item.to === '/' ? '' : item.to}`}
-              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}>
+              className={
+                pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''
+              }>
               {formatMessage({
                 id: item.id,
                 defaultMessage: item.defaultMessage
@@ -94,7 +96,9 @@ const Header = ({ locale }) => {
               key={item.id}
               href={`/${locale}${item.to === '/' ? '' : item.to}`}
               onClick={() => setOpen(false)}
-              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}>
+              className={
+                pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''
+              }>
               {formatMessage({
                 id: item.id,
                 defaultMessage: item.defaultMessage
