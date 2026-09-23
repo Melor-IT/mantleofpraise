@@ -9,7 +9,7 @@ export default function OurVisionPage() {
     <div className="page OurVision">
       {/* Header */}
       <section>
-        <BackgroundImage url="/images/ourvision-banner.jpg" className="OurVisionHeader" />
+        <BackgroundImage url="/images/ourvision-banner.png" className="OurVisionHeader" />
         <div className="page-content">
           <h1>{formatMessage({ id: 'ourVisionTitle', defaultMessage: 'Our Vision' })}</h1>
         </div>

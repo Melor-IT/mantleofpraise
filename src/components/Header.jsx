@@ -111,7 +111,7 @@ const Header = ({ locale }) => {
             className="language-menu"
             role="menu"
             aria-hidden={!languageOpen}
-            inert={!languageOpen ? '' : undefined}
+            inert={!languageOpen}
           >
             {languages.map((language) => (
               <button
@@ -160,7 +160,7 @@ const Header = ({ locale }) => {
           className={`mobile-menu ${open ? 'show' : ''}`}
           aria-label={formatMessage({ id: 'mainNavigation', defaultMessage: 'Main navigation' })}
           aria-hidden={!open}
-          inert={!open ? '' : undefined}
+          inert={!open}
         >
           {menuItems.map((item) => (
             <Link

@@ -37,7 +37,7 @@ const images = {
   '': '/images/home-banner.jpg',
   'join-us': '/images/juneUs.png',
   'about-us': '/images/back1.jpg',
-  'our-vision': '/images/ourvision-banner.jpg',
+  'our-vision': '/images/ourvision-banner.png',
   'ANBI-information': '/images/ANBI-banner.jpg'
 };
 
