@@ -789,6 +789,20 @@ section.our-vision > .page-content {
 .form-block button:hover {
   background-color: var(--secondary-color);
 }
+.form-block button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+.form-status {
+  min-height: 1.7em;
+  font-weight: 700;
+}
+.form-status.success {
+  color: #236b2d;
+}
+.form-status.error {
+  color: #9f1d1d;
+}
 
 .services {
   display: flex;

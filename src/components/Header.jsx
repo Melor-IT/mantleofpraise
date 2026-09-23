@@ -56,6 +56,11 @@ const Header = ({ locale }) => {
     };
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+    setLanguageOpen(false);
+  }, [pathname]);
+
   return (
     <header className="app-header">
       <div className="page-content">
@@ -74,9 +79,12 @@ const Header = ({ locale }) => {
 
         {/* Hamburger Menu Button */}
         <button
+          type="button"
           className={`hamburger ${open ? 'open' : ''}`}
           onClick={() => setOpen((prev) => !prev)}
-          aria-label="Toggle Menu"
+          aria-label={formatMessage({ id: 'menu', defaultMessage: 'Menu' })}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <span></span>
           <span></span>
@@ -99,7 +107,12 @@ const Header = ({ locale }) => {
             <span className="language-code">{currentLanguage.short}</span>
           </button>
 
-          <div className="language-menu" role="menu" aria-hidden={!languageOpen}>
+          <div
+            className="language-menu"
+            role="menu"
+            aria-hidden={!languageOpen}
+            inert={!languageOpen ? '' : undefined}
+          >
             {languages.map((language) => (
               <button
                 type="button"
@@ -123,7 +136,10 @@ const Header = ({ locale }) => {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="nav-menu" aria-label="Main navigation">
+        <nav
+          className="nav-menu"
+          aria-label={formatMessage({ id: 'mainNavigation', defaultMessage: 'Main navigation' })}
+        >
           {menuItems.map((item) => (
             <Link
               key={item.id}
@@ -139,7 +155,13 @@ const Header = ({ locale }) => {
         </nav>
 
         {/* Mobile Menu */}
-        <div className={`mobile-menu ${open ? 'show' : ''}`}>
+        <nav
+          id="mobile-navigation"
+          className={`mobile-menu ${open ? 'show' : ''}`}
+          aria-label={formatMessage({ id: 'mainNavigation', defaultMessage: 'Main navigation' })}
+          aria-hidden={!open}
+          inert={!open ? '' : undefined}
+        >
           {menuItems.map((item) => (
             <Link
               key={item.id}
@@ -177,7 +199,7 @@ const Header = ({ locale }) => {
               </button>
             ))}
           </div>
-        </div>
+        </nav>
       </div>
     </header>
   );

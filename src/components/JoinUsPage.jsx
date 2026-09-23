@@ -6,6 +6,7 @@ import BackgroundImage from './BackgroundImage';
 export default function JoinUsPage() {
   const { formatMessage } = useIntl();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,8 +30,9 @@ export default function JoinUsPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus(null);
     if (!formData.agreeTerms || !formData.agreePrivacy) {
-      alert(formatMessage({ id: 'mustAgree' }));
+      setStatus({ type: 'error', message: formatMessage({ id: 'mustAgree' }) });
       return;
     }
     setIsSubmitting(true);
@@ -46,7 +48,10 @@ export default function JoinUsPage() {
 
       if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
 
-      alert(formatMessage({ id: 'formSent', defaultMessage: 'Message sent!' }));
+      setStatus({
+        type: 'success',
+        message: formatMessage({ id: 'formSent', defaultMessage: 'Message sent!' })
+      });
       setFormData({
         firstName: '',
         lastName: '',
@@ -60,12 +65,13 @@ export default function JoinUsPage() {
         agreePrivacy: false
       });
     } catch {
-      alert(
-        formatMessage({
+      setStatus({
+        type: 'error',
+        message: formatMessage({
           id: 'formFailed',
           defaultMessage: 'Failed to send message. Please try again later.'
         })
-      );
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -246,6 +252,13 @@ export default function JoinUsPage() {
                 ? formatMessage({ id: 'submitting', defaultMessage: 'Sending...' })
                 : formatMessage({ id: 'submit' })}
             </button>
+            <p
+              className={`form-status${status ? ` ${status.type}` : ''}`}
+              role={status?.type === 'error' ? 'alert' : 'status'}
+              aria-live="polite"
+            >
+              {status?.message || ''}
+            </p>
           </form>
         </div>
       </section>

@@ -2,7 +2,7 @@
 import { useIntl } from 'react-intl';
 import BackgroundImage from './BackgroundImage';
 
-export default function OurVisionPage({ locale, setLocale }) {
+export default function OurVisionPage() {
   const { formatMessage } = useIntl();
 
   return (

@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl';
 
-const Footer = ({ locale, setLocale }) => {
+const Footer = () => {
   const { formatMessage } = useIntl();
 
   const footerStyle = {
