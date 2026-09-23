@@ -49,7 +49,8 @@ const Footer = ({ locale, setLocale }) => {
               <a
                 href="https://www.instagram.com/mantle.of.praise/"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 @mantle.of.praise
               </a>
             </p>

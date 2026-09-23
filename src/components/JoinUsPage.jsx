@@ -1,7 +1,7 @@
 'use client';
 import { useIntl } from 'react-intl';
 import { useState } from 'react';
-import BackgroundImage from '../components/BackgroundImage';
+import BackgroundImage from './BackgroundImage';
 
 export default function JoinUsPage() {
   const { formatMessage } = useIntl();
@@ -211,7 +211,8 @@ export default function JoinUsPage() {
                 name="gifts"
                 value={formData.gifts}
                 onChange={handleChange}
-                rows="3"></textarea>{' '}
+                rows="3"
+              ></textarea>{' '}
             </label>
 
             <label className="checkbox">

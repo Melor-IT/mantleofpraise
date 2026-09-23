@@ -1,5 +1,6 @@
 const messages = {
   welcome: 'Welkom',
+  selectLanguage: 'Taal selecteren',
   welcomeTo: 'Welkom bij',
   mantleOfPraise: 'Mantel van lof',
   home: 'Home',
@@ -86,7 +87,7 @@ const messages = {
   treasurer: 'Penningmeester',
   babak: 'Herder Babak Zeynali',
   kamil: 'Dominee Kamil Navai',
-   sahar:'Dominee Sahar Apistola',
+  sahar: 'Dominee Sahar Apistola',
   advisoryBoardMember: 'Adviseurend',
   supervisoryCommission: 'Toezichtscommissie',
   supervisoryCommissionText:

@@ -1,6 +1,6 @@
 'use client';
 import { useIntl } from 'react-intl';
-import BackgroundImage from '../components/BackgroundImage';
+import BackgroundImage from './BackgroundImage';
 
 export default function AboutUs() {
   const { formatMessage } = useIntl();
@@ -22,24 +22,6 @@ export default function AboutUs() {
       roleId: 'secretary',
       defaultRole: 'Secretary'
     }
-    //  {
-    //   img: '/images/homa.jpg',
-    //   alt: 'Homa K Mohammadi',
-    //   nameId: 'homa',
-    //   defaultName: 'Homa Mohammadi'
-    // }
-    // {
-    //   img: '/images/alireza.jpg',
-    //   alt: 'Ali Reza Shayan',
-    //   nameId: 'alireza',
-    //   defaultName: 'Ali Reza Shayan'
-    // },
-    // {
-    //   img: '/images/atena.jpg',
-    //   alt: 'Atena Gholami',
-    //   nameId: 'atena',
-    //   defaultName: 'Atena Gholami'
-    // },
   ];
 
   const supervisoryTeam = [

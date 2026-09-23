@@ -1,6 +1,6 @@
 'use client';
 import { useIntl } from 'react-intl';
-import BackgroundImage from '../components/BackgroundImage';
+import BackgroundImage from './BackgroundImage';
 
 export default function OurVisionPage({ locale, setLocale }) {
   const { formatMessage } = useIntl();

@@ -1,5 +1,6 @@
 const messages = {
   welcome: 'Welcome',
+  selectLanguage: 'Select language',
   welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
   home: 'Home',
@@ -23,7 +24,7 @@ const messages = {
   phone: 'Phone',
   city: 'City',
   church: 'Which church are you a member of?',
-  pastor: 'Your pastor\'s name',
+  pastor: "Your pastor's name",
   gifts: 'Gifts / Talents',
   agreeTerms: 'I agree to the Terms & Conditions',
   agreePrivacy: 'I agree to the Privacy Policy',
@@ -41,7 +42,8 @@ const messages = {
   aboutUsText:
     'The Spirit of the Lord GOD is upon me; for the LORD has anointed me to bring good news to the meek, to heal the brokenhearted, to proclaim liberty to captives and release to the bound; to declare the year of the LORD’s favor and the day of His vengeance; to comfort all who mourn, giving them beauty for ashes, joy for mourning, and a garment of praise for heaviness, that they may be called trees of righteousness, the planting of the LORD, that He may be glorified.',
   aboutUsTextOnder: '- Isaiah 61:1-3',
-  joinUsText: 'Let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, but encouraging one another.',
+  joinUsText:
+    'Let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, but encouraging one another.',
   joinUsTextOnder: '- Hebrews 10:24-25',
   ourMission: 'Our Mission',
   ourMissionText:
@@ -49,10 +51,11 @@ const messages = {
   secondService: 'Prophecy and Prophets',
   secondServiceText:
     'Worship and prophecy are complementary to one another, and this ministry provides the foundation for the manifestation and flow of prophecy alongside worship',
-  thirdService:  'Organizing Prayer and Worship Sessions',
-  thirdServiceText: 'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
-  firstService:'Worship and Worshipers',
-  firstServiceText:'We provide a platform for you to serve as a worshipper in worship gatherings.'    ,
+  thirdService: 'Organizing Prayer and Worship Sessions',
+  thirdServiceText:
+    'In Mantle of Praise, prayer and worship gatherings are a place where hearts are united in the presence of God. By combining music and worship under the guidance of the Holy Spirit, and inspired by the Word of God in 1 Samuel 10:5, these gatherings provide an opportunity for the people of God to glorify Him with one voice.',
+  firstService: 'Worship and Worshipers',
+  firstServiceText: 'We provide a platform for you to serve as a worshipper in worship gatherings.',
   more: 'More',
   vision: 'Our Vision',
   visionText:
@@ -65,12 +68,12 @@ const messages = {
   giftTextbibelOnder: '2 Corinthians 9:7',
   team: 'Our Team',
   teamText:
-    'Bij Mantle of Praise zijn we niet zomaar een team; we zijn een familie. Samen aanbidden, leren, dienen en groeien we. De leiding van deze dienst wordt verzorgd door het leiderschapsteam en de geestelijke supervisie van de Levieten, maar de waarheid is dat wij allemaal een belangrijk onderdeel zijn van de Mantle of Praise-familie. Ieder van ons dient op zijn of haar plek: het aanbids- en muziekteam, het trainingsteam, en degenen die bijeenkomsten en evenementen organiseren. Ook jeugdleiders zijn bij ons om de volgende generatie voor te bereiden op de toekomst. Wij geloven: wij zijn instrumenten van dienst, maar groei en zegen komen alleen van God.',
+    'At Mantle of Praise, we are not merely a team; we are a family. Together we worship, learn, serve, and grow. The leadership team carries this ministry under spiritual oversight. Each of us has a place in worship, music, teaching, organizing gatherings, or guiding young people. We believe that we are called to serve, while all growth and blessing come from God.',
   leader: 'Leadership Team',
   leaderText:
     'The Leadership Team of Mantle of Praise, consisting of servants with experience and a deep commitment to worship and church ministry, is responsible for guiding all spiritual and practical activities of this ministry. In consultation with and under the spiritual oversight of the Levites, it develops and advances policies and programs, coordinates worship and training teams, leads gatherings and events, manages resources and budgets, and supports and cares for the members of the ministry, in order to create a healthy, spiritual, and creative environment for worship and the growth of faith.',
   aboutUsShortText:
-    'We is more than a team; we are a family worshiping, learning, and serving together.',
+    'We are more than a team; we are a family worshiping, learning, and serving together.',
   aboutUsSectionText:
     'Mantle of Praise is a spiritual family dedicated to bringing people together to experience the true presence of God through worship, learning, and service. We believe that every individual, with their unique gifts and heart, can play a distinct role in advancing faith and divine love. Our activities include worship and music, training, and organizing meetings and events, all coordinated under the leadership team and the spiritual guidance of the Levites. Alongside youth leaders, we prepare the next generation for a fruitful future and a life reflecting the light of Christ. Mantle of Praise is a place where people grow together, share experiences, and learn how to manifest God’s light in their personal lives and communities. We are instruments of service, but every blessing and growth we witness comes solely from God.',
   sima: 'Dr. Sima Sasanfar',
@@ -84,15 +87,15 @@ const messages = {
   treasurer: 'Treasurer',
   babak: 'Shepherd Babak Zeynali',
   kamil: 'Senior Pastor Kamil Navai',
-  sahar:'Shepherd Sahar Apistola',
+  sahar: 'Shepherd Sahar Apistola',
   advisoryBoardMember: 'Advisory Board Member',
   supervisoryCommission: 'Supervisory Commission',
   supervisoryCommissionText:
     'The Supervisory Commission of the Reda-ye Setayesh Service Organization is composed of Levites from the member churches. Its responsibility is to oversee the spiritual integrity of the organization, provide pastoral and spiritual support to its members and activities, and ensure that the organization operates within biblical principles.',
   ANBIInformation: 'ANBI Information',
-  ourVision: 'Onze Visie',
+  ourVision: 'Our Vision',
   ourVisionText:
-    'Onze visie is het ervaren van ware eenheid in de aanbidding van de Heer; een plaats waar harten, stemmen en levens in Zijn aanwezigheid één worden. Wij geloven dat de taal van de hemel niets anders is dan eenheid in aanbidding, en wanneer het volk van God met één hart Hem aanbidt, wordt Zijn aanwezigheid geopenbaard en wordt de hemel op aarde weerspiegeld. Onze visie is het zien van een generatie die in de liefde en aanbidding van Christus verenigd is en samen Zijn naam verheerlijkt.',
+    'Our vision is to experience true unity in worship of the Lord—a place where hearts, voices, and lives become one in His presence. We believe that unity in worship is the language of heaven. When God’s people worship Him with one heart, His presence is revealed and heaven is reflected on earth. We long to see a generation united in the love and worship of Christ, exalting His name together.',
   beleidsplanTitle: 'Beleidsplan Stichting Mantle of Praise',
 
   // Section 1 – Goals

@@ -1,6 +1,6 @@
 'use client';
 import { useIntl } from 'react-intl';
-import BackgroundImage from '../components/BackgroundImage';
+import BackgroundImage from './BackgroundImage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
