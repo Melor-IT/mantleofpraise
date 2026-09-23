@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. Run `npm run build` to verify production output, then `npm start` to serve it.
+Open `http://localhost:3000`. Run `npm run build` to verify the production export in `out`.
 
 ## Languages and SEO
 
@@ -21,7 +21,7 @@ The membership form still submits to the existing external `contact.php` endpoin
 
 ## Deployment checks
 
-- Deploy with a host that supports Next.js routing, redirects, and response headers. The old Create React App static hosting configuration is no longer used.
+- Netlify builds the site with Next.js and publishes the static `out` directory. Redirects and response headers are configured in `netlify.toml`.
 - Serve the canonical domain over HTTPS. Redirect other hostnames, including `www` if configured, to the chosen canonical hostname.
 - After deployment, verify `/fa`, `/en`, `/nl`, `/sitemap.xml`, and `/robots.txt` on the public domain. Submit the sitemap and inspect sample URLs for all three languages in Google Search Console. Indexing is determined by Google and cannot be guaranteed by code alone.
 - The registration form sends personal data directly to `www.ewcms.org`. Its server-side validation, rate limiting, retention, and CORS policy must be reviewed on that service. The current privacy checkbox has no linked policy document; publish and link the applicable policy before collecting registrations.

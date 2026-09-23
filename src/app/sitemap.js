@@ -1,5 +1,7 @@
 import { locales, routes, siteUrl, pathFor, alternatesFor } from '../lib/site';
 
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   return routes.flatMap((slug) =>
     locales.map((locale) => ({
