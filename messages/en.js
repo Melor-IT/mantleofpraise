@@ -1,6 +1,8 @@
 const messages = {
   welcome: 'Welcome',
   selectLanguage: 'Select language',
+  menu: 'Menu',
+  mainNavigation: 'Main navigation',
   welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
   home: 'Home',

@@ -1,6 +1,8 @@
 const messages = {
   welcome: 'Welkom',
   selectLanguage: 'Taal selecteren',
+  menu: 'Menu',
+  mainNavigation: 'Hoofdnavigatie',
   welcomeTo: 'Welkom bij',
   mantleOfPraise: 'Mantel van lof',
   home: 'Home',

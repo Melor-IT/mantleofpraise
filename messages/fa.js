@@ -1,6 +1,8 @@
 const messages = {
   welcome: 'خوش آمدید',
   selectLanguage: 'انتخاب زبان',
+  menu: 'منو',
+  mainNavigation: 'پیمایش اصلی',
   welcomeTo: 'خوش آمدید به',
   mantleOfPraise: 'ردای ستایش',
   home: 'خانه',

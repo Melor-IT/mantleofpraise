@@ -18,6 +18,8 @@ const languages = [
   { code: 'nl', short: 'NL', label: 'Nederlands' }
 ];
 
+const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
+
 const Header = ({ locale }) => {
   const { formatMessage } = useIntl();
   const pathname = usePathname();
@@ -28,6 +30,14 @@ const Header = ({ locale }) => {
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageMenuRef = useRef(null);
   const currentLanguage = languages.find((language) => language.code === locale) || languages[0];
+  const isActive = (itemPath) => {
+    const currentPath = normalizePath(pathname);
+    const targetPath = normalizePath(`/${locale}${itemPath === '/' ? '' : itemPath}`);
+
+    return itemPath === '/'
+      ? currentPath === targetPath
+      : currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -126,10 +136,7 @@ const Header = ({ locale }) => {
                   if (language.code !== locale) router.push(languagePath(language.code));
                 }}
               >
-                <span className="language-code">{language.short}</span>
-                <span className="language-check" aria-hidden="true">
-                  ✓
-                </span>
+              {language.short}
               </button>
             ))}
           </div>
@@ -144,7 +151,8 @@ const Header = ({ locale }) => {
             <Link
               key={item.id}
               href={`/${locale}${item.to === '/' ? '' : item.to}`}
-              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}
+              className={isActive(item.to) ? 'active' : ''}
+              aria-current={isActive(item.to) ? 'page' : undefined}
             >
               {formatMessage({
                 id: item.id,
@@ -167,7 +175,8 @@ const Header = ({ locale }) => {
               key={item.id}
               href={`/${locale}${item.to === '/' ? '' : item.to}`}
               onClick={() => setOpen(false)}
-              className={pathname === `/${locale}${item.to === '/' ? '' : item.to}` ? 'active' : ''}
+              className={isActive(item.to) ? 'active' : ''}
+              aria-current={isActive(item.to) ? 'page' : undefined}
             >
               {formatMessage({
                 id: item.id,

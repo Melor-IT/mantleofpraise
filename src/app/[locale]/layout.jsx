@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import '../../style/globals.css';
 import '../../style/main.css';
 import { locales, messages } from '../../lib/site';
 import SiteShell from '../../components/SiteShell';
