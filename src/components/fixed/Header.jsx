@@ -33,6 +33,9 @@ const Header = ({ locale }) => {
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageMenuRef = useRef(null);
+  const languageTriggerRef = useRef(null);
+  const hamburgerRef = useRef(null);
+  const mobileMenuRef = useRef(null);
   const currentLanguage = languages.find((language) => language.code === locale) || languages[0];
   const availableLanguages = languages.filter((language) => language.code !== currentLanguage.code);
   const isActive = (itemPath) => {
@@ -46,7 +49,7 @@ const Header = ({ locale }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 500) {
+      if (window.matchMedia('(min-width: 37.501em)').matches) {
         setOpen(false);
       }
     };
@@ -55,10 +58,24 @@ const Header = ({ locale }) => {
 
     const handlePointerDown = (event) => {
       if (!languageMenuRef.current?.contains(event.target)) setLanguageOpen(false);
+      if (
+        !mobileMenuRef.current?.contains(event.target) &&
+        !hamburgerRef.current?.contains(event.target)
+      )
+        setOpen(false);
     };
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') setLanguageOpen(false);
+      if (event.key === 'Escape') {
+        if (languageMenuRef.current?.contains(document.activeElement)) {
+          languageTriggerRef.current?.focus();
+        }
+        if (mobileMenuRef.current?.contains(document.activeElement)) {
+          hamburgerRef.current?.focus();
+        }
+        setLanguageOpen(false);
+        setOpen(false);
+      }
     };
 
     document.addEventListener('pointerdown', handlePointerDown);
@@ -75,6 +92,27 @@ const Header = ({ locale }) => {
     setOpen(false);
     setLanguageOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (languageOpen) languageMenuRef.current?.querySelector('[role="menuitem"]')?.focus();
+  }, [languageOpen]);
+
+  function handleLanguageKeys(event) {
+    const items = [...languageMenuRef.current.querySelectorAll('[role="menuitem"]')];
+    const index = items.indexOf(document.activeElement);
+    let nextIndex;
+    if (event.key === 'ArrowDown') nextIndex = (index + 1) % items.length;
+    else if (event.key === 'ArrowUp') nextIndex = (index - 1 + items.length) % items.length;
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = items.length - 1;
+    else if (event.key === 'Tab') {
+      setLanguageOpen(false);
+      languageTriggerRef.current.focus();
+      return;
+    } else return;
+    event.preventDefault();
+    items[nextIndex]?.focus();
+  }
 
   return (
     <header className="app-header">
@@ -96,6 +134,7 @@ const Header = ({ locale }) => {
         <button
           type="button"
           className={`hamburger ${open ? 'open' : ''}`}
+          ref={hamburgerRef}
           onClick={() => setOpen((prev) => !prev)}
           aria-label={formatMessage({ id: 'menu', defaultMessage: 'Menu' })}
           aria-expanded={open}
@@ -116,20 +155,30 @@ const Header = ({ locale }) => {
             <button
               type="button"
               className="language-trigger"
+              ref={languageTriggerRef}
               onClick={() => setLanguageOpen((value) => !value)}
+              onKeyDown={(event) => {
+                if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                  event.preventDefault();
+                  setLanguageOpen(true);
+                }
+              }}
               aria-label={formatMessage({
                 id: 'selectLanguage',
                 defaultMessage: 'Select language'
               })}
               aria-haspopup="menu"
               aria-expanded={languageOpen}
+              aria-controls="language-navigation"
             >
               <span className="language-code">{currentLanguage.short}</span>
             </button>
 
             <div
               className="language-menu"
+              id="language-navigation"
               role="menu"
+              onKeyDown={handleLanguageKeys}
               aria-hidden={!languageOpen}
               inert={!languageOpen}
             >
@@ -174,6 +223,7 @@ const Header = ({ locale }) => {
         {/* Mobile Menu */}
         <nav
           id="mobile-navigation"
+          ref={mobileMenuRef}
           className={`mobile-menu ${open ? 'show' : ''}`}
           aria-label={formatMessage({ id: 'mainNavigation', defaultMessage: 'Main navigation' })}
           aria-hidden={!open}

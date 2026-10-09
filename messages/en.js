@@ -52,6 +52,10 @@ const messages = {
   mustAgree: 'You must agree to both terms to continue.',
   formSent: 'Message sent!',
   formFailed: 'Failed to send message. Please try again later.',
+  formInvalid:
+    'Please complete the required fields and keep your answers within the allowed length.',
+  formTimedOut:
+    'The request timed out. Please contact us before sending again to avoid duplicate registrations.',
   submitting: 'Sending...',
   socialMedia: 'Social Media',
   visitingAddress: 'Visiting Address',

@@ -3,7 +3,7 @@ import { createIntl } from 'react-intl/server';
 import Banner from '../../components/system/Banner';
 import GridSteps from '../../components/system/GridSteps';
 import ContentImageButton from '../../components/system/ContentImageButton';
-import { messages, pageMetadata } from '../../lib/site';
+import { messages, pageMetadata, pathFor } from '../../lib/site';
 
 const serviceSteps = [
   {
@@ -61,7 +61,7 @@ export default async function Home({ params }) {
         title={text('aboutUs', 'About Us')}
         description={text('aboutUsSectionText')}
         buttonText={text('more', 'More')}
-        buttonHref={`/${locale}/about-us`}
+        buttonHref={pathFor(locale, 'about-us')}
       />
     </div>
   );

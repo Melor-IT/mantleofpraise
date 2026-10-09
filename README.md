@@ -9,7 +9,11 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. Run `npm run build` to verify the production export in `out`.
+Use Node.js 22 or newer. Open `http://localhost:3000` during development.
+Run `npm run build` to generate the production export in `out`, then `npm start`
+to preview it at `http://127.0.0.1:3000`. Set `PORT` to use a different local port.
+The preview binds to the local machine and serves the generated security headers.
+Run `npm test` for the security-header and static-preview regression tests.
 
 ## Donations
 
@@ -40,11 +44,17 @@ The English home page is served directly at `/`, with Persian and Dutch home pag
 
 The default canonical origin is `https://mantleofpraise.nl`. For another deployment domain, set `NEXT_PUBLIC_SITE_URL` to its full HTTPS origin before building. Submit the deployed sitemap in Google Search Console after launch.
 
-The membership form still submits to the existing external `contact.php` endpoint. That endpoint must remain available and allow requests from the deployed site.
+The membership form submits to the existing external `contact.php` endpoint. That endpoint must
+remain available and allow requests from the deployed site. The client validates required fields
+and field lengths, trims text, prevents concurrent submissions, and aborts after 15 seconds.
+Failed submissions retain the entered values. A timeout may occur after the server has received
+the request, so the message asks visitors to contact the organization before resubmitting.
+Requests omit cookies and referrers and reject redirects to avoid forwarding personal data.
+These client safeguards do not replace validation and abuse prevention on the PHP server.
 
 ## Deployment checks
 
-- Netlify builds the site with Next.js and publishes the static `out` directory. Redirects and response headers are configured in `netlify.toml`.
+- Netlify builds the site with Next.js and publishes the static `out` directory. Redirects are configured in `netlify.toml`. The postbuild script generates response headers in `out/_headers`, including a Content Security Policy that permits the exact exported inline scripts by SHA-256 hash. Deploy the entire export and its headers together; changing HTML or injecting scripts after the build can invalidate the hashes. Other hosts must apply these response headers themselves.
 - Serve the canonical domain over HTTPS. Redirect other hostnames, including `www` if configured, to the chosen canonical hostname.
 - After deployment, verify `/`, `/fa`, `/nl`, `/sitemap.xml`, and `/robots.txt` on the public domain. Submit the sitemap and inspect sample URLs for all three languages in Google Search Console. Indexing is determined by Google and cannot be guaranteed by code alone.
 - The registration form sends personal data directly to `www.ewcms.org`. Its server-side validation, rate limiting, retention, and CORS policy must be reviewed on that service. The current privacy checkbox has no linked policy document; publish and link the applicable policy before collecting registrations.

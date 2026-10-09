@@ -5,12 +5,22 @@ import nl from '../../messages/nl';
 export const messages = { en, fa, nl };
 export const locales = Object.keys(messages);
 export const routes = ['', 'join-us', 'about-us', 'our-vision', 'ANBI-information'];
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://mantleofpraise.nl').replace(
-  /\/$/,
-  ''
-);
+const canonicalUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://mantleofpraise.nl');
+if (
+  canonicalUrl.protocol !== 'https:' ||
+  canonicalUrl.username ||
+  canonicalUrl.password ||
+  canonicalUrl.pathname !== '/' ||
+  canonicalUrl.search ||
+  canonicalUrl.hash
+) {
+  throw new Error(
+    'NEXT_PUBLIC_SITE_URL must be an HTTPS origin without credentials, path, query, or fragment.'
+  );
+}
+export const siteUrl = canonicalUrl.origin;
 export const pathFor = (locale, slug = '') =>
-  locale === 'en' && !slug ? '/' : `/${locale}${slug ? `/${slug}` : ''}`;
+  locale === 'en' && !slug ? '/' : `/${locale}/${slug ? `${slug}/` : ''}`;
 export const alternatesFor = (slug = '') => ({
   en: pathFor('en', slug),
   fa: pathFor('fa', slug),

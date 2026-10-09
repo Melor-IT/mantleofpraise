@@ -52,6 +52,9 @@ const messages = {
   mustAgree: 'U moet met beide voorwaarden akkoord gaan om verder te gaan.',
   formSent: 'Bericht verzonden!',
   formFailed: 'Bericht verzenden is mislukt. Probeer het later opnieuw.',
+  formInvalid: 'Vul de verplichte velden in en houd uw antwoorden binnen de toegestane lengte.',
+  formTimedOut:
+    'De aanvraag duurde te lang. Neem contact met ons op voordat u opnieuw verzendt om dubbele aanmeldingen te voorkomen.',
   submitting: 'Verzenden...',
   socialMedia: 'Sociale media',
   visitingAddress: 'Bezoekadres',
