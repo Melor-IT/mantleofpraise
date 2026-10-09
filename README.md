@@ -14,6 +14,12 @@ Run `npm run build` to generate the production export in `out`, then `npm start`
 to preview it at `http://127.0.0.1:3000`. Set `PORT` to use a different local port.
 The preview binds to the local machine and serves the generated security headers.
 Run `npm test` for the security-header and static-preview regression tests.
+After building, run `npm run test:browser` for the full browser checks. It requires
+Chrome or Chromium; set `CHROME_PATH` if it is installed outside a standard location.
+The browser checks intercept membership requests and never send a real registration.
+If Chrome's sandbox cannot start in a restricted test environment, set
+`BROWSER_TEST_NO_SANDBOX=1` for that isolated local test run. The default enables
+the browser sandbox.
 
 ## Donations
 
@@ -55,6 +61,7 @@ These client safeguards do not replace validation and abuse prevention on the PH
 ## Deployment checks
 
 - Netlify builds the site with Next.js and publishes the static `out` directory. Redirects are configured in `netlify.toml`. The postbuild script generates response headers in `out/_headers`, including a Content Security Policy that permits the exact exported inline scripts by SHA-256 hash. Deploy the entire export and its headers together; changing HTML or injecting scripts after the build can invalidate the hashes. Other hosts must apply these response headers themselves.
+- Postbuild also provides dot-separated aliases for Next.js segment payloads so client navigation and prefetching work on static hosts without additional rewrites.
 - Serve the canonical domain over HTTPS. Redirect other hostnames, including `www` if configured, to the chosen canonical hostname.
 - After deployment, verify `/`, `/fa`, `/nl`, `/sitemap.xml`, and `/robots.txt` on the public domain. Submit the sitemap and inspect sample URLs for all three languages in Google Search Console. Indexing is determined by Google and cannot be guaranteed by code alone.
 - The registration form sends personal data directly to `www.ewcms.org`. Its server-side validation, rate limiting, retention, and CORS policy must be reviewed on that service. The current privacy checkbox has no linked policy document; publish and link the applicable policy before collecting registrations.

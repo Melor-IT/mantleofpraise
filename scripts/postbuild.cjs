@@ -1,8 +1,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { securityHeaders } = require('./security-headers.cjs');
+const { copyStaticSegments } = require('./static-segments.cjs');
 
 const exportRoot = path.resolve(__dirname, '../out');
+const segments = copyStaticSegments(exportRoot);
+console.log(`Prepared ${segments} static segment payloads for client navigation.`);
 const headers = securityHeaders(exportRoot);
 const rules = Object.entries(headers)
   .map(([name, value]) => `  ${name}: ${value}`)

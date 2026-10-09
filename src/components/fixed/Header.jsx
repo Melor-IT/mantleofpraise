@@ -94,7 +94,11 @@ const Header = ({ locale }) => {
   }, [pathname]);
 
   useEffect(() => {
-    if (languageOpen) languageMenuRef.current?.querySelector('[role="menuitem"]')?.focus();
+    if (!languageOpen) return;
+    const frame = requestAnimationFrame(() => {
+      languageMenuRef.current?.querySelector('[role="menuitem"]')?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
   }, [languageOpen]);
 
   function handleLanguageKeys(event) {
