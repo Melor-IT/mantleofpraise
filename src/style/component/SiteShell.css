@@ -1,0 +1,41 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app.rtl {
+  font-family: var(--font-family-fa);
+}
+
+.app.rtl h1,
+.app.rtl h2,
+.app.rtl h3,
+.app.rtl h4,
+.app.rtl h5,
+.app.rtl h6,
+.app.rtl p,
+.app.rtl li,
+.app.rtl label,
+.app.rtl input,
+.app.rtl textarea,
+.app.rtl button,
+.app.rtl select {
+  font-family: var(--font-family-fa);
+}
+
+.app.rtl p,
+.app.rtl li,
+.app.rtl label,
+.app.rtl input,
+.app.rtl textarea,
+.app.rtl button,
+.app.rtl select {
+  line-height: 1.9;
+}
+@media (max-width: 37.5em) {
+  .app.rtl p,
+  .app.rtl li {
+    line-height: 1.9;
+  }
+}

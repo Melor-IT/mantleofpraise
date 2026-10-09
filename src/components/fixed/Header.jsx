@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useIntl } from 'react-intl';
 import { useEffect, useRef, useState } from 'react';
+import { pathFor } from '../../lib/site';
+import DonationButton from '../system/DonationButton';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
@@ -24,15 +26,18 @@ const Header = ({ locale }) => {
   const { formatMessage } = useIntl();
   const pathname = usePathname();
   const router = useRouter();
-  const suffix = pathname.split('/').slice(2).join('/');
-  const languagePath = (lang) => `/${lang}${suffix ? `/${suffix}` : ''}`;
+  const routeSuffix = normalizePath(pathname).split('/').slice(2).join('/');
+  const suffix = routeSuffix === 'Home' ? '' : routeSuffix;
+  const languagePath = (lang) => pathFor(lang, suffix);
+  const menuPath = (itemPath) => pathFor(locale, itemPath === '/' ? '' : itemPath.slice(1));
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageMenuRef = useRef(null);
   const currentLanguage = languages.find((language) => language.code === locale) || languages[0];
+  const availableLanguages = languages.filter((language) => language.code !== currentLanguage.code);
   const isActive = (itemPath) => {
     const currentPath = normalizePath(pathname);
-    const targetPath = normalizePath(`/${locale}${itemPath === '/' ? '' : itemPath}`);
+    const targetPath = normalizePath(menuPath(itemPath));
 
     return itemPath === '/'
       ? currentPath === targetPath
@@ -77,7 +82,7 @@ const Header = ({ locale }) => {
         {/* Logo */}
         <Link
           className="logo-full"
-          href={`/${locale}`}
+          href={pathFor(locale)}
           aria-label={formatMessage({ id: 'home', defaultMessage: 'Home' })}
         >
           <img src="/images/logo-mini.png" alt="Mantle of Praise logo" />
@@ -101,44 +106,48 @@ const Header = ({ locale }) => {
           <span></span>
         </button>
 
-        {/* Language Selector */}
-        <div
-          className={`lang-selector desktop-language ${languageOpen ? 'is-open' : ''}`}
-          ref={languageMenuRef}
-        >
-          <button
-            type="button"
-            className="language-trigger"
-            onClick={() => setLanguageOpen((value) => !value)}
-            aria-label={formatMessage({ id: 'selectLanguage', defaultMessage: 'Select language' })}
-            aria-haspopup="menu"
-            aria-expanded={languageOpen}
-          >
-            <span className="language-code">{currentLanguage.short}</span>
-          </button>
-
+        <div className="header-actions">
+          <DonationButton />
+          {/* Language Selector */}
           <div
-            className="language-menu"
-            role="menu"
-            aria-hidden={!languageOpen}
-            inert={!languageOpen}
+            className={`lang-selector desktop-language ${languageOpen ? 'is-open' : ''}`}
+            ref={languageMenuRef}
           >
-            {languages.map((language) => (
-              <button
-                type="button"
-                role="menuitemradio"
-                aria-checked={language.code === locale}
-                aria-label={language.label}
-                className={language.code === locale ? 'active' : ''}
-                key={language.code}
-                onClick={() => {
-                  setLanguageOpen(false);
-                  if (language.code !== locale) router.push(languagePath(language.code));
-                }}
-              >
-              {language.short}
-              </button>
-            ))}
+            <button
+              type="button"
+              className="language-trigger"
+              onClick={() => setLanguageOpen((value) => !value)}
+              aria-label={formatMessage({
+                id: 'selectLanguage',
+                defaultMessage: 'Select language'
+              })}
+              aria-haspopup="menu"
+              aria-expanded={languageOpen}
+            >
+              <span className="language-code">{currentLanguage.short}</span>
+            </button>
+
+            <div
+              className="language-menu"
+              role="menu"
+              aria-hidden={!languageOpen}
+              inert={!languageOpen}
+            >
+              {availableLanguages.map((language) => (
+                <button
+                  type="button"
+                  role="menuitem"
+                  aria-label={language.label}
+                  key={language.code}
+                  onClick={() => {
+                    setLanguageOpen(false);
+                    router.push(languagePath(language.code));
+                  }}
+                >
+                  {language.short}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -150,7 +159,7 @@ const Header = ({ locale }) => {
           {menuItems.map((item) => (
             <Link
               key={item.id}
-              href={`/${locale}${item.to === '/' ? '' : item.to}`}
+              href={menuPath(item.to)}
               className={isActive(item.to) ? 'active' : ''}
               aria-current={isActive(item.to) ? 'page' : undefined}
             >
@@ -173,7 +182,7 @@ const Header = ({ locale }) => {
           {menuItems.map((item) => (
             <Link
               key={item.id}
-              href={`/${locale}${item.to === '/' ? '' : item.to}`}
+              href={menuPath(item.to)}
               onClick={() => setOpen(false)}
               className={isActive(item.to) ? 'active' : ''}
               aria-current={isActive(item.to) ? 'page' : undefined}
@@ -184,29 +193,30 @@ const Header = ({ locale }) => {
               })}
             </Link>
           ))}
-          <div
-            className="mobile-language-switcher"
-            role="group"
-            aria-label={formatMessage({
-              id: 'selectLanguage',
-              defaultMessage: 'Select language'
-            })}
-          >
-            {languages.map((language) => (
-              <button
-                type="button"
-                className={language.code === locale ? 'active' : ''}
-                aria-label={language.label}
-                aria-pressed={language.code === locale}
-                key={language.code}
-                onClick={() => {
-                  setOpen(false);
-                  if (language.code !== locale) router.push(languagePath(language.code));
-                }}
-              >
-                {language.short}
-              </button>
-            ))}
+          <div className="mobile-menu-actions">
+            <DonationButton onClick={() => setOpen(false)} />
+            <div
+              className="mobile-language-switcher"
+              role="group"
+              aria-label={formatMessage({
+                id: 'selectLanguage',
+                defaultMessage: 'Select language'
+              })}
+            >
+              {availableLanguages.map((language) => (
+                <button
+                  type="button"
+                  aria-label={language.label}
+                  key={language.code}
+                  onClick={() => {
+                    setOpen(false);
+                    router.push(languagePath(language.code));
+                  }}
+                >
+                  {language.short}
+                </button>
+              ))}
+            </div>
           </div>
         </nav>
       </div>

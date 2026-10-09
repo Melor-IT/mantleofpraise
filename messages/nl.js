@@ -1,4 +1,22 @@
 const messages = {
+  closeDonation: 'Sluit donatievenster',
+  donationQrDescription:
+    'Scan met uw telefoon om de betaalpagina te openen, of gebruik de link hieronder. U kunt zelf het bedrag kiezen en betalen met elke bank in Nederland.',
+  openPayment: 'Open betaalpagina',
+
+  donationTitle: 'Steun onze bediening',
+  donationIntro:
+    'Bedankt voor uw steun aan Mantle of Praise. U kunt een bankoverschrijving doen met de onderstaande rekeninggegevens.',
+  bankDetails: 'Rekeninggegevens',
+  organization: 'Organisatie',
+  copyIban: 'Kopieer IBAN',
+  ibanCopied: 'IBAN gekopieerd.',
+  ibanCopyFailed: 'Selecteer en kopieer het IBAN handmatig.',
+  donationQrTitle: 'Scan de QR-code',
+  donationQrAlt: 'QR-code naar de betaalpagina van Mantle of Praise',
+  donate: 'Steun ons',
+  partnersTitle: 'Partners en samenwerkende organisaties',
+  partnersSubtitle: 'Samen op weg naar groei en ontwikkeling.',
   welcome: 'Welkom',
   selectLanguage: 'Taal selecteren',
   menu: 'Menu',

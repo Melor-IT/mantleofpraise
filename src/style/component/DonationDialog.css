@@ -1,0 +1,137 @@
+.donation-dialog {
+  position: fixed;
+  width: calc(100% - 2rem);
+  max-width: 64rem;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+  box-shadow: 0 1.5rem 5rem var(--color-shadow-purple-medium);
+}
+
+.donation-dialog::backdrop {
+  background: rgba(25, 12, 28, 0.65);
+  backdrop-filter: blur(0.35rem);
+}
+
+.donation-dialog[open] {
+  animation: donation-dialog-zoom 0.2s ease-out;
+}
+
+.donation-dialog[open]::backdrop {
+  animation: donation-dialog-fade 0.2s ease-out;
+}
+
+.donation-dialog__panel {
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.donation-dialog__heading {
+  padding-inline-end: 3rem;
+  margin-bottom: 2rem;
+}
+
+.donation-dialog__heading h2 {
+  color: var(--secondary-color);
+  font-family: var(--font-family-body);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.donation-dialog__heading p {
+  max-width: 48rem;
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.donation-dialog__close {
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface-soft);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.donation-dialog__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.donation-dialog__close:hover {
+  background: var(--color-surface-active);
+}
+
+.donation-dialog__close:focus-visible {
+  outline: 0.1875rem solid var(--primary-color);
+  outline-offset: 0.125rem;
+}
+
+.donation-dialog .donation-details {
+  display: block;
+}
+
+.donation-dialog .donation-details__card {
+  padding: 0;
+  border: 0;
+  gap: 2rem;
+  box-shadow: none;
+}
+
+@keyframes donation-dialog-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes donation-dialog-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .donation-dialog {
+    width: calc(100% - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+    border-radius: 1rem;
+  }
+
+  .donation-dialog__panel {
+    padding: 1rem;
+  }
+
+  .donation-dialog__close {
+    top: 0.75rem;
+    inset-inline-end: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .donation-dialog[open],
+  .donation-dialog[open]::backdrop {
+    animation: none;
+  }
+}

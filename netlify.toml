@@ -6,8 +6,20 @@
   NODE_VERSION = "22"
 
 [[redirects]]
-  from = "/"
-  to = "/en/"
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Home"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/Home"
+  to = "/:locale/"
   status = 301
   force = true
 

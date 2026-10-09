@@ -1,0 +1,11 @@
+.botoje-white {
+  width: 12.5rem;
+  aspect-ratio: 0.66;
+  height: auto;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  background-image: url('/images/botoje-white.png');
+  background-size: cover;
+  z-index: 10;
+}

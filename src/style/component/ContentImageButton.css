@@ -1,0 +1,61 @@
+.page .button {
+  text-transform: uppercase;
+  padding: 0.9rem 3rem;
+  background: var(--color-overlay-dark);
+  color: var(--color-white);
+  border: 0.0625rem solid var(--color-white);
+  border-radius: 2rem;
+  box-shadow: 0 0.1875rem 0.4375rem var(--color-shadow-medium);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: var(--font-size-nav);
+  text-decoration: none;
+  text-align: center;
+}
+.page .button:hover {
+  background: var(--color-overlay-darker);
+}
+section.about-us {
+  justify-content: flex-start;
+}
+section.about-us .botoje-white {
+  bottom: 3rem;
+  width: 11.25rem;
+}
+.app.ltr section.about-us .botoje-white {
+  right: unset;
+  left: 1rem;
+}
+.app.rtl section.about-us .botoje-white {
+  left: unset;
+  right: 1rem;
+}
+section.about-us .button {
+  margin-top: 5rem;
+}
+section.about-us > .page-content {
+  min-height: 36rem;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+section.about-us > .page-content > div {
+  flex: 1 1 50%;
+}
+@media (max-width: 68.75em) {
+  section.about-us .button {
+    margin-top: 5rem;
+  }
+  section.about-us > .page-content {
+    flex-direction: column;
+    padding-bottom: calc(4rem + 9.375rem);
+  }
+  section.about-us > .page-content .botoje-white {
+    width: 6.25rem;
+    left: calc(50% - 3.125rem);
+  }
+  section.about-us > .page-content > div {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+}

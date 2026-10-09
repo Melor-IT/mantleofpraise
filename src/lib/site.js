@@ -9,7 +9,8 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://mantleofpra
   /\/$/,
   ''
 );
-export const pathFor = (locale, slug = '') => `/${locale}${slug ? `/${slug}` : ''}`;
+export const pathFor = (locale, slug = '') =>
+  locale === 'en' && !slug ? '/' : `/${locale}${slug ? `/${slug}` : ''}`;
 export const alternatesFor = (slug = '') => ({
   en: pathFor('en', slug),
   fa: pathFor('fa', slug),

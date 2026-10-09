@@ -1,0 +1,56 @@
+.page.home > section.banner:first-child {
+  color: var(--color-white);
+  aspect-ratio: 16/9;
+}
+
+.page.home > section.banner:first-child > .page-content {
+  padding-top: 10rem;
+}
+
+@media (max-width: 68.75em) {
+  .page.home > section.banner:first-child {
+    margin-top: 9.125rem;
+    aspect-ratio: 3/2;
+  }
+
+  .page.home > section.banner:first-child > .page-content {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .page.home > section.banner:first-child {
+    margin-top: 5rem;
+  }
+}
+
+section.banner {
+  font-size: var(--font-size-display);
+}
+section.banner .page-content {
+  height: 100%;
+  justify-content: center;
+}
+section.banner .page-content > .botoje-white {
+  bottom: 3rem;
+  width: 9.375rem;
+}
+.app.ltr section.banner .page-content > .botoje-white {
+  right: 3rem;
+  left: auto;
+}
+.app.rtl section.banner .page-content > .botoje-white {
+  left: 3rem;
+  right: auto;
+}
+@media (max-width: 68.75em) {
+  section.banner .page-content > .botoje-white {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.75rem;
+  }
+  section.banner .page-content h2,
+  section.banner .page-content h1 {
+    padding: 0 2rem;
+  }
+}

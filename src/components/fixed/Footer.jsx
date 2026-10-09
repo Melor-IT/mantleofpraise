@@ -1,14 +1,11 @@
 import { useIntl } from 'react-intl';
+import { donation } from '../../data/donation';
 
 const Footer = () => {
   const { formatMessage } = useIntl();
 
-  const footerStyle = {
-    backgroundImage: `url(/images/footerimage.jpg)`
-  };
-
   return (
-    <footer className="footer" style={footerStyle}>
+    <footer className="footer">
       <div className="page-content">
         <div className="content-row message">
           <h3>
@@ -62,13 +59,13 @@ const Footer = () => {
                 defaultMessage: 'KVK'
               })}
             </h4>
-            <p>97889539</p>
+            <p>{donation.kvk}</p>
 
             <h4> RSIN </h4>
-            <p>868276972</p>
+            <p>{donation.rsin}</p>
 
             <h4>IBAN</h4>
-            <p>NL54INGB0120063999</p>
+            <p dir="ltr">{donation.iban}</p>
           </div>
         </div>
       </div>
