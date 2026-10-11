@@ -16,6 +16,7 @@ footer {
   background-image: url('/images/footerimage.jpg');
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-ui-lg);
@@ -40,6 +41,23 @@ footer .message {
   width: 80%;
   color: var(--color-black);
   padding: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: var(--color-overlay-dark);
+  border-top: 1px solid var(--color-overlay-light);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: var(--font-size-control);
 }
 
 .dark-glass {

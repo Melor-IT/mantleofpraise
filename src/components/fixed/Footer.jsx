@@ -69,6 +69,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+       <div className="footer-bottom">
+           <p>© 2026 Mntle of Praise</p>
+           <p>Made by Melor</p>
+        </div>
     </footer>
   );
 };
