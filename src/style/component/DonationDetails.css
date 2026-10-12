@@ -5,9 +5,9 @@
   gap: 3rem;
   padding: clamp(1.25rem, 4vw, 3rem);
   border: 0.0625rem solid var(--color-border-decorative);
-  border-radius: 1.5rem;
+  border-radius: var(--radius-card);
   background: var(--color-surface);
-  box-shadow: 0 1rem 3rem var(--color-shadow-purple-subtle);
+  box-shadow: var(--shadow-card);
 }
 
 .donation-details__card--bank-only {

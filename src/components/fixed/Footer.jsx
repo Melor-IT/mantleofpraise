@@ -25,7 +25,7 @@ const Footer = () => {
                 defaultMessage: 'Address'
               })}
             </h4>
-            <p>Tante Pollewopstraat, 1336KB Almere, Netherlands</p>
+            <p dir="ltr">Tante Pollewopstraat, 1336KB Almere, Netherlands</p>
 
             <h4>
               {formatMessage({
@@ -34,7 +34,9 @@ const Footer = () => {
               })}
             </h4>
             <p>
-              <a href="mailto:info@mantleofpraise.nl">info@mantleofpraise.nl</a>
+              <a href="mailto:info@mantleofpraise.nl" dir="ltr">
+                info@mantleofpraise.nl
+              </a>
             </p>
             <h4>
               {formatMessage({
@@ -47,6 +49,7 @@ const Footer = () => {
                 href="https://www.instagram.com/mantle.of.praise/"
                 target="_blank"
                 rel="noreferrer"
+                dir="ltr"
               >
                 @mantle.of.praise
               </a>
@@ -59,20 +62,20 @@ const Footer = () => {
                 defaultMessage: 'KVK'
               })}
             </h4>
-            <p>{donation.kvk}</p>
+            <p dir="ltr">{donation.kvk}</p>
 
             <h4> RSIN </h4>
-            <p>{donation.rsin}</p>
+            <p dir="ltr">{donation.rsin}</p>
 
             <h4>IBAN</h4>
             <p dir="ltr">{donation.iban}</p>
           </div>
         </div>
       </div>
-       <div className="footer-bottom">
-           <p>© 2026 Mntle of Praise</p>
-           <p>Made by Melor</p>
-        </div>
+      <div className="footer-bottom">
+        <p dir="ltr">© 2026 Mantle of Praise</p>
+        <p>Made by Melor</p>
+      </div>
     </footer>
   );
 };

@@ -33,9 +33,3 @@
 .app.rtl select {
   line-height: 1.9;
 }
-@media (max-width: 37.5em) {
-  .app.rtl p,
-  .app.rtl li {
-    line-height: 1.9;
-  }
-}

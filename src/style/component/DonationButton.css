@@ -58,9 +58,4 @@ button.donation-button:focus-visible {
   button.donation-button:hover {
     transform: none;
   }
-
-  html,
-  body {
-    scroll-behavior: auto;
-  }
 }

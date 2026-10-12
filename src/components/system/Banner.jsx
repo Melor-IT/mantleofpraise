@@ -7,8 +7,8 @@ export default function Banner({ title, subtitle, backgroundImage }) {
       <div className="page-content">
         <h2>{subtitle}</h2>
         <h1>{title}</h1>
-        <div className="botoje-white"></div>
       </div>
+      <div className="botoje-white" aria-hidden="true"></div>
     </section>
   );
 }

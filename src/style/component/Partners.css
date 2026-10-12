@@ -1,11 +1,12 @@
 .partners {
   width: 100%;
-  padding: clamp(2.5rem, 5vw, 4.5rem) 1rem;
+  padding: var(--section-padding-block) var(--section-padding-inline);
   border-block-start: 0.0625rem solid var(--color-border-soft);
   background: linear-gradient(180deg, var(--color-background), var(--color-surface-soft));
 }
 
 .partners > .page-content {
+  margin-inline: auto;
   align-items: center;
   gap: 2.5rem;
 }
@@ -21,7 +22,7 @@
   height: 0.25rem;
   margin: 0 auto 1.25rem;
   border-radius: 1rem;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: var(--gradient-accent);
   content: '';
 }
 

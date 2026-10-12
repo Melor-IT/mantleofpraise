@@ -1,9 +1,9 @@
 export default function Lead({ title, description, members, className = 'primary' }) {
   return (
-    <section className={className}>
+    <section className={`lead ${className}`}>
       <div className="page-content">
-        <div className="text-block">
-          <h2>{title}</h2>
+        <div className="lead__intro content-card">
+          <h2 className="section-title">{title}</h2>
           <p>{description}</p>
         </div>
         <div className="team">

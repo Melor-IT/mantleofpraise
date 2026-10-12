@@ -2,8 +2,8 @@ export default function ContentSection({ title, description, items, className = 
   return (
     <section className={`content-section ${className}`}>
       <div className="page-content">
-        <div className="text-block content-section__card">
-          <h2 className="content-section__title">{title}</h2>
+        <div className="content-section__card content-card">
+          <h2 className="section-title">{title}</h2>
           <div className="content-section__body">
             {description !== undefined && <p>{description}</p>}
             {items && (

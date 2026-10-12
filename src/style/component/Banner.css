@@ -1,56 +1,70 @@
-.page.home > section.banner:first-child {
+.page.home {
+  --banner-decoration-width: clamp(4.5rem, 9.5vw, 8.5rem);
+}
+
+.page > section.banner {
+  min-height: calc(var(--header-offset) + clamp(30rem, 52vw, 46rem));
+  justify-content: center;
+  isolation: isolate;
+  z-index: 2;
+  background: var(--color-text-strong);
   color: var(--color-white);
-  aspect-ratio: 16/9;
 }
 
-.page.home > section.banner:first-child > .page-content {
-  padding-top: 10rem;
+.banner > .background {
+  filter: brightness(0.6);
 }
 
-@media (max-width: 68.75em) {
-  .page.home > section.banner:first-child {
-    margin-top: 9.125rem;
-    aspect-ratio: 3/2;
-  }
+.page > section.banner > .page-content {
+  justify-content: center;
+  gap: 1rem;
+  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block-start: calc(var(--header-offset) + clamp(4rem, 8vw, 7rem));
+}
 
-  .page.home > section.banner:first-child > .page-content {
-    padding-top: 4rem;
-  }
+.banner h1,
+.banner h2 {
+  max-width: 56rem;
+  text-align: start;
+}
+
+.banner h2 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.banner h1 {
+  line-height: 1.15;
+}
+
+.app.rtl .banner h1 {
+  line-height: 1.45;
+}
+
+.banner .botoje-white {
+  inset-inline-end: max(
+    var(--section-padding-inline),
+    calc((100% - 71.25rem) / 2 + var(--section-padding-inline))
+  );
+  bottom: 0;
+  width: var(--banner-decoration-width);
+  transform: translateY(50%);
+  z-index: 2;
+  opacity: 1;
+  filter: drop-shadow(0 0.125rem 0.375rem var(--color-overlay-dark));
+}
+
+.page.home > .banner + section > .page-content {
+  padding-block-start: max(
+    var(--section-padding-block),
+    calc(var(--banner-decoration-width) / 1.32 + 1.5rem)
+  );
 }
 
 @media (max-width: 37.5em) {
-  .page.home > section.banner:first-child {
-    margin-top: 5rem;
-  }
-}
-
-section.banner {
-  font-size: var(--font-size-display);
-}
-section.banner .page-content {
-  height: 100%;
-  justify-content: center;
-}
-section.banner .page-content > .botoje-white {
-  bottom: 3rem;
-  width: 9.375rem;
-}
-.app.ltr section.banner .page-content > .botoje-white {
-  right: 3rem;
-  left: auto;
-}
-.app.rtl section.banner .page-content > .botoje-white {
-  left: 3rem;
-  right: auto;
-}
-@media (max-width: 68.75em) {
-  section.banner .page-content > .botoje-white {
-    bottom: 1rem;
-    right: 1rem;
-    width: 3.75rem;
-  }
-  section.banner .page-content h2,
-  section.banner .page-content h1 {
-    padding: 0 2rem;
+  .page > section.banner {
+    min-height: calc(var(--header-offset) + 26rem);
   }
 }

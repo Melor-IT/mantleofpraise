@@ -24,6 +24,7 @@
   --color-surface-hover: #f7f2f8;
   --color-surface-active: #f1e7f2;
   --color-surface-control: #faf8fa;
+  --color-surface-warm: #fbf6e7;
   --color-success: #236b2d;
   --color-danger: #9f1d1d;
   --color-overlay-light: rgba(255, 255, 255, 0.35);
@@ -41,6 +42,14 @@
   --color-shadow-purple-medium: rgba(48, 19, 51, 0.18);
   --color-gradient-base: rgb(253, 252, 250);
   --color-gradient-transparent: rgba(253, 252, 250, 0);
+  --gradient-primary: linear-gradient(135deg, var(--color-surface-warm), var(--color-background));
+  --gradient-secondary: linear-gradient(135deg, var(--color-surface-soft), var(--color-background));
+  --gradient-accent: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  --radius-card: 1.5rem;
+  --shadow-card: 0 1rem 3rem var(--color-shadow-purple-subtle);
+  --section-padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  --section-padding-inline: clamp(1rem, 3vw, 3rem);
+  --header-offset: 8.375rem;
   --primary-color: var(--color-primary);
   --secondary-color: var(--color-secondary);
   --white-color: var(--color-white);
@@ -151,7 +160,23 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+:focus-visible {
+  outline: 0.1875rem solid var(--secondary-color);
+  outline-offset: 0.1875rem;
+}
+
+@media (max-width: 68.75em) {
+  :root {
+    --header-offset: 9.125rem;
+  }
+}
+
 @media (max-width: 37.5em) {
+  :root {
+    --radius-card: 1rem;
+    --header-offset: 5rem;
+  }
   h1 {
     font-size: var(--font-size-h1-mobile);
     line-height: 1.08;
@@ -167,5 +192,12 @@ html {
   p {
     font-size: var(--font-size-body);
     line-height: 1.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
   }
 }

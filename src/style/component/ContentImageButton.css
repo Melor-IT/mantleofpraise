@@ -1,61 +1,73 @@
-.page .button {
-  text-transform: uppercase;
-  padding: 0.9rem 3rem;
-  background: var(--color-overlay-dark);
+.about-us__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-us__card .text-block {
+  min-width: 0;
+  align-items: flex-start;
+  color: var(--color-text-strong);
+  overflow-wrap: anywhere;
+}
+
+.about-us__card p {
+  line-height: 1.85;
+}
+
+.about-us .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  max-width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 0.0625rem solid var(--secondary-color);
+  border-radius: 0.75rem;
+  background: var(--secondary-color);
   color: var(--color-white);
-  border: 0.0625rem solid var(--color-white);
-  border-radius: 2rem;
-  box-shadow: 0 0.1875rem 0.4375rem var(--color-shadow-medium);
-  cursor: pointer;
-  font-weight: bold;
-  font-size: var(--font-size-nav);
+  box-shadow: 0 0.1875rem 0.75rem var(--color-shadow-purple-subtle);
+  font-size: var(--font-size-control);
+  font-weight: 700;
+  line-height: 1.5;
   text-decoration: none;
   text-align: center;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.page .button:hover {
-  background: var(--color-overlay-darker);
+
+.about-us .button:hover {
+  background: var(--color-text-strong);
+  box-shadow: 0 0.375rem 1.125rem var(--color-shadow-purple-soft);
 }
-section.about-us {
-  justify-content: flex-start;
+
+.about-us .button:focus-visible {
+  outline-color: var(--primary-color);
 }
-section.about-us .botoje-white {
-  bottom: 3rem;
-  width: 11.25rem;
+
+.about-us .botoje-white {
+  bottom: 1rem;
+  inset-inline-start: 1rem;
+  width: 9rem;
+  opacity: 0.25;
+  z-index: 0;
 }
-.app.ltr section.about-us .botoje-white {
-  right: unset;
-  left: 1rem;
+
+.app.rtl .about-us__card p {
+  line-height: 1.95;
 }
-.app.rtl section.about-us .botoje-white {
-  left: unset;
-  right: 1rem;
-}
-section.about-us .button {
-  margin-top: 5rem;
-}
-section.about-us > .page-content {
-  min-height: 36rem;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: flex-start;
-}
-section.about-us > .page-content > div {
-  flex: 1 1 50%;
-}
-@media (max-width: 68.75em) {
-  section.about-us .button {
-    margin-top: 5rem;
+
+@media (max-width: 52em) {
+  .about-us__card {
+    grid-template-columns: minmax(0, 1fr);
   }
-  section.about-us > .page-content {
-    flex-direction: column;
-    padding-bottom: calc(4rem + 9.375rem);
-  }
-  section.about-us > .page-content .botoje-white {
-    width: 6.25rem;
-    left: calc(50% - 3.125rem);
-  }
-  section.about-us > .page-content > div {
-    flex: 1 0 100%;
-    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-us .button {
+    transition: none;
   }
 }
