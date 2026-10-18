@@ -94,6 +94,59 @@
   font-size: var(--font-size-control);
 }
 
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.9rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-control);
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.footer-credit__label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-credit__brand {
+  font-weight: 700;
+}
+
+.footer-credit svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+.footer-credit:hover {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.footer-credit:focus-visible {
+  outline: 0.1875rem solid var(--primary-color);
+  outline-offset: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-credit {
+    transition: none;
+  }
+}
+
 .footer .botoje-gold {
   width: 3.5rem;
   aspect-ratio: 0.66;
