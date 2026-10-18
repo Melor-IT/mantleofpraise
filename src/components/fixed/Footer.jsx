@@ -74,7 +74,9 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p dir="ltr">© 2026 Mantle of Praise</p>
-        <p>Made by Melor</p>
+        <p>
+          <a href="https://mel-or.com/">Made by Melor</a>
+        </p>
       </div>
     </footer>
   );
