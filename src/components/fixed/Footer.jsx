@@ -2,7 +2,7 @@ import { useIntl } from 'react-intl';
 import { donation } from '../../data/donation';
 
 const Footer = () => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, locale } = useIntl();
 
   return (
     <footer className="footer">
@@ -73,7 +73,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p dir="ltr">© 2026 Mantle of Praise</p>
+        <p dir={locale === 'fa' ? 'rtl' : 'ltr'}>
+          {locale === 'fa' ? '© ۲۰۲۶ ردای ستایش' : '© 2026 Mantle of Praise'}
+        </p>
         <p>
           <a className="footer-credit" href="https://mel-or.com/" dir="ltr" lang="en">
             <span className="footer-credit__label">Made by</span>{' '}

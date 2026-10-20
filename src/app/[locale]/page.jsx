@@ -60,8 +60,8 @@ export default async function Home({ params }) {
       <ContentImageButton
         title={text('aboutUs', 'About Us')}
         description={text('aboutUsSectionText')}
-        buttonText={text('more', 'More')}
-        buttonHref={pathFor(locale, 'about-us')}
+        buttonText={text('introduction')}
+        buttonHref={pathFor(locale, 'introduction')}
       />
     </div>
   );

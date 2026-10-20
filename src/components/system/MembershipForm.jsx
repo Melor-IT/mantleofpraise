@@ -118,7 +118,11 @@ export default function MembershipForm() {
   };
 
   return (
-    <section className="botoje form">
+    <section
+      className="botoje form"
+      id="membership-form"
+      style={{ scrollMarginTop: 'var(--header-offset)' }}
+    >
       <div className="page-content">
         <form className="form-block" onSubmit={handleSubmit} aria-busy={isSubmitting}>
           <label>

@@ -24,6 +24,9 @@ const messages = {
   welcomeTo: 'Welkom bij',
   mantleOfPraise: 'Mantel van lof',
   home: 'Home',
+  introduction: 'Onze bediening',
+  introductionDescription:
+    'Maak kennis met Mantle of Praise: onze christelijke missie, visie, werkterreinen, waarden, relatie met plaatselijke kerken en het lidmaatschap.',
   gallery: 'Galerij',
   joinUs: 'Word lid',
   aboutUs: 'Over ons',

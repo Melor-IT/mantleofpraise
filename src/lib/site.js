@@ -4,7 +4,7 @@ import nl from '../../messages/nl';
 
 export const messages = { en, fa, nl };
 export const locales = Object.keys(messages);
-export const routes = ['', 'join-us', 'about-us', 'our-vision', 'ANBI-information'];
+export const routes = ['', 'introduction', 'join-us', 'about-us', 'our-vision', 'ANBI-information'];
 const canonicalUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://mantleofpraise.nl');
 if (
   canonicalUrl.protocol !== 'https:' ||
@@ -30,6 +30,7 @@ export const alternatesFor = (slug = '') => ({
 
 const pageLabels = {
   '': 'mantleOfPraise',
+  introduction: 'introduction',
   'join-us': 'joinUs',
   'about-us': 'aboutUs',
   'our-vision': 'ourVision',
@@ -38,6 +39,7 @@ const pageLabels = {
 
 const descriptions = {
   '': 'ourMissionText',
+  introduction: 'introductionDescription',
   'join-us': 'joinUsText',
   'about-us': 'aboutUsSectionText',
   'our-vision': 'visionText',
@@ -46,6 +48,7 @@ const descriptions = {
 
 const images = {
   '': '/images/home-banner.jpg',
+  introduction: '/images/home-banner.jpg',
   'join-us': '/images/juneUs.png',
   'about-us': '/images/back1.jpg',
   'our-vision': '/images/ourvision-banner.png',
@@ -56,23 +59,28 @@ export function pageMetadata(locale, route = '') {
   if (!locales.includes(locale) || !routes.includes(route)) return {};
 
   const label = messages[locale][pageLabels[route]] || 'Mantle of Praise';
-  const title = route ? `${label} | Mantle of Praise` : label;
+  const organizationName = locale === 'fa' ? 'ردای ستایش' : 'Mantle of Praise';
+  const title = route ? `${label} | ${organizationName}` : label;
   const description = (messages[locale][descriptions[route]] || '').slice(0, 180);
   const path = pathFor(locale, route);
+  const image = images[route] || images[''];
 
   return {
     title,
     description,
-    alternates: { canonical: path, languages: alternatesFor(route) },
+    alternates: {
+      canonical: path,
+      languages: alternatesFor(route)
+    },
     openGraph: {
       title,
       description,
       url: path,
-      siteName: 'Mantle of Praise',
+      siteName: organizationName,
       locale,
       type: 'website',
-      images: [{ url: images[route] }]
+      images: [{ url: image }]
     },
-    twitter: { card: 'summary_large_image', title, description, images: [images[route]] }
+    twitter: { card: 'summary_large_image', title, description, images: [image] }
   };
 }

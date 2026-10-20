@@ -1,7 +1,6 @@
 'use client';
 import { IntlProvider } from 'react-intl';
 import Header from './fixed/Header';
-import Partners from './fixed/Partners';
 import Footer from './fixed/Footer';
 import DonationProvider from './system/DonationDialog';
 
@@ -13,8 +12,9 @@ export default function SiteShell({ locale, messages, children, donationQr }) {
       <div className={`app ${direction}`} dir={direction}>
         <DonationProvider qrDataUrl={donationQr}>
           <Header locale={locale} />
-          <main>{children}</main>
-          <Partners />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
         </DonationProvider>
       </div>

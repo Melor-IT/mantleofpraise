@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { createIntl } from 'react-intl/server';
 import Hero from '../../../components/system/Hero';
 import Lead from '../../../components/system/Lead';
+import Partners from '../../../components/fixed/Partners';
 import { messages, pageMetadata } from '../../../lib/site';
 
 const leadershipTeam = [
@@ -68,28 +69,31 @@ export default async function AboutUs({ params }) {
     }));
 
   return (
-    <div className="page juin-us">
-      <Hero
-        title={text('aboutUs', 'About Us')}
-        intro={text('aboutUsText', 'The Spirit of the Lord GOD is upon me ...')}
-        reference={text('aboutUsTextOnder', '- Isaiah 61:1-3')}
-        backgroundImage="/images/join-us-banner.png"
-        backgroundClassName="aboutus"
-      />
-      <Lead
-        title={text('leader', 'Our Vision')}
-        description={text('leaderText', 'Our vision is to form an inspiring community...')}
-        members={localizeMembers(leadershipTeam)}
-      />
-      <Lead
-        title={text('supervisoryCommission', 'Supervisory Commission')}
-        description={text(
-          'supervisoryCommissionText',
-          'The Supervisory Commission of the Reda-ye Setayesh Service Organization...'
-        )}
-        members={localizeMembers(supervisoryTeam)}
-        className="secondary"
-      />
-    </div>
+    <>
+      <div className="page juin-us">
+        <Hero
+          title={text('aboutUs', 'About Us')}
+          intro={text('aboutUsText', 'The Spirit of the Lord GOD is upon me ...')}
+          reference={text('aboutUsTextOnder', '- Isaiah 61:1-3')}
+          backgroundImage="/images/join-us-banner.png"
+          backgroundClassName="aboutus"
+        />
+        <Lead
+          title={text('leader', 'Our Vision')}
+          description={text('leaderText', 'Our vision is to form an inspiring community...')}
+          members={localizeMembers(leadershipTeam)}
+        />
+        <Lead
+          title={text('supervisoryCommission', 'Supervisory Commission')}
+          description={text(
+            'supervisoryCommissionText',
+            'The Supervisory Commission of the Reda-ye Setayesh Service Organization...'
+          )}
+          members={localizeMembers(supervisoryTeam)}
+          className="secondary"
+        />
+      </div>
+      <Partners />
+    </>
   );
 }

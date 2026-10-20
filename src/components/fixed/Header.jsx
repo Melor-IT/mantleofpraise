@@ -8,6 +8,7 @@ import DonationButton from '../system/DonationButton';
 
 const menuItems = [
   { to: '/', id: 'home', defaultMessage: 'Home' },
+  { to: '/introduction', id: 'introduction', defaultMessage: 'Our Ministry' },
   { to: '/our-vision', id: 'ourVision', defaultMessage: 'Our Vision' },
   { to: '/ANBI-information', id: 'ANBIInformation', defaultMessage: 'ANBI Information' },
   { to: '/about-us', id: 'aboutUs', defaultMessage: 'About Us' },
@@ -127,10 +128,13 @@ const Header = ({ locale }) => {
           href={pathFor(locale)}
           aria-label={formatMessage({ id: 'home', defaultMessage: 'Home' })}
         >
-          <img src="/images/logo-mini.png" alt="Mantle of Praise logo" />
+          <img
+            src="/images/logo-mini.png"
+            alt={locale === 'fa' ? 'نشان ردای ستایش' : 'Mantle of Praise logo'}
+          />
           <img
             src={locale === 'fa' ? '/images/rada-farsi.png' : '/images/rada-eng.png'}
-            alt="Reda-ye Setayesh logo"
+            alt={locale === 'fa' ? 'ردای ستایش' : 'Mantle of Praise'}
           />
         </Link>
 

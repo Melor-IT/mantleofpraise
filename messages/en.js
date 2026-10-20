@@ -24,6 +24,9 @@ const messages = {
   welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
   home: 'Home',
+  introduction: 'Our Ministry',
+  introductionDescription:
+    'Discover Mantle of Praise: our Christian mission, vision, ministries, values, relationship with local churches, and how to apply for membership.',
   gallery: 'Gallery',
   joinUs: 'Join Us',
   contact: 'Contact',

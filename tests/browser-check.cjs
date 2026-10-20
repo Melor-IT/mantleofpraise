@@ -147,7 +147,7 @@ const server = createPreviewServer(path.resolve('out'));
   }
   const urls = ['/'];
   for (const locale of ['en', 'fa', 'nl'])
-    for (const route of ['', 'about-us', 'join-us', 'our-vision', 'ANBI-information'])
+    for (const route of ['', 'introduction', 'about-us', 'join-us', 'our-vision', 'ANBI-information'])
       urls.push('/' + locale + '/' + (route ? route + '/' : ''));
   let cases = 0;
   for (const url of urls)
@@ -162,7 +162,7 @@ const server = createPreviewServer(path.resolve('out'));
       assert.equal(result.h1, 1);
       assert.equal(result.headers, 1);
       assert(!result.overflow, JSON.stringify({ url, width, result }));
-      assert.equal(result.partners, 5);
+      assert.equal(result.partners, url.includes('/about-us/') ? 5 : 0);
       assert.equal(result.languages.length, 2);
       assert(!result.languages.includes(locale));
       for (const href of result.links) {

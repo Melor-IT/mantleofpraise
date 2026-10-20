@@ -1,8 +1,12 @@
 import BackgroundImage from './BackgroundImage';
 
-export default function GridSteps({ title, description, backgroundImage, steps }) {
+export default function GridSteps({ id, title, description, backgroundImage, steps }) {
   return (
-    <section className="secondary">
+    <section
+      className="secondary"
+      id={id}
+      style={id ? { scrollMarginTop: 'var(--header-offset)' } : undefined}
+    >
       <BackgroundImage url={backgroundImage} className="mission" />
       <div className="page-content">
         <header className="missionus content-card">
