@@ -28,6 +28,13 @@
   overflow-wrap: anywhere;
 }
 
+.hero .hero__ornament {
+  align-self: flex-end;
+  width: clamp(2.5rem, 5vw, 4.5rem);
+  margin-block-start: 1rem;
+  opacity: 0.75;
+}
+
 .hero__intro,
 .hero__reference {
   width: 100%;

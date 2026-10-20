@@ -7,12 +7,12 @@ import introduction from '../../../data/introduction';
 import { pageMetadata, pathFor } from '../../../lib/site';
 
 const serviceImages = [
+  '/images/Worship-Praise-clean.jpeg',
   '/images/firstService.jpg',
-  '/images/secondService.jpeg',
   '/images/open-bible.jpg',
   '/images/thirdService.jpg',
   '/images/home-banner.jpg',
-  '/images/community-service.jpg'
+  '/images/community-service.png'
 ];
 
 export async function generateMetadata({ params }) {
@@ -30,7 +30,7 @@ export default async function Introduction({ params }) {
       <Hero
         title={content.title}
         intro={content.tagline}
-        backgroundImage="/images/home-banner.jpg"
+        backgroundImage="/images/introduction-faces-v2.jpg"
       />
       <ContentImageButton
         title={content.aboutTitle}
@@ -43,6 +43,8 @@ export default async function Introduction({ params }) {
         title={content.visionTitle}
         paragraphs={content.vision}
         className="secondary"
+        ornament
+        ornamentTone="gold"
       />
       <GridSteps
         id="services"
@@ -73,6 +75,7 @@ export default async function Introduction({ params }) {
       <ContentSection title={content.stepsTitle} items={listItems(content.steps)} ordered />
       <ContentImageButton
         title={content.closingTitle}
+        ornamentTone="gold"
         description={content.closing.join(' ')}
         buttonText={content.membershipButton}
         buttonHref={`${pathFor(locale, 'join-us')}#membership-form`}

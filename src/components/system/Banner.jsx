@@ -1,4 +1,5 @@
 import BackgroundImage from './BackgroundImage';
+import Paisley from './Paisley';
 
 export default function Banner({ title, subtitle, backgroundImage }) {
   return (
@@ -8,7 +9,9 @@ export default function Banner({ title, subtitle, backgroundImage }) {
         <h2>{subtitle}</h2>
         <h1>{title}</h1>
       </div>
-      <div className="botoje-white" aria-hidden="true"></div>
+      <div className="banner-ornament" aria-hidden="true">
+        <Paisley className="banner-ornament__motif" />
+      </div>
     </section>
   );
 }

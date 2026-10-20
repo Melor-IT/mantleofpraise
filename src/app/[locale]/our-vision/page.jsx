@@ -87,6 +87,7 @@ export default async function OurVision({ params }) {
           title={formatMessage(section.title)}
           description={formatMessage(section.description)}
           className={section.className}
+          ornament={section.title.id === 'applicationTodayTitle'}
         />
       ))}
     </div>

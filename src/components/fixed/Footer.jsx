@@ -1,5 +1,6 @@
 import { useIntl } from 'react-intl';
 import { donation } from '../../data/donation';
+import Paisley from '../system/Paisley';
 
 const Footer = () => {
   const { formatMessage, locale } = useIntl();
@@ -16,7 +17,7 @@ const Footer = () => {
             })}
           </h3>
         </div>
-        <div className="botoje-gold"></div>
+        <Paisley className="footer-ornament" tone="gold" />
         <div className="content-row">
           <div className="dark-glass">
             <h4>

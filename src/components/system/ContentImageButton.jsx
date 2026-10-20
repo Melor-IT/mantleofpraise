@@ -1,15 +1,29 @@
 import Link from 'next/link';
+import Paisley from './Paisley';
 
-export default function ContentImageButton({ title, description, image, buttonText, buttonHref }) {
+export default function ContentImageButton({
+  title,
+  description,
+  image,
+  buttonText,
+  buttonHref,
+  ornamentTone = 'teal'
+}) {
   return (
     <section className="primary about-us">
       <div className="page-content">
-        <div
-          className="botoje-white"
-          style={image ? { backgroundImage: `url(${image})` } : undefined}
-        ></div>
+        {image && (
+          <div
+            className="botoje-white"
+            style={{ backgroundImage: `url(${image})` }}
+            aria-hidden="true"
+          />
+        )}
         <div className="about-us__card content-card">
-          <h2 className="section-title">{title}</h2>
+          <div className="section-heading--ornament">
+            <h2 className="section-title">{title}</h2>
+            <Paisley tone={ornamentTone} />
+          </div>
           <div className="text-block">
             <p>{description}</p>
             <Link className="button" href={buttonHref}>

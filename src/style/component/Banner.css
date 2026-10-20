@@ -43,17 +43,25 @@
   line-height: 1.45;
 }
 
-.banner .botoje-white {
+.banner-ornament {
+  position: absolute;
   inset-inline-end: max(
     var(--section-padding-inline),
     calc((100% - 71.25rem) / 2 + var(--section-padding-inline))
   );
   bottom: 0;
+  display: grid;
+  place-items: center;
   width: var(--banner-decoration-width);
+  aspect-ratio: 0.66;
   transform: translateY(50%);
   z-index: 2;
-  opacity: 1;
-  filter: drop-shadow(0 0.125rem 0.375rem var(--color-overlay-dark));
+  pointer-events: none;
+  user-select: none;
+}
+
+.banner-ornament > .paisley {
+  width: 100%;
 }
 
 .page.home > .banner + section > .page-content {
@@ -107,7 +115,7 @@
     animation: banner-text-reveal 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
   }
 
-  .banner .botoje-white {
+  .banner-ornament {
     transform-origin: center;
     animation:
       banner-decoration-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both,

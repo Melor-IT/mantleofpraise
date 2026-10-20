@@ -1,3 +1,65 @@
+.paisley {
+  --paisley-light: color-mix(in srgb, var(--secondary-color), var(--color-white) 25%);
+  --paisley-dark: var(--secondary-color);
+  display: block;
+  flex-shrink: 0;
+  width: 3.5rem;
+  aspect-ratio: 0.66;
+  background-image:
+    url('/images/botoje-white.png'),
+    linear-gradient(145deg, var(--paisley-light), var(--paisley-dark));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply, normal;
+  mask-image: url('/images/botoje-white.png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+  user-select: none;
+}
+
+.paisley--gold {
+  --paisley-light: color-mix(in srgb, var(--primary-color), var(--color-white) 30%);
+  --paisley-dark: var(--primary-color);
+}
+
+.paisley--teal {
+  --paisley-light: color-mix(in srgb, var(--color-accent-teal), var(--color-white) 25%);
+  --paisley-dark: var(--color-accent-teal);
+}
+
+.paisley--white {
+  --paisley-light: var(--color-white);
+  --paisley-dark: var(--color-surface-soft);
+}
+
+.section-heading--ornament {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.section-heading--ornament > .paisley {
+  width: clamp(3rem, 4vw, 4rem);
+  opacity: 0.55;
+}
+
+@media (max-width: 52em) {
+  .section-heading--ornament {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.5rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-heading--ornament > .paisley {
+    width: 100%;
+    opacity: 0.4;
+  }
+}
+
 .botoje-white {
   width: 12.5rem;
   aspect-ratio: 0.66;

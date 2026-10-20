@@ -147,11 +147,8 @@
   }
 }
 
-.footer .botoje-gold {
-  width: 3.5rem;
-  aspect-ratio: 0.66;
-  background: url('/images/botoje-gold-1.png') center / contain no-repeat;
-  pointer-events: none;
+.footer .footer-ornament {
+  width: 2.5rem;
 }
 
 .app.rtl .footer .message h3 {

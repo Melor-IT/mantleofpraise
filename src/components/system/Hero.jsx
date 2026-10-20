@@ -1,4 +1,5 @@
 import BackgroundImage from './BackgroundImage';
+import Paisley from './Paisley';
 
 export default function Hero({
   title,
@@ -19,6 +20,7 @@ export default function Hero({
         </h1>
         {intro !== undefined && <p className="hero__intro">{intro}</p>}
         {reference !== undefined && <p className="hero__reference">{reference}</p>}
+        <Paisley className="hero__ornament" tone="white" />
       </div>
     </section>
   );
