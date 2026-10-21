@@ -147,12 +147,27 @@ const server = createPreviewServer(path.resolve('out'));
   }
   const urls = ['/'];
   for (const locale of ['en', 'fa', 'nl'])
-    for (const route of ['', 'introduction', 'about-us', 'join-us', 'our-vision', 'ANBI-information'])
+    for (const route of [
+      '',
+      'introduction',
+      'about-us',
+      'join-us',
+      'our-vision',
+      'ANBI-information'
+    ])
       urls.push('/' + locale + '/' + (route ? route + '/' : ''));
   let cases = 0;
   for (const url of urls)
     for (const width of [320, 375, 600, 900, 1440]) {
       await navigate(url, width);
+      const heroImage = await evaluate(
+        "(async()=>{const image=document.querySelector('main section:first-child > .background > img');if(!image)return null;await image.decode();const style=getComputedStyle(image);return{src:image.currentSrc,width:image.naturalWidth,priority:image.fetchPriority,loading:image.loading,fit:style.objectFit}})()"
+      );
+      assert(heroImage?.width > 0, 'Hero image did not load: ' + url);
+      assert(heroImage.src.includes('/images/optimized/') && heroImage.src.endsWith('.webp'));
+      assert.equal(heroImage.priority, 'high');
+      assert.equal(heroImage.loading, 'eager');
+      assert.equal(heroImage.fit, 'cover');
       const locale = url === '/' ? 'en' : url.split('/')[1];
       const result = await evaluate(
         "(()=>({lang:document.documentElement.lang,dir:document.querySelector('.app').dir,h1:document.querySelectorAll('main h1').length,overflow:document.documentElement.scrollWidth>innerWidth+1,languages:[...document.querySelectorAll('.language-menu button')].map(e=>e.textContent.trim().toLowerCase()),partners:document.querySelectorAll('.partners-grid li').length,links:[...document.querySelectorAll('a[href],img[src]')].map(e=>e.href||e.src).filter(v=>v.startsWith(location.origin)),headers:document.querySelectorAll('.app-header').length}))()"

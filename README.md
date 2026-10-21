@@ -21,6 +21,13 @@ If Chrome's sandbox cannot start in a restricted test environment, set
 `BROWSER_TEST_NO_SANDBOX=1` for that isolated local test run. The default enables
 the browser sandbox.
 
+## Background images
+
+Hero and section backgrounds use responsive WebP files in `public/images/optimized`.
+The first background loads eagerly with high priority; later backgrounds load lazily.
+After replacing a background original in `public/images`, run `npm run images:optimize`
+to regenerate the WebP files and `src/data/background-images.json`, then rebuild.
+
 ## Donations
 
 The header donation button opens a modal on the current page in all three languages.

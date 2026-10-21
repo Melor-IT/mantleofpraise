@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "images:optimize": "node scripts/optimize-backgrounds.cjs",
     "start": "node scripts/preview.cjs",
     "build": "next build",
     "postbuild": "node scripts/postbuild.cjs",
@@ -18,7 +19,8 @@
     "test:browser": "node tests/browser-check.cjs"
   },
   "devDependencies": {
-    "prettier": "^3.9.9"
+    "prettier": "^3.9.9",
+    "sharp": "0.35.5"
   },
   "engines": {
     "node": ">=22.0.0"

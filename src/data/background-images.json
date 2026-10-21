@@ -1,0 +1,37 @@
+{
+  "/images/home-banner.jpg": {
+    "width": 1920,
+    "height": 851,
+    "srcSet": "/images/optimized/home-banner-768.webp 768w, /images/optimized/home-banner-1280.webp 1280w, /images/optimized/home-banner-1920.webp 1920w"
+  },
+  "/images/ourvision-banner.png": {
+    "width": 1536,
+    "height": 1024,
+    "srcSet": "/images/optimized/ourvision-banner-768.webp 768w, /images/optimized/ourvision-banner-1280.webp 1280w, /images/optimized/ourvision-banner-1536.webp 1536w"
+  },
+  "/images/juneUs.png": {
+    "width": 1536,
+    "height": 1024,
+    "srcSet": "/images/optimized/juneUs-768.webp 768w, /images/optimized/juneUs-1280.webp 1280w, /images/optimized/juneUs-1536.webp 1536w"
+  },
+  "/images/join-us-banner.png": {
+    "width": 1536,
+    "height": 1024,
+    "srcSet": "/images/optimized/join-us-banner-768.webp 768w, /images/optimized/join-us-banner-1280.webp 1280w, /images/optimized/join-us-banner-1536.webp 1536w"
+  },
+  "/images/ANBI-banner.jpg": {
+    "width": 2560,
+    "height": 1155,
+    "srcSet": "/images/optimized/ANBI-banner-768.webp 768w, /images/optimized/ANBI-banner-1280.webp 1280w, /images/optimized/ANBI-banner-1920.webp 1920w"
+  },
+  "/images/introduction-faces-v2.jpg": {
+    "width": 1536,
+    "height": 1024,
+    "srcSet": "/images/optimized/introduction-faces-v2-768.webp 768w, /images/optimized/introduction-faces-v2-1280.webp 1280w, /images/optimized/introduction-faces-v2-1536.webp 1536w"
+  },
+  "/images/back2.jpg": {
+    "width": 1024,
+    "height": 574,
+    "srcSet": "/images/optimized/back2-768.webp 768w, /images/optimized/back2-1024.webp 1024w"
+  }
+}

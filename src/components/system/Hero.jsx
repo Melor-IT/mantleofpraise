@@ -13,7 +13,7 @@ export default function Hero({
 }) {
   return (
     <section className={['hero', className].filter(Boolean).join(' ')} aria-labelledby={titleId}>
-      <BackgroundImage url={backgroundImage} className={backgroundClassName} />
+      <BackgroundImage url={backgroundImage} className={backgroundClassName} priority />
       <div className={contentClassName}>
         <h1 className="hero__title" id={titleId}>
           {title}
