@@ -40,8 +40,8 @@ const Header = ({ locale }) => {
   const currentLanguage = languages.find((language) => language.code === locale) || languages[0];
   const availableLanguages = languages.filter((language) => language.code !== currentLanguage.code);
   const isActive = (itemPath) => {
-    const currentPath = normalizePath(pathname);
-    const targetPath = normalizePath(menuPath(itemPath));
+    const currentPath = normalizePath(pathname).toLowerCase();
+    const targetPath = normalizePath(menuPath(itemPath)).toLowerCase();
 
     return itemPath === '/'
       ? currentPath === targetPath

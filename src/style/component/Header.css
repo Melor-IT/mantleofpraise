@@ -122,12 +122,11 @@
   opacity: 1;
   transform: scaleX(1);
 }
-.nav-menu a:hover,
 .nav-menu a.active {
   color: var(--secondary-color);
 }
-.nav-menu a.active::after {
-  background-color: var(--secondary-color);
+.nav-menu a:hover {
+  color: var(--primary-color);
 }
 .hamburger {
   display: none;

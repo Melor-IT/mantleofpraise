@@ -146,6 +146,34 @@ const server = createPreviewServer(path.resolve('out'));
     );
     await pause(100);
   }
+  for (const locale of ['en', 'fa', 'nl']) {
+    for (const width of [375, 1440]) {
+      await navigate('/' + locale + '/ANBI-information/', width);
+      if (width <= 600) {
+        await evaluate("document.querySelector('.hamburger').click()");
+        await pause();
+      }
+      const selector = width <= 600 ? '.mobile-menu' : '.nav-menu';
+      for (const slug of ['ANBI-information/', 'anbi-information/', 'anbi-information']) {
+        await evaluate(
+          'history.replaceState(null, "", ' + JSON.stringify('/' + locale + '/' + slug) + ')'
+        );
+        await pause(250);
+        const activeLinks = await evaluate(
+          `([...document.querySelectorAll('${selector} a.active')].map(a => ({href:a.getAttribute('href'),current:a.getAttribute('aria-current'),underline:getComputedStyle(a,'::after').opacity})))`
+        );
+        assert.equal(
+          activeLinks.length,
+          1,
+          'Expected one active menu link: ' + locale + '/' + slug
+        );
+        assert.equal(activeLinks[0].href, '/' + locale + '/ANBI-information/');
+        assert.equal(activeLinks[0].current, 'page');
+        if (width > 600) assert.equal(activeLinks[0].underline, '1', 'ANBI underline is hidden');
+      }
+    }
+  }
+  console.log(JSON.stringify({ anbiActiveNavigationPassed: true }));
   const urls = ['/'];
   for (const locale of ['en', 'fa', 'nl'])
     for (const route of [
