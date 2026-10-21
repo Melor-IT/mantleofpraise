@@ -10,8 +10,8 @@ const serviceImages = [
   '/images/Worship-Praise-clean.jpeg',
   '/images/prayer-spiritual-fellowship.png',
   '/images/open-bible.jpg',
-  '/images/thirdService.jpg',
-  '/images/home-banner.jpg',
+  '/images/Warme-aanbidding-live-band.png',
+  '/images/Warme-erkgemeenschap-gesprek.png',
   '/images/community-service.png',
 ];
 
