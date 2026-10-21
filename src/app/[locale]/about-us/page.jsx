@@ -44,8 +44,8 @@ const supervisoryTeam = [
     alt: 'Kazem Dehghanie',
     nameId: 'Kazem',
     defaultName: 'Kazem Dehghanie',
-    roleId: 'treasurer',
-    defaultRole: 'Treasurer'
+    roleId: 'churchPastor',
+    defaultRole: 'Church Pastor'
   }
 ];
 

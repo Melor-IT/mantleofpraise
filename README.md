@@ -49,8 +49,10 @@ the section. Rebuild the static export after changing the list.
 The logo assets come from [Kerk Licht van de Wereld](https://lichtwereld.com/images/licht-wereld-logo.png),
 [eHerkenning](https://www.eherkenning.nl/themes/custom/eherkenning/logo.svg),
 [Belastingdienst ANBI Loket](https://anbi.belastingdienst.nl/),
-[Filadelfia Oase Ministries](https://filadelfia-oase.nl/wp-content/uploads/2023/06/flaticon.jpg), and
-the [ANBI logo displayed on Filadelfia Oase](https://filadelfia-oase.nl/wp-content/uploads/2023/08/ANBI_FC.png).
+[Filadelfia Oase Ministries](https://filadelfia-oase.nl/wp-content/uploads/2023/06/flaticon.jpg),
+the [ANBI logo displayed on Filadelfia Oase](https://filadelfia-oase.nl/wp-content/uploads/2023/08/ANBI_FC.png),
+[Iranian Church](https://iranian.church/assets/logo-DLQQg2Xz.png), and
+[Gemeente Almere](https://www.almere.nl/_assets/f20fb53eac3716ad4f374a5272077327/Images/logo-almere-turquoise.svg).
 
 ## Languages and SEO
 

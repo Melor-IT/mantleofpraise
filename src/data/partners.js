@@ -30,5 +30,17 @@ export const partners = [
     name: 'ANBI',
     logo: '/images/partners/anbi.png',
     href: 'https://anbi.nl/'
+  },
+  {
+    id: 'iranian-church',
+    name: 'Iranian Church',
+    logo: '/images/partners/iranian-church.png',
+    href: 'https://iranian.church/en/'
+  },
+  {
+    id: 'gemeente-almere',
+    name: 'Gemeente Almere',
+    logo: '/images/partners/gemeente-almere.svg',
+    href: 'https://www.almere.nl/'
   }
 ];

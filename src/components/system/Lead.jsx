@@ -1,9 +1,14 @@
+import Paisley from './Paisley';
+
 export default function Lead({ title, description, members, className = 'primary' }) {
   return (
     <section className={`lead ${className}`}>
       <div className="page-content">
         <div className="lead__intro content-card">
-          <h2 className="section-title">{title}</h2>
+          <div className="section-heading--ornament">
+            <h2 className="section-title">{title}</h2>
+            <Paisley seed={title} />
+          </div>
           <p>{description}</p>
         </div>
         <div className="team">

@@ -108,6 +108,7 @@ const messages = {
   hamid: 'Hamid Ghanbari',
   secretary: 'Secretary',
   Kazem: 'Shepherd Kazem Dehghani',
+  churchPastor: 'Church Pastor',
   treasurer: 'Treasurer',
   kamil: 'Senior Pastor Kamil Navai',
   sahar: 'Shepherd Sahar Apistola',

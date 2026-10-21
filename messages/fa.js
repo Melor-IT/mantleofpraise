@@ -107,6 +107,7 @@ const messages = {
   secretary: 'سر دبیر',
   treasurer: 'خزانه دار',
   Kazem: 'شبان کاظم دهقانی',
+  churchPastor: 'شبان کلیسا',
   kamil: 'کشیش کامیل نوایی',
   sahar: 'شبان سحر آپیستولا',
   advisoryBoardMember: 'عضو هیئت مشاوران',

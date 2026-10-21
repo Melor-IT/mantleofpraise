@@ -44,7 +44,6 @@ export default async function Introduction({ params }) {
         paragraphs={content.vision}
         className="secondary"
         ornament
-        ornamentTone="gold"
       />
       <GridSteps
         id="services"
@@ -75,7 +74,6 @@ export default async function Introduction({ params }) {
       <ContentSection title={content.stepsTitle} items={listItems(content.steps)} ordered />
       <ContentImageButton
         title={content.closingTitle}
-        ornamentTone="gold"
         description={content.closing.join(' ')}
         buttonText={content.membershipButton}
         buttonHref={`${pathFor(locale, 'join-us')}#membership-form`}

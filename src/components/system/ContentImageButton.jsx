@@ -7,7 +7,7 @@ export default function ContentImageButton({
   image,
   buttonText,
   buttonHref,
-  ornamentTone = 'teal'
+  ornamentTone
 }) {
   return (
     <section className="primary about-us">
@@ -22,7 +22,7 @@ export default function ContentImageButton({
         <div className="about-us__card content-card">
           <div className="section-heading--ornament">
             <h2 className="section-title">{title}</h2>
-            <Paisley tone={ornamentTone} />
+            <Paisley tone={ornamentTone} seed={title} />
           </div>
           <div className="text-block">
             <p>{description}</p>

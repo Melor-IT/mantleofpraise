@@ -85,6 +85,7 @@ const assert = require('node:assert/strict');
 const { createPreviewServer } = require(path.join(process.cwd(), 'scripts/preview.cjs'));
 const server = createPreviewServer(path.resolve('out'));
 (async () => {
+  const { partners } = await import('../src/data/partners.js');
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
   const origin = 'http://127.0.0.1:' + server.address().port;
   await send('Browser.getVersion');
@@ -177,7 +178,7 @@ const server = createPreviewServer(path.resolve('out'));
       assert.equal(result.h1, 1);
       assert.equal(result.headers, 1);
       assert(!result.overflow, JSON.stringify({ url, width, result }));
-      assert.equal(result.partners, url.includes('/about-us/') ? 5 : 0);
+      assert.equal(result.partners, url.includes('/about-us/') ? partners.length : 0);
       assert.equal(result.languages.length, 2);
       assert(!result.languages.includes(locale));
       for (const href of result.links) {

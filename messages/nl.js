@@ -107,6 +107,7 @@ const messages = {
   hamid: 'Hamid Ghanbari',
   secretary: 'Secretaris',
   Kazem: 'Pastor Kazem Dehghani',
+  churchPastor: 'Voorganger van de kerk',
   treasurer: 'Penningmeester',
   babak: 'Pastor Babak Zeynali',
   kamil: 'Dominee Kamil Navai',

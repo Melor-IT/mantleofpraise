@@ -1,4 +1,5 @@
 import BackgroundImage from './BackgroundImage';
+import Paisley from './Paisley';
 
 export default function GridSteps({ id, title, description, backgroundImage, steps }) {
   return (
@@ -10,7 +11,10 @@ export default function GridSteps({ id, title, description, backgroundImage, ste
       <BackgroundImage url={backgroundImage} className="mission" />
       <div className="page-content">
         <header className="missionus content-card">
-          <h2 className="section-title">{title}</h2>
+          <div className="section-heading--ornament">
+            <h2 className="section-title">{title}</h2>
+            <Paisley seed={title} />
+          </div>
           <p>{description}</p>
         </header>
         <div className="services">
