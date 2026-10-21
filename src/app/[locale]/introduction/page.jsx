@@ -8,11 +8,11 @@ import { pageMetadata, pathFor } from '../../../lib/site';
 
 const serviceImages = [
   '/images/Worship-Praise-clean.jpeg',
-  '/images/firstService.jpg',
+  '/images/prayer-spiritual-fellowship.png',
   '/images/open-bible.jpg',
   '/images/thirdService.jpg',
   '/images/home-banner.jpg',
-  '/images/community-service.png'
+  '/images/community-service.png',
 ];
 
 export async function generateMetadata({ params }) {
