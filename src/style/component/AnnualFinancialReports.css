@@ -1,0 +1,57 @@
+.annual-financial-reports__years {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.annual-financial-reports__year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 9rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid var(--color-border-decorative);
+  border-block-start: 0.1875rem solid var(--primary-color);
+  border-radius: 0.75rem;
+  background: var(--color-surface-control);
+  color: var(--secondary-color);
+  font: inherit;
+  font-size: 1.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.annual-financial-reports__year svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.annual-financial-reports__format {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.annual-financial-reports__year:hover {
+  border-color: var(--secondary-color);
+  background: var(--color-surface-active);
+}
+
+.annual-financial-reports__year:focus-visible {
+  outline: 0.1875rem solid var(--secondary-color);
+  outline-offset: 0.1875rem;
+}
+
+.annual-financial-reports__empty {
+  padding: 1rem 1.25rem;
+  border-inline-start: 0.1875rem solid var(--primary-color);
+  border-radius: 0.5rem;
+  background: var(--color-surface-control);
+  color: var(--color-text-muted);
+}

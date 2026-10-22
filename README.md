@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Use Node.js 22 or newer. Open `http://localhost:3000` during development.
+Use Node.js 22.13 or newer. Open `http://localhost:3000` during development.
 Run `npm run build` to generate the production export in `out`, then `npm start`
 to preview it at `http://127.0.0.1:3000`. Set `PORT` to use a different local port.
 The preview binds to the local machine and serves the generated security headers.
@@ -53,6 +53,54 @@ The logo assets come from [Kerk Licht van de Wereld](https://lichtwereld.com/ima
 the [ANBI logo displayed on Filadelfia Oase](https://filadelfia-oase.nl/wp-content/uploads/2023/08/ANBI_FC.png),
 [Iranian Church](https://iranian.church/assets/logo-DLQQg2Xz.png), and
 [Gemeente Almere](https://www.almere.nl/_assets/f20fb53eac3716ad4f374a5272077327/Images/logo-almere-turquoise.svg).
+
+## Annual financial reports
+
+The existing ANBI page includes `AnnualFinancialReports` below the policy content
+in English, Dutch, and Persian. The section shows an empty state until approved
+reports are added; no sample reports or placeholder years are published.
+
+To publish a report, upload its approved PDF to
+`public/pdf/annual-financial-reports/` and add an entry to
+`src/data/financialReports.js`:
+
+```js
+{
+  year: 2025,
+  pdfUrl: '/pdf/annual-financial-reports/2025.pdf',
+  title: { id: 'annualFinancialReportTitle' },
+  approved: true
+}
+```
+
+Use the actual financial year and filename. The title uses the translated
+`annualFinancialReportTitle` template from `messages/en.js`, `messages/nl.js`, and
+`messages/fa.js`. Rebuild and deploy the complete static export. Reports are sorted
+newest first. Unapproved entries are hidden, and the build rejects approved entries
+with missing files, invalid PDF signatures, duplicate years, or nonlocal URLs.
+Only place files approved for public release in `public/`: that entire directory
+is publicly accessible, including files not listed in the report data.
+
+Each year opens the reusable `FinancialReportModal` on the current page. Native
+dialog behavior keeps focus inside the modal and supports Escape; the close button
+and backdrop also dismiss it and restore focus and page scrolling. A locally hosted
+PDF.js viewer loads only when opened, with page navigation, zoom, selectable text,
+and PDF annotations. Rendering stays within the page so keyboard events, including
+Escape after clicking inside the PDF, remain under the modal's control. Download
+and new-tab links remain available below the viewer if previewing fails.
+
+`npm run dev` and `npm run build` automatically prepare versioned PDF.js worker,
+font, character-map, and image-decoding assets in the ignored `public/pdf-viewer`
+directory. Deploy the complete export and generated `out/_headers` together. The
+CSP permits the local worker and WebAssembly used for PDF image decoding; inline
+JavaScript restrictions and the existing frame restrictions remain in place.
+
+Run `npm run test:reports-browser` to exercise populated report modals in all three
+languages at mobile, tablet, landscape, and desktop sizes. This builds a temporary
+copy with clearly marked PDF viewer test documents, then deletes it. The real
+report list, public files, and production export are never changed by the test.
+It uses the same Chrome setup as `npm run test:browser`, which also verifies the
+current report list and empty state.
 
 ## Languages and SEO
 

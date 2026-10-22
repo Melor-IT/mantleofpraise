@@ -1,4 +1,21 @@
 const messages = {
+  annualFinancialReportsTitle: '6. Annual Financial Reports',
+  annualFinancialReportsIntro:
+    'View and download our annual financial statements. Select a year to open the report.',
+  annualFinancialReportsEmpty: 'No annual financial reports are available yet.',
+  annualFinancialReportTitle: 'Annual Financial Report {year}',
+  closeFinancialReport: 'Close financial report',
+  downloadFinancialReport: 'Download PDF',
+  financialReportViewerHelp: 'If the PDF does not display, you can open it in a new tab.',
+  openFinancialReport: 'Open PDF in a new tab',
+  financialReportLoading: 'Loading PDF…',
+  financialReportError:
+    'The PDF preview is unavailable. Please download the PDF or open it in a new tab.',
+  financialReportPreviousPage: 'Previous',
+  financialReportNextPage: 'Next',
+  financialReportPage: 'Page {page, number} of {total, number}',
+  financialReportZoomOut: 'Zoom out',
+  financialReportZoomIn: 'Zoom in',
   closeDonation: 'Close donation window',
   donationQrDescription:
     'Scan with your phone to open the payment page, or use the link below. You can choose your amount and pay with any bank in the Netherlands.',

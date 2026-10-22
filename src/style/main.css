@@ -4,6 +4,8 @@
 @import './component/DonationButton.css';
 @import './component/DonationDetails.css';
 @import './component/DonationDialog.css';
+@import './component/AnnualFinancialReports.css';
+@import './component/FinancialReportModal.css';
 @import './component/Partners.css';
 @import './component/Footer.css';
 @import './component/BackgroundImage.css';

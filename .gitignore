@@ -7,12 +7,14 @@
 
 # testing
 /coverage
+/.reports-browser-test-*
 
 # production
 /build
 /.next
 /.npm-cache
 /out
+/public/pdf-viewer
 
 # misc
 .DS_Store

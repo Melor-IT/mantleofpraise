@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { createIntl } from 'react-intl/server';
 import Hero from '../../../components/system/Hero';
 import ContentSection from '../../../components/system/ContentSection';
+import AnnualFinancialReports from '../../../components/system/AnnualFinancialReports';
 import { messages, pageMetadata } from '../../../lib/site';
 
 const sections = [
@@ -139,6 +140,7 @@ export default async function ANBIInformation({ params }) {
           className={section.className}
         />
       ))}
+      <AnnualFinancialReports locale={locale} />
     </div>
   );
 }

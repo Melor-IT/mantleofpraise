@@ -124,7 +124,13 @@ const server = createPreviewServer(path.resolve('out'));
   async function key(name, code) {
     await send(
       'Input.dispatchKeyEvent',
-      { type: 'keyDown', key: name, code: name, windowsVirtualKeyCode: code },
+      {
+        type: 'keyDown',
+        key: name,
+        code: name,
+        windowsVirtualKeyCode: code,
+        ...(name === 'Enter' ? { text: '\r', unmodifiedText: '\r' } : {})
+      },
       sessionId
     );
     await send(
@@ -146,6 +152,246 @@ const server = createPreviewServer(path.resolve('out'));
     );
     await pause(100);
   }
+  const { getAnnualFinancialReports } = await import('../src/lib/financialReports.js');
+  const reports = await getAnnualFinancialReports();
+  const reportLabels = {
+    en: '6. Annual Financial Reports',
+    nl: '6. Jaarrekeningen',
+    fa: '6. گزارش‌های مالی سالانه'
+  };
+  let reportCases = 0;
+  for (const locale of ['en', 'nl', 'fa']) {
+    for (const [width, height] of [
+      [320, 640],
+      [375, 812],
+      [768, 500],
+      [1440, 900]
+    ]) {
+      await navigate('/' + locale + '/ANBI-information/', width, height);
+      const section = await evaluate(`(() => {
+        const section = document.querySelector('.annual-financial-reports');
+        return {
+          title: section.querySelector('h2').textContent.trim(),
+          years: [...section.querySelectorAll('.annual-financial-reports__year bdi')].map(e => Number(e.textContent)),
+          last: section === section.parentElement.lastElementChild,
+          empty: !!section.querySelector('.annual-financial-reports__empty'),
+          viewers: section.querySelectorAll('.financial-report-viewer').length
+        };
+      })()`);
+      assert.equal(section.title, reportLabels[locale]);
+      assert.deepEqual(
+        section.years,
+        reports.map((report) => report.year)
+      );
+      assert(section.last, 'Reports must follow all existing ANBI content');
+      assert.equal(section.empty, reports.length === 0);
+      assert.equal(section.viewers, 0, 'PDFs must not load before opening a report');
+      for (let index = 0; index < reports.length; index++) {
+        const report = reports[index];
+        await evaluate(
+          `window.reportButton = document.querySelectorAll('.annual-financial-reports__year')[${index}]; reportButton.scrollIntoView({block:'center'}); reportButton.focus();`
+        );
+        const previousScroll = await evaluate('scrollY');
+        const previousUrl = await evaluate('location.href');
+        await key('Enter', 13);
+        await pause();
+        assert(
+          await evaluate("!!document.querySelector('.financial-report-modal[open]')"),
+          'Report did not open: ' +
+            JSON.stringify(
+              await evaluate(`({
+            active: document.activeElement.outerHTML,
+            button: reportButton.outerHTML,
+            connected: reportButton.isConnected,
+            dialogs: [...document.querySelectorAll('.financial-report-modal')].map(e => e.open)
+          })`)
+            )
+        );
+        await evaluate(`new Promise((resolve, reject) => {
+          let attempts = 0;
+          const timer = setInterval(() => {
+            const canvas = document.querySelector('.financial-report-modal[open] canvas');
+            if (canvas?.width > 0 && document.querySelector('.react-pdf__Page__textContent span')) {
+              clearInterval(timer); resolve(true);
+            } else if (++attempts > 200) {
+              clearInterval(timer); reject(Error('PDF did not render: ' + document.querySelector('.financial-report-modal[open]').textContent));
+            }
+          }, 50);
+        })`);
+        const modal = await evaluate(`(() => {
+          const dialog = document.querySelector('.financial-report-modal[open]');
+          const rect = dialog.getBoundingClientRect();
+          return {
+            title: dialog.querySelector('h2').textContent,
+            viewerTitle: dialog.querySelector('[role="region"]').getAttribute('aria-label'),
+            closeFocus: document.activeElement === dialog.querySelector('button'),
+            locked: document.body.style.overflow === 'hidden' && document.body.style.position === 'fixed',
+            direction: getComputedStyle(dialog).direction,
+            download: dialog.querySelector('a[download]').getAttribute('href'),
+            fallback: dialog.querySelector('.financial-report-modal__actions a[target="_blank"]').getAttribute('href'),
+            fits: rect.left >= 0 && rect.right <= innerWidth && rect.top >= 0 && rect.bottom <= innerHeight,
+            noOverflow: dialog.scrollWidth <= dialog.clientWidth + 1
+          };
+        })()`);
+        assert.equal(modal.viewerTitle, modal.title);
+        assert(modal.title.includes(String(report.year)));
+        assert.equal(modal.download, report.pdfUrl);
+        assert.equal(modal.fallback, report.pdfUrl);
+        assert.equal(modal.direction, locale === 'fa' ? 'rtl' : 'ltr');
+        assert(
+          modal.closeFocus && modal.locked && modal.fits && modal.noOverflow,
+          JSON.stringify(modal)
+        );
+        assert.equal(await evaluate('location.href'), previousUrl);
+        const pdfResponse = await fetch(origin + report.pdfUrl);
+        assert.equal(pdfResponse.status, 200);
+        assert.equal(pdfResponse.headers.get('content-type'), 'application/pdf');
+        assert.equal(pdfResponse.headers.get('x-frame-options'), 'DENY');
+        if (process.env.BROWSER_SCREENSHOT_DIR && index === 0) {
+          await pause(500);
+          const screenshot = await send('Page.captureScreenshot', { format: 'png' }, sessionId);
+          fs.mkdirSync(process.env.BROWSER_SCREENSHOT_DIR, { recursive: true });
+          fs.writeFileSync(
+            path.join(process.env.BROWSER_SCREENSHOT_DIR, `report-${locale}-${width}.png`),
+            Buffer.from(screenshot.data, 'base64')
+          );
+        }
+        if (
+          await evaluate(
+            "!document.querySelector('.financial-report-viewer__toolbar > button:nth-of-type(2)').disabled"
+          )
+        ) {
+          await evaluate(
+            "document.querySelector('.financial-report-viewer__toolbar > button:nth-of-type(2)').click()"
+          );
+          await pause();
+          assert.equal(
+            await evaluate("document.querySelector('.react-pdf__Page').dataset.pageNumber"),
+            '2'
+          );
+          await evaluate(
+            "document.querySelector('.financial-report-viewer__toolbar > button:first-of-type').click()"
+          );
+          await pause();
+          assert.equal(
+            await evaluate("document.querySelector('.react-pdf__Page').dataset.pageNumber"),
+            '1'
+          );
+        }
+        const pageWidth = await evaluate(
+          "document.querySelector('.react-pdf__Page').getBoundingClientRect().width"
+        );
+        await evaluate(
+          "document.querySelector('.financial-report-viewer__zoom button:last-child').click()"
+        );
+        await pause();
+        assert(
+          (await evaluate(
+            "document.querySelector('.react-pdf__Page').getBoundingClientRect().width"
+          )) > pageWidth
+        );
+        await evaluate(
+          "document.querySelector('.financial-report-viewer__zoom button:first-child').click(); document.querySelector('.financial-report-modal[open] .financial-report-modal__close').focus()"
+        );
+        await pause();
+        for (let tab = 0; tab < 8; tab++) {
+          await key('Tab', 9);
+          await pause();
+          assert(
+            await evaluate(
+              "document.querySelector('.financial-report-modal[open]').contains(document.activeElement)"
+            ),
+            'Focus escaped the report dialog: ' +
+              JSON.stringify(
+                await evaluate(`({
+              tab: ${tab}, tag: document.activeElement.tagName, className: document.activeElement.className,
+              documentFocused: document.hasFocus()
+            })`)
+              )
+          );
+        }
+        // Escape must dismiss the modal even after the PDF receives focus.
+        const pdfPoint = await evaluate(`(() => {
+          const viewport = document.querySelector('.financial-report-viewer__viewport');
+          viewport.focus();
+          const rect = viewport.getBoundingClientRect();
+          return { x: rect.left + rect.width * 0.65, y: rect.top + rect.height * 0.5 };
+        })()`);
+        await send(
+          'Input.dispatchMouseEvent',
+          { type: 'mousePressed', ...pdfPoint, button: 'left', clickCount: 1 },
+          sessionId
+        );
+        await send(
+          'Input.dispatchMouseEvent',
+          { type: 'mouseReleased', ...pdfPoint, button: 'left', clickCount: 1 },
+          sessionId
+        );
+        await key('Escape', 27);
+        await pause();
+        assert(!(await evaluate("!!document.querySelector('.financial-report-modal[open]')")));
+        assert(await evaluate('document.activeElement === reportButton'));
+        assert.equal(await evaluate('document.body.style.overflow'), '');
+        assert(Math.abs((await evaluate('scrollY')) - previousScroll) <= 1);
+        await evaluate('reportButton.click()');
+        await pause();
+        await evaluate(
+          "document.querySelector('.financial-report-modal[open] .financial-report-modal__close').click()"
+        );
+        await pause();
+        assert(!(await evaluate("!!document.querySelector('.financial-report-modal[open]')")));
+        await evaluate('reportButton.click()');
+        await pause();
+        await send(
+          'Input.dispatchMouseEvent',
+          { type: 'mousePressed', x: 1, y: 1, button: 'left', clickCount: 1 },
+          sessionId
+        );
+        await send(
+          'Input.dispatchMouseEvent',
+          { type: 'mouseReleased', x: 1, y: 1, button: 'left', clickCount: 1 },
+          sessionId
+        );
+        await pause();
+        assert(
+          !(await evaluate("!!document.querySelector('.financial-report-modal[open]')")),
+          'Backdrop did not close the dialog'
+        );
+        assert(await evaluate('document.activeElement === reportButton'));
+        assert.equal(await evaluate('location.href'), previousUrl);
+      }
+      reportCases++;
+    }
+  }
+  assert.equal(exceptions.length, 0, JSON.stringify(exceptions));
+  assert.equal(badResponses.length, 0, JSON.stringify(badResponses));
+  console.log(JSON.stringify({ annualReportCases: reportCases, approvedReports: reports.length }));
+  if (process.env.REPORTS_ONLY === '1' && reports.length) {
+    await navigate('/en/ANBI-information/');
+    await send(
+      'Network.setBlockedURLs',
+      { urls: ['*fonts.googleapis.com*', '*fonts.gstatic.com*', '*' + reports[0].pdfUrl] },
+      sessionId
+    );
+    await evaluate("document.querySelector('.annual-financial-reports__year').click()");
+    await evaluate(`new Promise((resolve, reject) => {
+      let attempts = 0;
+      const timer = setInterval(() => {
+        if(document.querySelector('.financial-report-modal[open] [role="alert"]')) { clearInterval(timer); resolve(true); }
+        else if(++attempts > 200) { clearInterval(timer); reject(Error('Missing PDF error fallback')); }
+      }, 50);
+    })`);
+    assert(
+      await evaluate(
+        "!!document.querySelector('.financial-report-modal[open] a[download]') && !!document.querySelector('.financial-report-modal__actions a[target=\"_blank\"]')"
+      )
+    );
+    await key('Escape', 27);
+    await pause();
+    assert(!(await evaluate("!!document.querySelector('.financial-report-modal[open]')")));
+    console.log(JSON.stringify({ pdfFailureFallbackPassed: true }));
+  }
+  if (process.env.REPORTS_ONLY === '1') return;
   for (const locale of ['en', 'fa', 'nl']) {
     for (const width of [375, 1440]) {
       await navigate('/' + locale + '/ANBI-information/', width);

@@ -1,4 +1,22 @@
 const messages = {
+  annualFinancialReportsTitle: '6. Jaarrekeningen',
+  annualFinancialReportsIntro:
+    'Bekijk en download onze jaarrekeningen. Selecteer een jaar om het verslag te openen.',
+  annualFinancialReportsEmpty: 'Er zijn nog geen jaarrekeningen beschikbaar.',
+  annualFinancialReportTitle: 'Jaarrekening {year}',
+  closeFinancialReport: 'Jaarrekening sluiten',
+  downloadFinancialReport: 'PDF downloaden',
+  financialReportViewerHelp:
+    'Als de PDF niet wordt weergegeven, kunt u deze in een nieuw tabblad openen.',
+  openFinancialReport: 'PDF openen in een nieuw tabblad',
+  financialReportLoading: 'PDF laden…',
+  financialReportError:
+    'Het PDF-voorbeeld is niet beschikbaar. Download de PDF of open deze in een nieuw tabblad.',
+  financialReportPreviousPage: 'Vorige',
+  financialReportNextPage: 'Volgende',
+  financialReportPage: 'Pagina {page, number} van {total, number}',
+  financialReportZoomOut: 'Uitzoomen',
+  financialReportZoomIn: 'Inzoomen',
   closeDonation: 'Sluit donatievenster',
   donationQrDescription:
     'Scan met uw telefoon om de betaalpagina te openen, of gebruik de link hieronder. U kunt zelf het bedrag kiezen en betalen met elke bank in Nederland.',

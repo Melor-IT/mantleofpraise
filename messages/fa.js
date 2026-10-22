@@ -1,4 +1,22 @@
 const messages = {
+  annualFinancialReportsTitle: '6. گزارش‌های مالی سالانه',
+  annualFinancialReportsIntro:
+    'صورت‌های مالی سالانهٔ ما را مشاهده و دانلود کنید. برای باز کردن گزارش، یک سال را انتخاب کنید.',
+  annualFinancialReportsEmpty: 'هنوز گزارشی از صورت‌های مالی سالانه در دسترس نیست.',
+  annualFinancialReportTitle: 'گزارش مالی سالانهٔ {year}',
+  closeFinancialReport: 'بستن گزارش مالی',
+  downloadFinancialReport: 'دانلود PDF',
+  financialReportViewerHelp:
+    'اگر فایل PDF نمایش داده نمی‌شود، می‌توانید آن را در زبانهٔ جدید باز کنید.',
+  openFinancialReport: 'باز کردن PDF در زبانهٔ جدید',
+  financialReportLoading: 'در حال بارگذاری PDF…',
+  financialReportError:
+    'پیش‌نمایش PDF در دسترس نیست. لطفاً فایل را دانلود کنید یا در زبانهٔ جدید باز کنید.',
+  financialReportPreviousPage: 'قبلی',
+  financialReportNextPage: 'بعدی',
+  financialReportPage: 'صفحهٔ {page, number} از {total, number}',
+  financialReportZoomOut: 'کوچک‌نمایی',
+  financialReportZoomIn: 'بزرگ‌نمایی',
   closeDonation: 'بستن پنجرهٔ حمایت مالی',
   donationQrDescription:
     'برای باز کردن صفحهٔ پرداخت، با گوشی اسکن کنید یا لینک زیر را بزنید. مبلغ را خودتان انتخاب کنید و با هر بانک هلندی پرداخت کنید.',

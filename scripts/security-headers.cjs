@@ -24,7 +24,8 @@ function securityHeaders(exportRoot) {
   }
   const policy = [
     "default-src 'self'",
-    `script-src 'self' ${[...hashes].sort().join(' ')}`,
+    // PDF.js uses local WebAssembly decoders; arbitrary JavaScript eval stays blocked.
+    `script-src 'self' 'wasm-unsafe-eval' ${[...hashes].sort().join(' ')}`,
     "script-src-attr 'none'",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
@@ -33,6 +34,7 @@ function securityHeaders(exportRoot) {
     "form-action 'self'",
     "object-src 'none'",
     "base-uri 'self'",
+    "worker-src 'self'",
     "frame-src 'none'",
     "frame-ancestors 'none'"
   ].join('; ');

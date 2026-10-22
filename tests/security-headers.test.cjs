@@ -25,10 +25,15 @@ test('CSP allows exact exported scripts and rejects arbitrary inline JavaScript'
     );
   }
   assert(!scriptPolicy.includes('unsafe-inline'));
-  assert(!scriptPolicy.includes('unsafe-eval'));
+  assert(!scriptPolicy.includes("'unsafe-eval'"));
   assert(!scriptPolicy.includes(createHash('sha256').update('alert("injected")').digest('base64')));
   assert(policy.includes("script-src-attr 'none'"));
+  assert(scriptPolicy.includes("'wasm-unsafe-eval'"));
+  assert(policy.includes("worker-src 'self'"));
+  assert(policy.includes("frame-src 'none'"));
   assert(policy.includes("frame-ancestors 'none'"));
+  assert(policy.includes("object-src 'none'"));
+  assert.equal(headers['X-Frame-Options'], 'DENY');
   assert.equal(headers['X-Content-Type-Options'], 'nosniff');
 
   fs.writeFileSync(path.join(root, 'index.html'), `<script>${scripts[0]}\n</script>`);
