@@ -7,10 +7,10 @@ import { messages, pageMetadata } from '../../../lib/site';
 
 const sections = [
   {
-    title: { id: 'policyGoalsTitle', defaultMessage: '1. Doelstelling van de instelling' },
+    title: { id: 'policyGoalsTitle', defaultMessage: '1. Doelstellingen van de stichting' },
     description: {
       id: 'policyGoalsIntro',
-      defaultMessage: 'De organisatie Stichting Mantle of Praise heeft als doel:'
+      defaultMessage: 'Stichting Mantle of Praise heeft de volgende doelstellingen:'
     },
     items: [
       {
@@ -33,12 +33,12 @@ const sections = [
   {
     title: {
       id: 'policyActivitiesTitle',
-      defaultMessage: '2. Activiteiten om dit doel te bereiken'
+      defaultMessage: '2. Activiteiten om deze doelstellingen te bereiken'
     },
     items: [
       {
         id: 'policyActivities1',
-        defaultMessage: 'Het organiseren van aanbidding bijeenkomsten, conferenties en trainingen.'
+        defaultMessage: 'Het organiseren van aanbiddingsbijeenkomsten, conferenties en trainingen.'
       },
       {
         id: 'policyActivities2',
@@ -105,7 +105,7 @@ const sections = [
     description: {
       id: 'policyAssetsText',
       defaultMessage:
-        'Het vermogen van de organisatie wordt zorgvuldig en transparant beheerd door het bestuur, conform de statuten en onder toezicht van de penningmeester en de commissie met toezicht. De middelen worden uitsluitend besteed aan de verwezenlijking van de doelstellingen.'
+        'Het bestuur beheert het vermogen van de stichting zorgvuldig en transparant, in overeenstemming met de statuten en onder toezicht van de penningmeester en de toezichtscommissie. De middelen worden uitsluitend besteed aan het realiseren van de doelstellingen van de stichting.'
     },
     className: 'primary'
   }

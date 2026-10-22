@@ -2,7 +2,7 @@ const introduction = {
   fa: {
     title: 'آشنایی با ردای ستایش',
     tagline: 'متحد در پرستش، یکدل در محبت، همراه در خدمت',
-    aboutTitle: 'درباره ردای ستایش',
+    aboutTitle: 'دربارهٔ ردای ستایش',
     about: [
       'ما باور داریم که پرستش خداوند تنها به سرود خواندن محدود نمی‌شود؛ بلکه شیوه‌ای از زندگی است که در محبت، اتحاد، فروتنی و خدمت به دیگران نمایان می‌شود.',
       '«ردای ستایش» یک سازمان خدماتی مسیحی است که با هدف ایجاد اتحاد میان ایمانداران، تقویت پرستش و ستایش خداوند و گسترش پیام محبت و امید عیسی مسیح شکل گرفته است.',
@@ -12,14 +12,14 @@ const introduction = {
     membershipButton: 'درخواست عضویت در ردای ستایش',
     missionTitle: 'رسالت ما',
     mission: [
-      'رسالت ما ایجاد بستری برای اتحاد ایمانداران و کلیساها در پرستش خداوند و خدمت به جامعه فارسی‌زبان است.',
+      'رسالت ما ایجاد بستری برای اتحاد ایمانداران و کلیساها در پرستش خداوند و خدمت به جامعهٔ فارسی‌زبان است.',
       'ما تلاش می‌کنیم از طریق پرستش، دعا، آموزش، مشارکت روحانی و فعالیت‌های فرهنگی و اجتماعی، محبت عیسی مسیح را به شکلی زنده و ملموس به دیگران منتقل کنیم.',
-      'خدمت ما از جامعه فارسی‌زبانان مقیم هلند آغاز شده و چشم‌انداز ما ارتباط، همکاری و خدمت به فارسی‌زبانان در سراسر جهان است.'
+      'خدمت ما از میان فارسی‌زبانان ساکن هلند آغاز شده است. چشم‌انداز ما برقراری ارتباط و همکاری با فارسی‌زبانان در سراسر جهان و خدمت به آنان است.'
     ],
     visionTitle: 'چشم‌انداز ما',
     vision: [
       'رؤیای ما دیدن جامعه‌ای متحد از ایمانداران مسیحی است که فراتر از تفاوت‌های کلیسایی، فرهنگی و فردی، با قلبی واحد خداوند را پرستش می‌کنند.',
-      'ما باور داریم که هر ایماندار دارای عطایا و توانایی‌هایی است که می‌تواند برای بنای بدن مسیح و خدمت به دیگران به کار گرفته شود.',
+      'ما باور داریم که هر ایماندار عطایا و توانایی‌هایی دارد که می‌توان از آن‌ها برای بنای بدن مسیح و خدمت به دیگران استفاده کرد.',
       'می‌خواهیم با ایجاد فرصت‌های مشارکت و خدمت، به رشد روحانی ایمانداران و گسترش پیام انجیل کمک کنیم.'
     ],
     servicesTitle: 'زمینه‌های خدمت ما',
@@ -34,8 +34,8 @@ const introduction = {
         'فراهم کردن فرصت‌هایی برای دعای جمعی، مشارکت، تشویق یکدیگر و رشد در ارتباط شخصی با خداوند.'
       ],
       [
-        'آموزش و تجهیز خادمین',
-        'برگزاری کارگاه‌ها و برنامه‌های آموزشی در زمینه پرستش، موسیقی مسیحی، رشد روحانی و مهارت‌های موردنیاز برای خدمت مؤثر.'
+        'آموزش و تجهیز خادمان',
+        'برگزاری کارگاه‌ها و برنامه‌های آموزشی در زمینهٔ پرستش، موسیقی مسیحی، رشد روحانی و مهارت‌های لازم برای خدمت مؤثر.'
       ],
       [
         'بشارت و معرفی پیام انجیل',
@@ -47,18 +47,18 @@ const introduction = {
       ],
       [
         'خدمت به جامعه',
-        'ابراز عملی محبت مسیح از طریق مشارکت در فعالیت‌های اجتماعی، فرهنگی و حمایتی با روحیه فروتنی، همدلی و خدمت‌گزاری.'
+        'ابراز عملی محبت مسیح از طریق مشارکت در فعالیت‌های اجتماعی، فرهنگی و حمایتی با روحیهٔ فروتنی، همدلی و خدمت‌گزاری.'
       ]
     ],
     valuesTitle: 'ارزش‌های ما',
     values: [
       [
         'ایمان به عیسی مسیح',
-        'عیسی مسیح، خداوند و نجات‌دهنده ما، مرکز ایمان، پرستش و تمامی فعالیت‌های ماست. کتاب مقدس راهنمای زندگی و خدمت ماست.'
+        'عیسی مسیح، خداوند و نجات‌دهندهٔ ما، مرکز ایمان، پرستش و تمامی فعالیت‌های ماست. کتاب مقدس راهنمای زندگی و خدمت ماست.'
       ],
       [
         'محبت و احترام',
-        'ما می‌کوشیم با همه انسان‌ها، فارغ از پیشینه فرهنگی، زبانی یا اجتماعی آنان، با محبت، احترام و فروتنی رفتار کنیم.'
+        'ما می‌کوشیم با همهٔ انسان‌ها، فارغ از پیشینهٔ فرهنگی، زبانی یا اجتماعی آنان، با محبت، احترام و فروتنی رفتار کنیم.'
       ],
       [
         'اتحاد در بدن مسیح',
@@ -77,7 +77,7 @@ const introduction = {
         'باور داریم که خدمت واقعی از قلبی فروتن و محبت‌آمیز سرچشمه می‌گیرد و هدف آن جلال خداوند و بنای دیگران است.'
       ]
     ],
-    churchesTitle: 'رابطه ما با کلیساهای محلی',
+    churchesTitle: 'رابطهٔ ما با کلیساهای محلی',
     churches: [
       'ردای ستایش جایگزین کلیسا نیست.',
       'ما به نقش بنیادی کلیساهای محلی و مسئولیت شبانان در هدایت و مراقبت روحانی ایمانداران احترام می‌گذاریم.',
@@ -87,7 +87,7 @@ const introduction = {
     membershipTitle: 'عضویت در ردای ستایش',
     membership: [
       'شما هم می‌توانید بخشی از این خدمت باشید. اگر به عیسی مسیح ایمان دارید، مشتاق پرستش خداوند هستید و می‌خواهید عطایا و توانایی‌های خود را برای خدمت به دیگران به کار بگیرید، خوشحال می‌شویم با شما آشنا شویم.',
-      'عضویت در ردای ستایش فرصتی است برای رشد روحانی، مشارکت در فعالیت‌های گروهی و همکاری با خادمینی که رؤیای مشترکی برای خدمت به خداوند دارند.'
+      'عضویت در ردای ستایش فرصتی برای رشد روحانی، مشارکت در فعالیت‌های گروهی و همکاری با خادمانی است که چشم‌اندازی مشترک برای خدمت به خداوند دارند.'
     ],
     requirementsTitle: 'شرایط عضویت',
     requirementsIntro: 'برای پیوستن به جمع اعضای ردای ستایش، موارد زیر اهمیت دارند:',
@@ -98,7 +98,7 @@ const introduction = {
       ],
       [
         'پایبندی به ایمان مسیحی',
-        'پذیرش اصول بنیادی و اعتقادنامه‌های تاریخی مسیحیت، از جمله اعتقادنامه رسولان، نیقیه و آتاناسیوس.'
+        'پذیرش اصول بنیادی و اعتقادنامه‌های تاریخی مسیحیت، از جمله اعتقادنامه‌های رسولان، نیقیه و آتاناسیوس.'
       ],
       ['همراهی با رسالت سازمان', 'پذیرش اهداف، ارزش‌ها و اصول خدماتی ردای ستایش.'],
       ['روحیه همکاری و خدمت', 'آمادگی برای مشارکت فعال، کار گروهی و احترام به دیگر اعضا.'],
@@ -109,19 +109,19 @@ const introduction = {
     ],
     stepsTitle: 'مراحل درخواست عضویت',
     steps: [
-      ['مرحله اول: ثبت درخواست', 'فرم درخواست عضویت و تعهدنامه را تکمیل می‌کنید.'],
+      ['مرحلهٔ اول: ثبت درخواست', 'فرم درخواست عضویت و تعهدنامه را تکمیل کنید.'],
       [
-        'مرحله دوم: آشنایی و گفت‌وگو',
-        'یکی از نمایندگان هیئت رهبری در جلسه‌ای دوستانه با شما آشنا می‌شود و درباره اهداف سازمان، زمینه‌های خدمت و پرسش‌های شما گفت‌وگو می‌کند.'
+        'مرحلهٔ دوم: آشنایی و گفت‌وگو',
+        'یکی از نمایندگان تیم رهبری در جلسه‌ای دوستانه با شما آشنا می‌شود و دربارهٔ اهداف سازمان، زمینه‌های خدمت و پرسش‌های شما گفت‌وگو می‌کند.'
       ],
       [
-        'مرحله سوم: بررسی درخواست',
-        'درخواست شما توسط هیئت رهبری بررسی می‌شود و نتیجه نهایی حداکثر ظرف چهار هفته پس از تکمیل پرونده به شما اطلاع داده خواهد شد.'
+        'مرحلهٔ سوم: بررسی درخواست',
+        'تیم رهبری درخواست شما را بررسی می‌کند. نتیجهٔ نهایی حداکثر ظرف چهار هفته پس از تکمیل پرونده به شما اعلام خواهد شد.'
       ]
     ],
     closingTitle: 'با هم در خدمت خداوند',
     closing: [
-      'ما باور داریم که خدمت به خداوند با قلب‌هایی متحد و مشتاق، می‌تواند تأثیری ماندگار بر زندگی انسان‌ها داشته باشد.',
+      'ما باور داریم که خدمت به خداوند با دل‌هایی متحد و مشتاق می‌تواند تأثیری ماندگار بر زندگی انسان‌ها داشته باشد.',
       'چه در پرستش و موسیقی، چه در دعا، آموزش، برنامه‌ریزی یا فعالیت‌های اجتماعی، هر عطیه می‌تواند فرصتی برای جلال خداوند و خدمت به دیگران باشد.',
       'بیایید در کنار یکدیگر، محبت مسیح را زندگی کنیم.'
     ]
@@ -161,7 +161,7 @@ const introduction = {
         'Creating opportunities for group prayer, fellowship, mutual encouragement, and growth in a personal relationship with God.'
       ],
       [
-        'Training and equipping servants',
+        'Training and equipping ministry workers',
         'Offering workshops and teaching programs in worship, Christian music, spiritual growth, and the skills needed for effective ministry.'
       ],
       [
@@ -185,7 +185,7 @@ const introduction = {
       ],
       [
         'Love and respect',
-        'We seek to treat everyone with love, respect, and humility, whatever their cultural, language, or social background.'
+        'We seek to treat everyone with love, respect, and humility, regardless of their cultural, linguistic, or social background.'
       ],
       [
         'Unity in the body of Christ',
@@ -197,7 +197,7 @@ const introduction = {
       ],
       [
         'Spiritual growth',
-        'We encourage one another to grow in our understanding of God’s Word, prayer, worship, and a life shaped by the teachings of Jesus Christ.'
+        'We encourage one another to deepen our understanding of God’s Word, grow in prayer and worship, and live according to the teachings of Jesus Christ.'
       ],
       [
         'A servant’s heart',
@@ -207,17 +207,17 @@ const introduction = {
     churchesTitle: 'Our relationship with local churches',
     churches: [
       'Mantle of Praise does not replace the local church.',
-      'We respect the vital role of local churches and the responsibility of pastors to guide and care for believers spiritually.',
+      'We respect the vital role of local churches and the responsibility of pastors to provide spiritual guidance and care for believers.',
       'Our members remain connected to their own church and pastor. Their involvement in Mantle of Praise offers an opportunity to broaden cooperation and serve together.',
       'Our aim is not to create competition between churches, but to build bridges of love, unity, and cooperation within the body of Christ.'
     ],
     membershipTitle: 'Membership in Mantle of Praise',
     membership: [
       'You can be part of this ministry too. If you believe in Jesus Christ, long to worship God, and want to use your gifts and abilities to serve others, we would be happy to get to know you.',
-      'Membership in Mantle of Praise offers opportunities for spiritual growth, group activities, and collaboration with fellow servants who share a vision for serving God.'
+      'Membership in Mantle of Praise offers opportunities for spiritual growth, group activities, and collaboration with others who share a vision for serving God.'
     ],
     requirementsTitle: 'Membership requirements',
-    requirementsIntro: 'The following commitments matter when joining Mantle of Praise:',
+    requirementsIntro: 'Membership in Mantle of Praise is based on the following commitments:',
     requirements: [
       [
         'Personal faith in Jesus Christ',
@@ -249,7 +249,7 @@ const introduction = {
       ],
       [
         'Step three: Application review',
-        'The leadership team reviews your application. You will be informed of the final decision within four weeks after your application file is complete.'
+        'The leadership team reviews your application. You will be informed of the final decision within four weeks after your application is complete.'
       ]
     ],
     closingTitle: 'Together in God’s service',
@@ -265,16 +265,16 @@ const introduction = {
     aboutTitle: 'Over Mantle of Praise',
     about: [
       'Wij geloven dat God aanbidden verder gaat dan liederen zingen. Het is een manier van leven die zichtbaar wordt in liefde, eenheid, nederigheid en dienstbaarheid aan anderen.',
-      'Mantle of Praise is een christelijke bedieningsorganisatie die gelovigen wil verbinden, de aanbidding en lofprijzing van God wil versterken en de boodschap van liefde en hoop in Jezus Christus wil delen.',
+      'Mantle of Praise is een christelijke organisatie die gelovigen wil verbinden, de aanbidding en lofprijzing van God wil versterken en de boodschap van liefde en hoop in Jezus Christus wil delen.',
       'Wij willen een gastvrije plek bieden waar gelovigen uit verschillende kerken en met uiteenlopende achtergronden samen kunnen aanbidden, groeien in geloof en hun gaven en talenten kunnen inzetten voor God en anderen.'
     ],
     servicesButton: 'Ontdek onze bediening',
     membershipButton: 'Lidmaatschap bij Mantle of Praise aanvragen',
     missionTitle: 'Onze missie',
     mission: [
-      'Onze missie is om gelovigen en kerken samen te brengen in de aanbidding van God en in de dienst aan de Perzischsprekende gemeenschap.',
+      'Onze missie is om gelovigen en kerken samen te brengen in de aanbidding van God en in dienstbaarheid aan de Perzischtalige gemeenschap.',
       'Door aanbidding, gebed, onderwijs, geestelijke gemeenschap en culturele en maatschappelijke activiteiten willen wij de liefde van Jezus Christus op een levende en tastbare manier doorgeven.',
-      'Onze bediening is begonnen onder Perzischsprekenden in Nederland. Onze visie is om verbinding te zoeken, samen te werken en Perzischsprekende gemeenschappen over de hele wereld te dienen.'
+      'Onze bediening is begonnen onder Perzischtaligen in Nederland. Wij willen contact leggen en samenwerken met Perzischtalige gemeenschappen over de hele wereld en hen dienen.'
     ],
     visionTitle: 'Onze visie',
     vision: [
@@ -303,7 +303,7 @@ const introduction = {
       ],
       [
         'Samenwerking met kerken',
-        'Mogelijkheden creëren voor samenwerking en ontmoeting tussen Perzischsprekende gelovigen en kerken, met volledig respect voor voorgangers en de verantwoordelijkheid van plaatselijke kerken.'
+        'Mogelijkheden creëren voor samenwerking en ontmoeting tussen Perzischtalige gelovigen en kerken, met volledig respect voor voorgangers en de verantwoordelijkheid van plaatselijke kerken.'
       ],
       [
         'Dienst aan de samenleving',
@@ -318,7 +318,7 @@ const introduction = {
       ],
       [
         'Liefde en respect',
-        'Wij willen iedereen met liefde, respect en nederigheid behandelen, ongeacht culturele, taalkundige of maatschappelijke achtergrond.'
+        'Wij willen iedereen met liefde, respect en nederigheid behandelen, ongeacht iemands culturele, taalkundige of maatschappelijke achtergrond.'
       ],
       [
         'Eenheid in het lichaam van Christus',
@@ -347,7 +347,7 @@ const introduction = {
     membershipTitle: 'Lid worden van Mantle of Praise',
     membership: [
       'Ook u kunt deel uitmaken van deze bediening. Als u gelooft in Jezus Christus, God wilt aanbidden en uw gaven en talenten wilt inzetten om anderen te dienen, maken wij graag kennis met u.',
-      'Het lidmaatschap van Mantle of Praise biedt mogelijkheden voor geestelijke groei, gezamenlijke activiteiten en samenwerking met medewerkers die dezelfde visie delen om God te dienen.'
+      'Het lidmaatschap van Mantle of Praise biedt mogelijkheden voor geestelijke groei, gezamenlijke activiteiten en samenwerking met medewerkers die vanuit een gezamenlijke visie God willen dienen.'
     ],
     requirementsTitle: 'Voorwaarden voor lidmaatschap',
     requirementsIntro:
@@ -386,7 +386,7 @@ const introduction = {
       ],
       [
         'Stap drie: Beoordeling van de aanvraag',
-        'Het leiderschapsteam beoordeelt uw aanvraag. U ontvangt de definitieve beslissing uiterlijk binnen vier weken nadat uw dossier compleet is.'
+        'Het leiderschapsteam beoordeelt uw aanvraag. U ontvangt de definitieve beslissing binnen vier weken nadat uw dossier compleet is.'
       ]
     ],
     closingTitle: 'Samen in dienst van God',

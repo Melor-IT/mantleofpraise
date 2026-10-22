@@ -8,22 +8,19 @@ import { messages, pageMetadata, pathFor } from '../../lib/site';
 const serviceSteps = [
   {
     id: 'firstService',
-    defaultTitle: 'Organizing Prayer and Worship Sessions',
+    defaultTitle: 'Worship and Worshipers',
     image: '/images/firstService.jpg',
-    imageAlt: 'Organizing Prayer and Worship Sessions',
     imageClassName: 'sw'
   },
   {
     id: 'secondService',
-    defaultTitle: 'Equipping Worshipers',
-    image: '/images/secondService.jpeg',
-    imageAlt: 'Equipping Worshipers'
+    defaultTitle: 'Prophecy and Prophets',
+    image: '/images/secondService.jpeg'
   },
   {
     id: 'thirdService',
-    defaultTitle: 'Nurturing Prophets',
+    defaultTitle: 'Organizing Prayer and Worship Sessions',
     image: '/images/thirdService.jpg',
-    imageAlt: 'Nurturing Prophets',
     imageClassName: 'ne'
   }
 ];
@@ -41,6 +38,7 @@ export default async function Home({ params }) {
   const steps = serviceSteps.map((step) => ({
     ...step,
     title: text(step.id, step.defaultTitle),
+    imageAlt: text(step.id, step.defaultTitle),
     description: text(`${step.id}Text`)
   }));
 

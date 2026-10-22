@@ -128,10 +128,7 @@ const Header = ({ locale }) => {
           href={pathFor(locale)}
           aria-label={formatMessage({ id: 'home', defaultMessage: 'Home' })}
         >
-          <img
-            src="/images/logo-mini.png"
-            alt={locale === 'fa' ? 'نشان ردای ستایش' : 'Mantle of Praise logo'}
-          />
+          <img src="/images/logo-mini.png" alt={formatMessage({ id: 'logoAlt' })} />
           <img
             src={locale === 'fa' ? '/images/rada-farsi.png' : '/images/rada-eng.png'}
             alt={locale === 'fa' ? 'ردای ستایش' : 'Mantle of Praise'}

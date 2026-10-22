@@ -63,7 +63,7 @@ export default async function AboutUs({ params }) {
     members.map((member) => ({
       id: member.nameId,
       image: member.img,
-      imageAlt: member.alt,
+      imageAlt: text(member.nameId, member.defaultName),
       name: text(member.nameId, member.defaultName),
       role: member.roleId ? text(member.roleId, member.defaultRole) : undefined
     }));

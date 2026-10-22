@@ -78,9 +78,15 @@ const Footer = () => {
           {locale === 'fa' ? '© ۲۰۲۶ ردای ستایش' : '© 2026 Mantle of Praise'}
         </p>
         <p>
-          <a className="footer-credit" href="https://mel-or.com/" dir="ltr" lang="en">
-            <span className="footer-credit__label">Made by</span>{' '}
-            <span className="footer-credit__brand">Melor</span>
+          <a
+            className="footer-credit"
+            href="https://mel-or.com/"
+            dir={locale === 'fa' ? 'rtl' : 'ltr'}
+          >
+            <span className="footer-credit__label">{formatMessage({ id: 'footerCredit' })}</span>{' '}
+            <span className="footer-credit__brand" lang="en" dir="ltr">
+              Melor
+            </span>
             <svg
               viewBox="0 0 24 24"
               fill="none"

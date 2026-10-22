@@ -38,12 +38,12 @@ const pageLabels = {
 };
 
 const descriptions = {
-  '': 'ourMissionText',
+  '': 'homeDescription',
   introduction: 'introductionDescription',
-  'join-us': 'joinUsText',
-  'about-us': 'aboutUsSectionText',
-  'our-vision': 'visionText',
-  'ANBI-information': 'policyGoals1'
+  'join-us': 'joinUsDescription',
+  'about-us': 'aboutUsDescription',
+  'our-vision': 'visionDescription',
+  'ANBI-information': 'anbiDescription'
 };
 
 const images = {
@@ -61,7 +61,7 @@ export function pageMetadata(locale, route = '') {
   const label = messages[locale][pageLabels[route]] || 'Mantle of Praise';
   const organizationName = locale === 'fa' ? 'ردای ستایش' : 'Mantle of Praise';
   const title = route ? `${label} | ${organizationName}` : label;
-  const description = (messages[locale][descriptions[route]] || '').slice(0, 180);
+  const description = messages[locale][descriptions[route]] || '';
   const path = pathFor(locale, route);
   const image = images[route] || images[''];
 

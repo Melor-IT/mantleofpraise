@@ -96,7 +96,10 @@ export default function MembershipForm() {
 
       setStatus({
         type: 'success',
-        message: formatMessage({ id: 'formSent', defaultMessage: 'Message sent!' })
+        message: formatMessage({
+          id: 'formSent',
+          defaultMessage: 'Your membership application has been submitted.'
+        })
       });
       setFormData(emptyForm);
     } catch {
@@ -105,7 +108,7 @@ export default function MembershipForm() {
         type: 'error',
         message: formatMessage({
           id: controller.signal.aborted ? 'formTimedOut' : 'formFailed',
-          defaultMessage: 'Failed to send message. Please try again later.'
+          defaultMessage: 'Your application could not be submitted. Please try again later.'
         })
       });
     } finally {
@@ -263,7 +266,7 @@ export default function MembershipForm() {
 
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting
-              ? formatMessage({ id: 'submitting', defaultMessage: 'Sending...' })
+              ? formatMessage({ id: 'submitting', defaultMessage: 'Submitting…' })
               : formatMessage({ id: 'submit' })}
           </button>
           <p

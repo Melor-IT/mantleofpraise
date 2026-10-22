@@ -157,7 +157,7 @@ const server = createPreviewServer(path.resolve('out'));
   const reportLabels = {
     en: '6. Annual Financial Reports',
     nl: '6. Jaarrekeningen',
-    fa: '6. گزارش‌های مالی سالانه'
+    fa: '۶. گزارش‌های مالی سالانه'
   };
   let reportCases = 0;
   for (const locale of ['en', 'nl', 'fa']) {
