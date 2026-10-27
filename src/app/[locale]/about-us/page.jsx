@@ -34,10 +34,16 @@ const supervisoryTeam = [
     defaultRole: 'Advisory Board Member'
   },
   {
-    img: '/images/sahar.jpg',
+    img: '/images/sahar.jpeg',
     alt: 'Sahar Apistola',
     nameId: 'sahar',
     defaultName: 'Sahar Apistola'
+  },
+  {
+    img: '/images/andere.jpeg',
+    alt: 'Pastor Andre Apistola',
+    nameId: 'andre',
+    defaultName: 'Pastor Andre Apistola'
   },
   {
     img: '/images/kazem.jpg',

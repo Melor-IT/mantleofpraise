@@ -145,9 +145,9 @@ const Header = ({ locale }) => {
           aria-expanded={open}
           aria-controls="mobile-navigation"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
 
         <div className="header-actions">

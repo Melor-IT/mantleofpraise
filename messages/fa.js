@@ -141,6 +141,7 @@ const messages = {
   churchPastor: 'شبان کلیسا',
   kamil: 'کشیش کامیل نوایی',
   sahar: 'شبان سحر آپیستولا',
+  andre: 'شبان آندره آپیستولا',
   advisoryBoardMember: 'عضو هیئت مشاوران',
   supervisoryCommission: 'کمیسیون نظارت',
   supervisoryCommissionText:

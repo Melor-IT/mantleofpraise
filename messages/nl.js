@@ -142,6 +142,7 @@ const messages = {
   babak: 'Pastor Babak Zeynali',
   kamil: 'Dominee Kamil Navai',
   sahar: 'Pastor Sahar Apistola',
+  andre: 'Pastor Andre Apistola',
   advisoryBoardMember: 'Lid van de adviesraad',
   supervisoryCommission: 'Toezichtscommissie',
   supervisoryCommissionText:

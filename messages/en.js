@@ -142,6 +142,7 @@ const messages = {
   treasurer: 'Treasurer',
   kamil: 'Senior Pastor Kamil Navai',
   sahar: 'Pastor Sahar Apistola',
+  andre: 'Pastor Andre Apistola',
   advisoryBoardMember: 'Advisory Board Member',
   supervisoryCommission: 'Supervisory Commission',
   supervisoryCommissionText:
