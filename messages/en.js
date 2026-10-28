@@ -42,6 +42,7 @@ const messages = {
   footerCredit: 'Made by',
   welcomeTo: 'Welcome to',
   mantleOfPraise: 'Mantle of Praise',
+  homeTitle: 'Mantle of Praise | Christian Worship and Prayer in the Netherlands',
   home: 'Home',
   introduction: 'Our Ministry',
   introductionDescription:

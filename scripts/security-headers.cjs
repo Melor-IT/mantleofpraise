@@ -30,10 +30,11 @@ function securityHeaders(exportRoot) {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data:",
-    "connect-src 'self' https://www.ewcms.org",
-    "form-action 'self'",
+    "connect-src 'self' https://www.ewcms.org/mantleofpraise/contact.php",
+    // Submissions use fetch; block native form navigation, including before hydration.
+    "form-action 'none'",
     "object-src 'none'",
-    "base-uri 'self'",
+    "base-uri 'none'",
     "worker-src 'self'",
     "frame-src 'none'",
     "frame-ancestors 'none'"

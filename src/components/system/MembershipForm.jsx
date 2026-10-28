@@ -92,6 +92,12 @@ export default function MembershipForm() {
       });
 
       if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+      if (response.headers.get('content-type')?.includes('application/json')) {
+        const result = await response.json();
+        if (result?.success === false || result?.status === 'error' || result?.error) {
+          throw new Error('The server rejected the application.');
+        }
+      }
       if (requestRef.current !== controller) return;
 
       setStatus({
@@ -127,7 +133,7 @@ export default function MembershipForm() {
       style={{ scrollMarginTop: 'var(--header-offset)' }}
     >
       <div className="page-content">
-        <form className="form-block" onSubmit={handleSubmit} aria-busy={isSubmitting}>
+        <form className="form-block" method="post" onSubmit={handleSubmit} aria-busy={isSubmitting}>
           <label>
             <span className="title">{formatMessage({ id: 'firstName' })}</span>
             <input

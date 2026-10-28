@@ -1,6 +1,6 @@
-import en from '../../messages/en';
-import fa from '../../messages/fa';
-import nl from '../../messages/nl';
+import en from '../../messages/en.js';
+import fa from '../../messages/fa.js';
+import nl from '../../messages/nl.js';
 
 export const messages = { en, fa, nl };
 export const locales = Object.keys(messages);
@@ -55,12 +55,14 @@ const images = {
   'ANBI-information': '/images/ANBI-banner.jpg'
 };
 
+const socialLocales = { en: 'en_US', fa: 'fa_IR', nl: 'nl_NL' };
+
 export function pageMetadata(locale, route = '') {
   if (!locales.includes(locale) || !routes.includes(route)) return {};
 
   const label = messages[locale][pageLabels[route]] || 'Mantle of Praise';
   const organizationName = locale === 'fa' ? 'ردای ستایش' : 'Mantle of Praise';
-  const title = route ? `${label} | ${organizationName}` : label;
+  const title = route ? `${label} | ${organizationName}` : messages[locale].homeTitle;
   const description = messages[locale][descriptions[route]] || '';
   const path = pathFor(locale, route);
   const image = images[route] || images[''];
@@ -77,10 +79,49 @@ export function pageMetadata(locale, route = '') {
       description,
       url: path,
       siteName: organizationName,
-      locale,
+      locale: socialLocales[locale],
+      alternateLocale: locales
+        .filter((language) => language !== locale)
+        .map((language) => socialLocales[language]),
       type: 'website',
-      images: [{ url: image }]
+      images: [{ url: image, alt: label }]
     },
-    twitter: { card: 'summary_large_image', title, description, images: [image] }
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [{ url: image, alt: label }]
+    }
   };
 }
+
+export function organizationStructuredData(locale) {
+  if (!locales.includes(locale)) throw new Error('Unsupported structured-data language.');
+  const organizationId = `${siteUrl}/#organization`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': organizationId,
+        name: messages[locale].mantleOfPraise,
+        legalName: 'Stichting Mantle of Praise',
+        alternateName: locale === 'fa' ? 'Mantle of Praise' : 'ردای ستایش',
+        url: `${siteUrl}/`,
+        logo: `${siteUrl}/images/logo-mini.png`,
+        email: 'info@mantleofpraise.nl',
+        sameAs: ['https://www.instagram.com/mantle.of.praise/']
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: `${siteUrl}/`,
+        name: messages[locale].mantleOfPraise,
+        inLanguage: locales,
+        publisher: { '@id': organizationId }
+      }
+    ]
+  };
+}
+
+export const serializeStructuredData = (data) => JSON.stringify(data).replace(/</g, '\\u003c');

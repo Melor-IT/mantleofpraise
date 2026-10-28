@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useIntl } from 'react-intl';
 import { useEffect, useRef, useState } from 'react';
 import { pathFor } from '../../lib/site';
@@ -26,7 +26,6 @@ const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
 const Header = ({ locale }) => {
   const { formatMessage } = useIntl();
   const pathname = usePathname();
-  const router = useRouter();
   const routeSuffix = normalizePath(pathname).split('/').slice(2).join('/');
   const suffix = routeSuffix === 'Home' ? '' : routeSuffix;
   const languagePath = (lang) => pathFor(lang, suffix);
@@ -188,18 +187,20 @@ const Header = ({ locale }) => {
               inert={!languageOpen}
             >
               {availableLanguages.map((language) => (
-                <button
-                  type="button"
+                <Link
+                  href={languagePath(language.code)}
+                  hrefLang={language.code}
+                  lang={language.code}
+                  prefetch={false}
                   role="menuitem"
                   aria-label={language.label}
                   key={language.code}
                   onClick={() => {
                     setLanguageOpen(false);
-                    router.push(languagePath(language.code));
                   }}
                 >
                   {language.short}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -259,17 +260,19 @@ const Header = ({ locale }) => {
               })}
             >
               {availableLanguages.map((language) => (
-                <button
-                  type="button"
+                <Link
+                  href={languagePath(language.code)}
+                  hrefLang={language.code}
+                  lang={language.code}
+                  prefetch={false}
                   aria-label={language.label}
                   key={language.code}
                   onClick={() => {
                     setOpen(false);
-                    router.push(languagePath(language.code));
                   }}
                 >
                   {language.short}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

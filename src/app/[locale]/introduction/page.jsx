@@ -12,7 +12,7 @@ const serviceImages = [
   '/images/open-bible.jpg',
   '/images/Warme-aanbidding-live-band.png',
   '/images/Warme-erkgemeenschap-gesprek.png',
-  '/images/community-service.png',
+  '/images/community-service.png'
 ];
 
 export async function generateMetadata({ params }) {

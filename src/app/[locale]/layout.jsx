@@ -5,6 +5,7 @@ import { locales, messages } from '../../lib/site';
 import SiteShell from '../../components/SiteShell';
 import { siteUrl } from '../../lib/site';
 import { getDonationQr } from '../../lib/donationQr';
+import OrganizationData from '../../components/system/OrganizationData';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,6 +24,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} dir={direction}>
       <body>
+        <OrganizationData locale={locale} />
         <SiteShell locale={locale} messages={messages[locale]} donationQr={await getDonationQr()}>
           {children}
         </SiteShell>

@@ -43,6 +43,7 @@ const messages = {
   footerCredit: 'ساخته‌شده توسط',
   welcomeTo: 'خوش آمدید به',
   mantleOfPraise: 'ردای ستایش',
+  homeTitle: 'ردای ستایش | پرستش، دعا و خدمت مسیحی در هلند',
   home: 'صفحهٔ اصلی',
   introduction: 'آشنایی با ردای ستایش',
   introductionDescription:

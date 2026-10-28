@@ -86,6 +86,7 @@ const { createPreviewServer } = require(path.join(process.cwd(), 'scripts/previe
 const server = createPreviewServer(path.resolve('out'));
 (async () => {
   const { partners } = await import('../src/data/partners.js');
+  const { siteUrl, pathFor, pageMetadata, alternatesFor } = await import('../src/lib/site.js');
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
   const origin = 'http://127.0.0.1:' + server.address().port;
   await send('Browser.getVersion');
@@ -445,7 +446,7 @@ const server = createPreviewServer(path.resolve('out'));
       assert.equal(heroImage.fit, 'cover');
       const locale = url === '/' ? 'en' : url.split('/')[1];
       const result = await evaluate(
-        "(()=>({lang:document.documentElement.lang,dir:document.querySelector('.app').dir,h1:document.querySelectorAll('main h1').length,overflow:document.documentElement.scrollWidth>innerWidth+1,languages:[...document.querySelectorAll('.language-menu button')].map(e=>e.textContent.trim().toLowerCase()),partners:document.querySelectorAll('.partners-grid li').length,links:[...document.querySelectorAll('a[href],img[src]')].map(e=>e.href||e.src).filter(v=>v.startsWith(location.origin)),headers:document.querySelectorAll('.app-header').length}))()"
+        "(()=>({lang:document.documentElement.lang,dir:document.querySelector('.app').dir,h1:document.querySelectorAll('main h1').length,overflow:document.documentElement.scrollWidth>innerWidth+1,languages:[...document.querySelectorAll('.language-menu a')].map(e=>e.textContent.trim().toLowerCase()),partners:document.querySelectorAll('.partners-grid li').length,links:[...document.querySelectorAll('a[href],img[src]')].map(e=>e.href||e.src).filter(v=>v.startsWith(location.origin)),headers:document.querySelectorAll('.app-header').length}))()"
       );
       assert.equal(result.lang, locale);
       assert.equal(result.dir, locale === 'fa' ? 'rtl' : 'ltr');
@@ -455,6 +456,40 @@ const server = createPreviewServer(path.resolve('out'));
       assert.equal(result.partners, url.includes('/about-us/') ? partners.length : 0);
       assert.equal(result.languages.length, 2);
       assert(!result.languages.includes(locale));
+      if (width === 320) {
+        const route = url.split('/')[2] || '';
+        const expected = pageMetadata(locale, route);
+        const seo = await evaluate(`(() => ({
+          title: document.title,
+          description: document.querySelector('meta[name="description"]')?.content,
+          canonical: document.querySelector('link[rel="canonical"]')?.href,
+          alternates: Object.fromEntries([...document.querySelectorAll('link[hreflang]')].map(link => [link.hreflang, link.href])),
+          socialLocale: document.querySelector('meta[property="og:locale"]')?.content,
+          socialAlternates: [...document.querySelectorAll('meta[property="og:locale:alternate"]')].map(meta => meta.content),
+          schema: [...document.querySelectorAll('script[type="application/ld+json"]')].map(script => JSON.parse(script.textContent)),
+          languageLinks: [...document.querySelectorAll('.language-menu a,.mobile-language-switcher a')].map(link => ({ language: link.hreflang, path: new URL(link.href).pathname }))
+        }))()`);
+        assert.equal(seo.title, expected.title, url);
+        assert.equal(seo.description, expected.description, url);
+        assert.equal(seo.canonical, new URL(pathFor(locale, route), siteUrl).href, url);
+        assert.deepEqual(
+          seo.alternates,
+          Object.fromEntries(
+            Object.entries(alternatesFor(route)).map(([language, value]) => [
+              language,
+              new URL(value, siteUrl).href
+            ])
+          ),
+          url
+        );
+        assert.equal(seo.socialLocale, expected.openGraph.locale);
+        assert.deepEqual(seo.socialAlternates, expected.openGraph.alternateLocale);
+        assert.equal(seo.schema.length, 1);
+        assert(seo.schema[0]['@graph'].some((item) => item['@type'] === 'Organization'));
+        assert.equal(seo.languageLinks.length, 4);
+        for (const link of seo.languageLinks)
+          assert.equal(link.path, pathFor(link.language, route));
+      }
       for (const href of result.links) {
         let file = path.join(process.cwd(), 'out', decodeURIComponent(new URL(href).pathname));
         if (fs.existsSync(file) && fs.statSync(file).isDirectory())
@@ -503,7 +538,7 @@ const server = createPreviewServer(path.resolve('out'));
   assert(await evaluate("document.activeElement.matches('.language-trigger')"));
   await evaluate("document.querySelector('.language-trigger').click()");
   await pause();
-  await evaluate("document.querySelector('.language-menu button').click()");
+  await evaluate("document.querySelector('.language-menu a').click()");
   await pause(350);
   assert.equal(await evaluate('location.pathname'), '/fa/about-us/');
   assert.equal(await evaluate('document.documentElement.lang'), 'fa');
@@ -544,6 +579,22 @@ const server = createPreviewServer(path.resolve('out'));
     'CSP allowed injected JavaScript'
   );
   console.log(JSON.stringify({ keyboardAndLanguageSwitchPassed: true, cspInjectionBlocked: true }));
+  await navigate('/en/join-us/');
+  await evaluate(`(() => {
+    window.nativeFormBlocked = false;
+    document.addEventListener('securitypolicyviolation', (event) => {
+      if (event.violatedDirective === 'form-action') window.nativeFormBlocked = true;
+    });
+    document.querySelector('form').submit();
+  })()`);
+  await pause(150);
+  assert.equal(
+    await evaluate('window.nativeFormBlocked'),
+    true,
+    'Native form navigation must be blocked to keep personal data out of URLs'
+  );
+  assert.equal(await evaluate("document.querySelector('form').method"), 'post');
+  console.log(JSON.stringify({ nativeFormNavigationBlocked: true, multilingualSeoPassed: true }));
   let mode = 'success',
     requests = [];
   eventHandlers.set('Fetch.requestPaused', async (event) => {
@@ -579,12 +630,14 @@ const server = createPreviewServer(path.resolve('out'));
           'Fetch.fulfillRequest',
           {
             requestId,
-            responseCode: mode === 'success' ? 200 : 500,
+            responseCode: ['success', 'rejected', 'invalidJson'].includes(mode) ? 200 : 500,
             responseHeaders: [
               { name: 'Access-Control-Allow-Origin', value: origin },
               { name: 'Content-Type', value: 'application/json' }
             ],
-            body: Buffer.from(JSON.stringify({ success: mode === 'success' })).toString('base64')
+            body: Buffer.from(
+              mode === 'invalidJson' ? '{' : JSON.stringify({ success: mode === 'success' })
+            ).toString('base64')
           },
           sessionId
         );
@@ -647,6 +700,21 @@ const server = createPreviewServer(path.resolve('out'));
     assert.equal(await evaluate("document.querySelector('[name=firstName]').value"), '  Test  ');
     assert(!(await evaluate("document.querySelector('button[type=submit]').disabled")));
     formCases += 3;
+    for (const failureMode of ['rejected', 'invalidJson']) {
+      mode = failureMode;
+      requests = [];
+      await fillForm();
+      await submit();
+      await pause(500);
+      assert.equal(requests.length, 1);
+      assert(
+        await evaluate("document.querySelector('.form-status').classList.contains('error')"),
+        failureMode + ': must not show a false success'
+      );
+      assert.equal(await evaluate("document.querySelector('[name=firstName]').value"), '  Test  ');
+      assert(!(await evaluate("document.querySelector('button[type=submit]').disabled")));
+      formCases++;
+    }
   }
   await navigate('/en/join-us/');
   mode = 'network';

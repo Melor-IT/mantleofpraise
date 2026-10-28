@@ -33,6 +33,9 @@ test('CSP allows exact exported scripts and rejects arbitrary inline JavaScript'
   assert(policy.includes("frame-src 'none'"));
   assert(policy.includes("frame-ancestors 'none'"));
   assert(policy.includes("object-src 'none'"));
+  assert(policy.includes("form-action 'none'"));
+  assert(policy.includes("base-uri 'none'"));
+  assert(policy.includes("connect-src 'self' https://www.ewcms.org/mantleofpraise/contact.php"));
   assert.equal(headers['X-Frame-Options'], 'DENY');
   assert.equal(headers['X-Content-Type-Options'], 'nosniff');
 

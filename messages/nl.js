@@ -43,6 +43,7 @@ const messages = {
   footerCredit: 'Gemaakt door',
   welcomeTo: 'Welkom bij',
   mantleOfPraise: 'Mantle of Praise',
+  homeTitle: 'Mantle of Praise | Christelijke aanbidding en gebed in Nederland',
   home: 'Home',
   introduction: 'Onze bediening',
   introductionDescription:

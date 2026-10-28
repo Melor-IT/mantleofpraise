@@ -40,7 +40,7 @@ const supervisoryTeam = [
     defaultName: 'Sahar Apistola'
   },
   {
-    img: '/images/andere.jpeg',
+    img: '/images/andere-arms-relaxed.webp',
     alt: 'Pastor Andre Apistola',
     nameId: 'andre',
     defaultName: 'Pastor Andre Apistola'
